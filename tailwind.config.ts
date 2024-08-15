@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from 'tailwindcss';
+import { boxShadow, colors, typography } from './src/theme';
+import typographyPlugin from './typography-plugin';
 
 const config = {
   darkMode: ['class'],
@@ -18,48 +21,23 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        'mobile-s': '320px',
+        'mobile-m': '375px',
+        'mobile-l': '425px',
+        tablet: '768px',
+        labtop: '1024px',
+        desktop: '1280px',
+        'desktop-l': '1536px',
+      },
+      boxShadow: {
+        ...boxShadow,
+      },
       colors: {
-        blue: '#2997FF',
-        gray: {
-          DEFAULT: '#86868b',
-          100: '#94928d',
-          200: '#afafaf',
-          300: '#42424570',
-        },
-        zinc: '#101010',
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
+        ...colors,
+      },
+      typography: {
+        ...typography,
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -81,8 +59,19 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
+    fontFamily: {
+      'vazirmatn-black': ['Vazirmatn-Black'],
+      'vazirmatn-extrabold': ['Vazirmatn-ExtraBold'],
+      'vazirmatn-bold': ['Vazirmatn-Bold'],
+      'vazirmatn-semibold': ['Vazirmatn-SemiBold'],
+      'vazirmatn-medium': ['Vazirmatn-Medium'],
+      'vazirmatn-regular': ['Vazirmatn-Regular'],
+      'vazirmatn-light': ['Vazirmatn-Light'],
+      'vazirmatn-extralight': ['Vazirmatn-ExtraLight'],
+      'vazirmatn-thin': ['Vazirmatn-Thin'],
+    },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), typographyPlugin],
 } satisfies Config;
 
 export default config;

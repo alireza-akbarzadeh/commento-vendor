@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { DashboardLayout, ErrorBoundray, RootLayout } from 'containers';
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
