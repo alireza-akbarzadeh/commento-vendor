@@ -27,7 +27,7 @@ const config = {
         'mobile-l': '425px',
         tablet: '768px',
         labtop: '1024px',
-        desktop: '1280px',
+        desktop: '1296px',
         'desktop-l': '1536px',
       },
       boxShadow: {

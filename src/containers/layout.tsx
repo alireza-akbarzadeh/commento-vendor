@@ -10,7 +10,7 @@ export function RootLayout() {
         <Loading />
       }
     >
-      <main className="bg-black overflow-hidden text-white border border-[#3b3b3b]">
+      <main className="max-w-screen-desktop mx-auto  min-h-screen b">
         <ProtectedRoute isPublic isAuthorized />
       </main>
     </Suspense>
