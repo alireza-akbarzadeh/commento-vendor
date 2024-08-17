@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Loading } from './loading';
 import { ProtectedRoute } from './ProtectedRoute';
+import { Header, Navbar } from 'components';
 
 export function RootLayout() {
   return (
@@ -10,9 +11,13 @@ export function RootLayout() {
         <Loading />
       }
     >
-      <main className="max-w-screen-desktop mx-auto  min-h-screen b">
-        <ProtectedRoute isPublic isAuthorized />
-      </main>
+      <div className="font-vazirmatn-semibold antialiased max-w-screen-desktop mx-auto">
+        <Header />
+        <Navbar />
+        <main className="">
+          <ProtectedRoute isPublic isAuthorized />
+        </main>
+      </div>
     </Suspense>
   );
 }

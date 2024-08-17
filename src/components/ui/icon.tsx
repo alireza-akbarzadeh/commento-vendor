@@ -3,15 +3,14 @@ import { cn } from 'lib/utils';
 import { icons, LucideProps } from 'lucide-react';
 import { forwardRef } from 'react';
 
-// Define icon variants
-const iconVariants = cva('px-2', {
+const iconVariants = cva('', {
   variants: {
     sizes: {
-      default: 'size-10',
-      xs: 'size-8',
-      sm: 'size-12',
-      md: 'size-14',
-      lg: 'size-17',
+      medium: 'size-6',
+      xxSmall: 'size-4',
+      xSmall: 'size-[18px]',
+      large: 'size-7',
+      xLarge: 'size-8',
     },
     colors: {
       muted: 'text-muted-foreground',
@@ -20,7 +19,7 @@ const iconVariants = cva('px-2', {
     },
   },
   defaultVariants: {
-    sizes: 'default',
+    sizes: 'medium',
     colors: 'primary',
   },
 });
@@ -31,22 +30,18 @@ export interface IconProps
   name: keyof typeof icons;
 }
 
-const Icon = forwardRef<SVGSVGElement, IconProps>(
-  ({ name, colors, className, sizes, ...props }, ref) => {
-    const LucideIcon = icons[name];
+const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
+  const { name, sizes = 'medium', className, colors, ...rest } = props;
+  const LucideIcon = icons[name];
 
-    return (
-      <LucideIcon
-        ref={ref}
-        className={cn(
-          'rounded-full size-5',
-          iconVariants({ sizes, colors, className })
-        )}
-        {...props}
-      />
-    );
-  }
-);
+  return (
+    <LucideIcon
+      ref={ref}
+      className={cn('rounded-full', iconVariants({ sizes, colors, className }))}
+      {...rest}
+    />
+  );
+});
 
 Icon.displayName = 'Icon';
 

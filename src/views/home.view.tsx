@@ -1,11 +1,7 @@
 import { Button } from 'components';
 
 function HomeView() {
-  return (
-    <div>
-      <Button>clicked me</Button>
-    </div>
-  );
+  return <div>content gose here</div>;
 }
 
 export default HomeView;

@@ -34,21 +34,21 @@ export const colors = {
     dark: '#0F5799',
     darker: '#051D33',
   },
- textAndIcon: {
+  textAndIcon: {
     main: '#FFFFFF',
-    light: '#E1E3E3',
+    light: '#6A6E73',
     lighter: '6A6E73',
     dark: '#323333',
     darker: '#000000',
   },
- border: {
+  border: {
     main: '#EAEDED',
     light: '#E1E3E3',
     lighter: '#CACCCC',
     dark: '#535454',
     darker: '#323333',
   },
- background: {
+  background: {
     main: '#FFFFFF',
     light: '#EEEEEE',
     lighter: '#CACCCC',

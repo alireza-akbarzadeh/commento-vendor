@@ -1,2 +1,2 @@
-export { Button } from './ui/button/button';
-export { Development } from './development';
+export * from './ui';
+export * from './common';
