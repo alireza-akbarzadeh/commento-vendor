@@ -1,4 +1,4 @@
-import { Development } from 'components';
+import { Development } from 'components/development';
 
 function StatusView() {
   return <Development />;
