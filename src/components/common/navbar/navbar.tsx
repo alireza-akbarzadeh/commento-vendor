@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
-    <nav className="py-2 px-6 mt-6">
+    <nav className="py-2 px-6">
       <ol className="flex gap-5">
         {navList.map((nav) => {
           return (
@@ -14,7 +14,7 @@ export function Navbar() {
                 className="flex gap-2.5 px-4 py-2  items-center"
               >
                 {nav.icon && (
-                  <Icon name={nav.icon} className="text-textAndIcon-dark" />
+                  <Icon name={nav.icon} className="text-textAndIcon-light" />
                 )}
                 <label className="text-labelMedium">{nav.title}</label>
               </Link>

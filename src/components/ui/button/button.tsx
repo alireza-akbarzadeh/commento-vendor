@@ -8,7 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-primary-main text-primary-foreground hover:bg-primary/90',
+        primary: 'bg-primary-main text-primary-lighter hover:bg-primary/90',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
@@ -45,6 +45,7 @@ const buttonVariants = cva(
     },
     defaultVariants: {
       variant: 'primary',
+      rounded: 'lg',
       size: 'default',
       fullWidth: false,
       roundedFull: false,
@@ -59,11 +60,24 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, fullWidth, variant, size, asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      fullWidth,
+      variant,
+      size,
+      rounded = 'lg',
+      asChild = false,
+      ...props
+    },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className, fullWidth }))}
+        className={cn(
+          buttonVariants({ variant, size, className, fullWidth, rounded })
+        )}
         ref={ref}
         {...props}
       />

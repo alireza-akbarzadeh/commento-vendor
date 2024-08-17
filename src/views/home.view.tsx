@@ -1,7 +1,7 @@
-import { Button } from 'components';
+import { HomeDomains } from 'domains';
 
 function HomeView() {
-  return <div>content gose here</div>;
+  return <HomeDomains />;
 }
 
 export default HomeView;
