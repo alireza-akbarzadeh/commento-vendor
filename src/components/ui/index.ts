@@ -56,7 +56,7 @@ export {
   ToastViewport,
 } from './toast';
 
-export { Icon, type IconProps, iconVariants } from './icon';
+export { Icon, type IconProps } from './icon/icon';
 export {
   type InputProps,
   useFormField,

@@ -1,98 +1,104 @@
 export const typography = {
-  tiny: [
-    '0.688rem',
-    {
-      lineHeight: '1.25rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
-    },
-  ],
-  xss: ' 0.688rem',
-  md: '1rem',
   displayLarge: [
     '3rem',
     {
-      lineHeight: '4.5rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      lineHeight: '3.9rem',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
   displayMedium: [
     '2.5rem',
     {
-      lineHeight: '3.75rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      lineHeight: '3.375rem',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
   displaySmall: [
-    '2rem',
+    '2.25rem',
     {
       lineHeight: '3rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
   headlinelarge: [
     '2rem',
     {
-      lineHeight: '3rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      lineHeight: '2.75rem',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
   headlineMedium: [
     '1.5rem',
     {
-      lineHeight: '2.25rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      lineHeight: '2.125rem',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
   headlineSmall: [
     '1.25rem',
     {
       lineHeight: '1.875rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      fontWeight: '900',
+      fontFamily: 'Vazirmatn-Black',
     },
   ],
-  headlineXSmall: [
+  titleLarge: [
+    '1.25rem',
+    {
+      lineHeight: '1.75rem',
+      fontWeight: '800',
+      fontFamily: 'Vazirmatn-ExtraBold',
+    },
+  ],
+  titleMedium: [
     '1rem',
     {
-      lineHeight: '1.5rem',
-      fontWeight: '600',
-      fontFamily: 'Vazirmatn-SemiBold',
+      lineHeight: '1.375rem',
+      fontWeight: '800',
+      fontFamily: 'Vazirmatn-ExtraBold',
     },
   ],
-  labellarge: [
-    '1.125rem',
+  titleSmall: [
+    '0.875rem',
     {
-      lineHeight: '2rem',
+      lineHeight: '1.25rem',
+      fontWeight: '800',
+      fontFamily: 'Vazirmatn-ExtraBold',
+    },
+  ],
+  labelXLarge: [
+    '1rem',
+    {
+      lineHeight: '1.375rem',
+      fontWeight: '500',
+      fontFamily: 'Vazirmatn-Medium',
+    },
+  ],
+  labelLarge: [
+    '0.875rem',
+    {
+      lineHeight: '1.25rem',
       fontWeight: '500',
       fontFamily: 'Vazirmatn-Medium',
     },
   ],
   labelMedium: [
-    '1rem',
+    '0.75rem',
     {
-      lineHeight: '1.75rem',
+      lineHeight: '1.125rem',
       fontWeight: '500',
       fontFamily: 'Vazirmatn-Medium',
     },
   ],
   labelSmall: [
-    '0.875rem',
+    '0.625rem',
     {
-      lineHeight: '1.5rem',
-      fontWeight: '500',
-      fontFamily: 'Vazirmatn-Medium',
-    },
-  ],
-  labelXSmall: [
-    '0.75rem',
-    {
-      lineHeight: '1.5rem',
+      lineHeight: '0.875rem',
       fontWeight: '500',
       fontFamily: 'Vazirmatn-Medium',
     },
@@ -105,8 +111,16 @@ export const typography = {
       fontFamily: 'Vazirmatn-Regular',
     },
   ],
-  bodyMedium: [
+  bodyLarge: [
     '1rem',
+    {
+      lineHeight: '2rem',
+      fontWeight: '400',
+      fontFamily: 'Vazirmatn-Regular',
+    },
+  ],
+  bodyMedium: [
+    '0.875rem',
     {
       lineHeight: '1.75rem',
       fontWeight: '400',
@@ -114,22 +128,6 @@ export const typography = {
     },
   ],
   bodySmall: [
-    '0.875rem',
-    {
-      lineHeight: '1.5rem',
-      fontWeight: '400',
-      fontFamily: 'Vazirmatn-Regular',
-    },
-  ],
-  bodyXSmall: [
-    '0.75rem',
-    {
-      lineHeight: '1.25rem',
-      fontWeight: '400',
-      fontFamily: 'Vazirmatn-Regular',
-    },
-  ],
-  bodyXXSmall: [
     '0.75rem',
     {
       lineHeight: '1.5rem',

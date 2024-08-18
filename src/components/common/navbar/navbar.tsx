@@ -16,7 +16,7 @@ export function Navbar() {
                 {nav.icon && (
                   <Icon name={nav.icon} className="text-textAndIcon-light" />
                 )}
-                <label className="text-labelMedium">{nav.title}</label>
+                <label className="text-labelXLarge">{nav.title}</label>
               </Link>
               {nav !== navList[navList.length - 1] && (
                 <div className="h-4 w-[3px] bg-border-light ml-4" />

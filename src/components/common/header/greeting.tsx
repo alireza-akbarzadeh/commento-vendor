@@ -34,7 +34,7 @@ export const Greeting: React.FC = React.memo(() => {
   const greetingText = getGreeting(Number(hour));
 
   return (
-    <div className="flex items-center gap-1 text-labellarge">
+    <div className="flex items-center gap-1 text-labelLarge">
       <p>{date}</p>
       <time>
         {minute.concat(' : ')}
