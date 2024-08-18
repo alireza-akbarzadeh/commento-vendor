@@ -11,7 +11,9 @@ export function UserStatus() {
           </Avatar>
           <p className="text-titleMedium">دیجی لند</p>
         </div>
-        <Button className="rounded-xl">پروفایل</Button>
+        <Button variant="natural" disabled className="">
+          پروفایل
+        </Button>
       </div>
       <div className="col-span-2 flex justify-between px-6">
         <p className="text-labelLarge">آخرین زمان ورود</p>
@@ -20,12 +22,12 @@ export function UserStatus() {
       <div className="col-span-2 flex justify-between px-6 items-center">
         <p className="text-labelLarge">وضعیت اتصال سایت شما</p>
         <p className="text-labelLarge text-textAndIcon-light">
-          <Badge variant="success">Active</Badge>
+          <Badge variant="secondary">Active</Badge>
         </p>
       </div>
       <div className="col-span-2 flex justify-between px-6">
         <p className="text-labelLarge">ویترین فروشگاه</p>
-        <Button className="rounded-xl">پروفایل</Button>
+        <Button>پروفایل</Button>
       </div>
     </div>
   );

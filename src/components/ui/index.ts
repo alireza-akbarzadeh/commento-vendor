@@ -1,4 +1,4 @@
-export { Button, type ButtonProps, buttonVariants } from './button/button';
+export { Button, type ButtonProps, buttonVariants } from './button';
 export {
   Accordion,
   AccordionItem,
@@ -56,7 +56,6 @@ export {
   ToastViewport,
 } from './toast';
 
-export { Icon, type IconProps } from './icon/icon';
 export {
   type InputProps,
   useFormField,
@@ -70,3 +69,6 @@ export {
   FormMessage,
   Input,
 } from './form';
+
+export { Icon, type IconProps } from './icon/icon';
+export { iconVariants } from './icon/icon-variant';

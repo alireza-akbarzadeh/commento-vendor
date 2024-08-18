@@ -35,9 +35,9 @@ export const colors = {
     darker: '#051D33',
   },
   textAndIcon: {
-    main: '#FFFFFF',
+    lightest: '#FFFFFF',
+    lighter: '#E1E3E3',
     light: '#6A6E73',
-    lighter: '6A6E73',
     dark: '#323333',
     darker: '#000000',
   },
@@ -49,7 +49,7 @@ export const colors = {
     darker: '#323333',
   },
   background: {
-    main: '#FFFFFF',
+    lightest: '#FFFFFF',
     light: '#EEEEEE',
     lighter: '#CACCCC',
     dark: '#B1B2B2',

@@ -64,10 +64,10 @@ export const Destructive: Story = {
   },
 };
 
-export const Ghost: Story = {
+export const Text: Story = {
   args: {
     ...buttonDefaultArgs,
-    variant: 'ghost',
+    variant: 'text',
   },
 };
 export const Link: Story = {

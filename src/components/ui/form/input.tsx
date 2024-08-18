@@ -19,7 +19,7 @@ const inputVariants = cva(
         outline: 'border-none',
         secondary: 'border-secondary  hover:border-secondary/80',
         info: 'border-sky-500/100 text-sky-foreground hover:ring-sky-600 placeholder-sky-500/100',
-        ghost: 'border-b',
+        text: 'border-b',
       },
       fullWidth: { true: 'w-full' },
     },
@@ -84,7 +84,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <Button
             onClick={onIconCLick}
             asChild
-            variant="ghost"
+            variant="text"
             className={cn(
               'ml-2 absolute  top-[50%] transform -translate-y-1/2 -translate-x-1/2',
               {
@@ -94,7 +94,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             )}
           >
             <Icon
-              sizes="sm"
+              sizes="medium"
               name={name as keyof typeof icons}
               {...restIconProps}
             />

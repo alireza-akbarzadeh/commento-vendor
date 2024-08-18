@@ -5,7 +5,7 @@ const VARIANT = {
   secondary: 'secondary',
   link: 'link',
   info: 'info',
-  ghost: 'ghost',
+  text: 'text',
 };
 
 const SIZES = {

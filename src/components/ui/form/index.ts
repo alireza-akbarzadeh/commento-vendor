@@ -1,5 +1,5 @@
 export { InputController } from './input-controller';
-export {} from './checkbox';
+export { Checkbox } from './checkbox';
 export { type InputProps, Input } from './input';
 export {
   Form,

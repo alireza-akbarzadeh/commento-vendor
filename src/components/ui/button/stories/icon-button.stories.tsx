@@ -43,9 +43,9 @@ export const Outline: Story = {
     iconClassName: 'text-black',
   },
 };
-export const Ghost: Story = {
+export const Text: Story = {
   args: {
-    variant: 'ghost',
+    variant: 'text',
     roundedFull: true,
   },
 };

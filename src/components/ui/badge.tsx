@@ -7,19 +7,16 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
+        info: 'border-info-lighter bg-info-lighter text-info-main',
         secondary:
-          'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        success:
-          'border-success-lighter bg-success-lighter text-success-main hover:bg-secondary/80',
-        destructive:
-          'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80',
-        outline: 'text-foreground',
+          'border-secondary-lighter bg-secondary-lighter text-secondary-main',
+        success: 'border-success-lighter bg-success-lighter text-success-main',
+        error: 'border-error-lighter bg-error-lighter text-error-main',
+        text: 'bg-primary-lighter text-primary-main',
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: 'text',
     },
   }
 );
@@ -30,7 +27,7 @@ export interface BadgeProps
 
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ className, variant, ...props }, ref) => (
-    <div
+    <span
       ref={ref}
       className={cn(badgeVariants({ variant }), className)}
       {...props}
