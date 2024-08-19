@@ -1,4 +1,4 @@
-import { IconProps } from 'components/ui/icon';
+import { IconProps } from 'components';
 
 interface NavItem {
   title: string;

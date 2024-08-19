@@ -6,7 +6,7 @@ import { TopProducts } from './top-products';
 
 export function HomeDomains() {
   return (
-    <div className="min-h-dvh w-full overflow-x-hidden flex flex-col gap-6 mt-6">
+    <div className="w-full flex flex-col gap-6 mt-6">
       <UserStatus />
       <Report />
       <StoreInsight />

@@ -11,7 +11,7 @@ export function RootLayout() {
         <Loading />
       }
     >
-      <div className="font-vazirmatn-semibold antialiased max-w-screen-desktop mx-auto">
+      <div className="font-vazirmatn-semibold antialiased px-6  mx-auto">
         <Header />
         <Navbar />
         <main className="">
