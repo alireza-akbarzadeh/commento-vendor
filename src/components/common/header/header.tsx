@@ -5,7 +5,7 @@ import { WalletBalance } from './wallet-balance';
 
 export function Header() {
   return (
-    <header className="py-3 px-6 ">
+    <header className="py-3">
       <div className="flex items-center justify-between">
         <Logo />
         <Greeting />

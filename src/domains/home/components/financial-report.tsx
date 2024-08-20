@@ -26,9 +26,8 @@ export function FinancialReport() {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
+              <SelectItem value="current_month">هفته جاری</SelectItem>
               <SelectItem value="current_month">ماه جاری</SelectItem>
-              <SelectItem value="last_3_months">۳ ماه جاری</SelectItem>
-              <SelectItem value="last_6_months">ماه جاری ۶</SelectItem>
               <SelectItem value="current_year">سال جاری</SelectItem>
             </SelectGroup>
           </SelectContent>

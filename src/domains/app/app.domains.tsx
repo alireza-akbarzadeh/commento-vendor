@@ -1,8 +1,7 @@
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'components/ui/toast/toaster';
-import { AuthProvider } from 'providers';
+import { AuthProvider, ReactIntlProvider } from 'providers';
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { router } from 'routes';
@@ -14,14 +13,16 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools />
-          <Toaster />
-          <RouterProvider router={router} />
-        </QueryClientProvider>
+        <ReactIntlProvider locale="fa">
+          <QueryClientProvider client={queryClient}>
+            <ReactQueryDevtools />
+            <Toaster />
+            <RouterProvider router={router} />
+          </QueryClientProvider>
+        </ReactIntlProvider>
       </AuthProvider>
     </React.StrictMode>
   );
 }
 
-export default App
+export default App;
