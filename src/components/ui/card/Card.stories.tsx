@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from 'components/ui/card/card';
-import { BellRing, Check } from 'lucide-react';
+
 import { Button } from '../button/button';
 
 const meta: Meta<typeof Card> = {
@@ -47,7 +47,6 @@ export const Default: Story = {
         </CardHeader>
         <CardContent className="grid gap-4">
           <div className=" flex items-center space-x-4 rounded-md border p-4">
-            <BellRing />
             <div className="flex-1 space-y-1">
               <p className="text-sm font-medium leading-none">
                 Push Notifications
@@ -77,9 +76,7 @@ export const Default: Story = {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full">
-            <Check className="mr-2 h-4 w-4" /> Mark all as read
-          </Button>
+          <Button className="w-full"></Button>
         </CardFooter>
       </Card>
       <Button variant="link" className="text-blue">

@@ -1,12 +1,10 @@
 import { Icon } from 'components';
 import { navList } from 'constant';
-import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
     <nav className="py-2">
-      <FormattedMessage id="greeting" />
       <ol className="flex gap-5">
         {navList.map((nav) => {
           return (

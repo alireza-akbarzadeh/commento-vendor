@@ -1,11 +1,10 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from 'lib/utils';
-import { icons } from 'lucide-react';
+import { Icon, IconProps } from 'components';
 import * as React from 'react';
 
 import { Label } from './label';
 import { Button } from '../button/button';
-import { Icon, IconProps } from 'components';
 
 const inputVariants = cva(
   'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50',

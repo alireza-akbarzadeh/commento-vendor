@@ -1,7 +1,7 @@
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 
 import { cn } from 'lib/utils';
-import { Check } from 'lucide-react';
+import { Icon } from 'components';
 import * as React from 'react';
 
 export type CheckboxPrimitiveRoot = typeof CheckboxPrimitive.Root;
@@ -21,7 +21,7 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Indicator
       className={cn('flex items-center justify-center text-current')}
     >
-      <Check className="size-4" />
+      <Icon name="check" className="size-4" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

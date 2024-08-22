@@ -10,7 +10,7 @@ export const navList: NavItem[] = [
   {
     title: 'داشبورد',
     path: '/dashboard',
-    icon: 'LayoutGrid',
+    icon: 'grid',
   },
   {
     title: 'مدیریت محصولات',

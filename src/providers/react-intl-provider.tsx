@@ -15,7 +15,11 @@ type IntlManagerProps = {
 export function ReactIntlProvider(props: IntlManagerProps) {
   const { children, locale } = props;
   return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
+    <IntlProvider
+      locale={locale}
+      defaultLocale="fa"
+      messages={messages[locale]}
+    >
       {children}
     </IntlProvider>
   );

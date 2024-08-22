@@ -40,13 +40,3 @@ const deepPick = <T, K extends keyof T>(fields: string, object: T): T[K] => {
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 export { capitalize, countDown, deepPick };
-
-export function formatPriceToPersian(value: number): string {
-  // Convert the number to a string and add commas as thousand separators
-  const formattedValue = value.toLocaleString('fa-IR', {
-    currency: 'IRR',
-  });
-
-  // Return the formatted value
-  return formattedValue;
-}
