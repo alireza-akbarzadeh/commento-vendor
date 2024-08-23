@@ -30,7 +30,7 @@ export const DataVisualizer = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className="col-span-7 p-6">
+    <div className="col-span-12 md:col-span-10 p-6">
       <TabsVisualizer />
       <ChartContainer config={chartConfig} className="w-full h-[220px]">
         <LineChart

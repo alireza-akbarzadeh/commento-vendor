@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage, Badge, Button } from 'components';
 
 export function UserStatus() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-8 items-center">
+    <div className="grid grid-cols-2 md:grid-cols-8 gap-12  items-center gap-y-5 lg:gap-y-0">
       <div className="col-span-2 flex justify-between px-6">
         <div className="flex items-center gap-2">
           <Avatar>

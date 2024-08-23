@@ -22,9 +22,9 @@ export const buttonVariants = cva(
         info: 'bg-sky-500/100 text-primary-foreground hover:bg-sky-600',
       },
       size: {
-        big: 'h-14',
-        medium: 'h-12',
-        small: 'h-10',
+        big: 'h-14 w-[125px]',
+        medium: 'h-12 w-[125px]',
+        small: 'h-10 w-[125px]',
       },
 
       fullWidth: {

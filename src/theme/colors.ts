@@ -45,6 +45,7 @@ export const colors = {
     main: '#EAEDED',
     light: '#E1E3E3',
     lighter: '#CACCCC',
+    lightest: '#EAEDED',
     dark: '#535454',
     darker: '#323333',
   },
