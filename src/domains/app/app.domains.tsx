@@ -15,7 +15,7 @@ function App() {
       <AuthProvider>
         <ReactIntlProvider locale="fa">
           <QueryClientProvider client={queryClient}>
-            <ReactQueryDevtools />
+            <ReactQueryDevtools position="top" />
             <Toaster />
             <RouterProvider router={router} />
           </QueryClientProvider>

@@ -35,4 +35,8 @@ export const homeMessages = defineMessages({
     id: `${scope}.level`,
     defaultMessage: 'سطح',
   },
+  topProduct: {
+    id: `${scope}.topProduct`,
+    defaultMessage: 'محصولات  برتر شما',
+  },
 });
