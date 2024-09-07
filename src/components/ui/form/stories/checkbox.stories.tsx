@@ -1,4 +1,3 @@
-import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from '../checkbox';
 
@@ -18,13 +17,7 @@ export const Example: Story = {
    * 👇 To avoid linting issues, it is recommended to use a function with a capitalized name.
    * If you are not concerned with linting, you may use an arrow function.
    */
-  render: function Render(args) {
-    const [{ checked }, updateArgs] = useArgs();
-
-    const onChange = () => {
-      updateArgs({ checked: !checked });
-    };
-
-    return <Checkbox {...args} onChange={onChange} />;
+  render: function Render() {
+    return <Checkbox />;
   },
 };

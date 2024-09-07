@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Args, Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import { Button, ButtonProps } from 'components/ui/button/button';
 import { SIZES, VARIANT } from 'constant/themes';
@@ -17,9 +17,6 @@ const meta = {
     </>
   ),
   tags: ['autodocs'],
-  // decorators: [
-  //       (story) => <Card><CardContent>{story()}</CardContent></Card>,
-  // ],
   args: { children: 'button' },
   argTypes: {
     variant: {
@@ -35,6 +32,7 @@ const meta = {
       options: Object.keys(SIZES),
       control: { type: 'radio' },
     },
+    iconOnly: { control: 'boolean' },
   },
   parameters: {
     controls: { expanded: true },
@@ -44,7 +42,7 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<ButtonPageProps>;
+type Story = StoryObj<Omit<ButtonPageProps, 'isIconOnly'>>;
 
 export const buttonDefaultArgs = {
   disabled: false,
@@ -57,21 +55,21 @@ export const Default: Story = {
   },
 };
 
-export const Destructive: Story = {
+export const Destructive = {
   args: {
     ...buttonDefaultArgs,
-    variant: 'destructive',
+    variant: 'error',
   },
 };
 
-export const Text: Story = {
+export const Text = {
   args: {
     ...buttonDefaultArgs,
     variant: 'text',
   },
 };
-export const Link: Story = {
-  render: (args) => (
+export const Link = {
+  render: (args: Args) => (
     <Button asChild {...args} variant="link">
       <a href="@gmail.com">link to some where</a>
     </Button>
@@ -81,27 +79,21 @@ export const Link: Story = {
     variant: 'link',
   },
 };
-export const Secondary: Story = {
+export const Secondary = {
   args: {
     ...buttonDefaultArgs,
     variant: 'secondary',
   },
 };
-export const Outline: Story = {
+export const Outline = {
   args: {
     ...buttonDefaultArgs,
     variant: 'outline',
   },
 };
-export const Info: Story = {
+export const Info = {
   args: {
     ...buttonDefaultArgs,
     variant: 'info',
-  },
-};
-
-Info.parameters = {
-  viewport: {
-    viewports: 'FHD',
   },
 };

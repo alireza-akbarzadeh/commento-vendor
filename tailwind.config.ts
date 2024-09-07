@@ -21,6 +21,16 @@ const config = {
       },
     },
     extend: {
+      borderRadius: {
+        none: '0',
+        XSS: '4px',
+        XS: '8px',
+        S: '12px',
+        M: '16px',
+        L: '20px',
+        XL: '24px',
+        XXL: '32px',
+      },
       screens: {
         'mobile-s': '320px',
         'mobile-m': '375px',
@@ -38,11 +48,6 @@ const config = {
       },
       typography: {
         ...typography,
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
