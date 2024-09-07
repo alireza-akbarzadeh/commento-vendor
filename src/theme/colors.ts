@@ -52,7 +52,7 @@ export const colors = {
   background: {
     lightest: '#FFFFFF',
     light: '#EEEEEE',
-    lighter: '#CACCCC',
+    lighter: '#F9F9F9',
     dark: '#B1B2B2',
     darker: '#000000',
   },

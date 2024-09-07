@@ -1,5 +1,5 @@
 <p align="center">
-  <h1>it bazar vendor codebase</h1>
+  <h1>Comment Vendor Panel codebase</h1>
 </p>
 
 ## Table of Contents
@@ -49,12 +49,8 @@ To get started with this app, follow these steps:
 
 4. Open [http://localhost:3000](http://localhost:5173) with your browser to see the result.
 
-
-
-
 > [!NOTE]
 > I use [Neode](https://github.com/adam-cowley/neode) for managing application data in this project. Ensure that
-
 
 ## 📃 Scripts Overview
 
@@ -74,15 +70,11 @@ The following scripts are available in the `package.json`:
 - `test:ui`: Runs end-to-end tests in headless mode
 - `coverage`: checking for how many of your code is tested
 
-
-
-
 ## Roadmap
-
 
 - [ ] **Update documentation for installation & configuration**: This is currently a work in progress. Enhancing documentation ensures smoother onboarding for new contributors and users. Focus on clarity, completeness, and providing examples where necessary.\
 
-- [ ] **Create a starter app  and  show how folder structure and explain how the project work**: This is currently a work in progress.
+- [ ] **Create a starter app and show how folder structure and explain how the project work**: This is currently a work in progress.
 
 - [] **Enhance Testing Coverage**: Consider expanding test coverage, especially for critical functionalities. Incorporate unit tests, integration tests, and end-to-end tests to ensure robustness and reliability.
 
@@ -98,9 +90,6 @@ The following scripts are available in the `package.json`:
 
 By following this roadmap and implementing the suggested improvements, you can enhance the overall quality, maintainability, and user satisfaction of your project.
 
-
-
-
 ### UI
 
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
@@ -109,8 +98,6 @@ By following this roadmap and implementing the suggested improvements, you can e
 - [Lucide](https://lucide.dev/) – Beautifully simple, pixel-perfect icons
 - [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
 - [`ImageResponse`](https://nextjs.org/docs/app/api-reference/functions/image-response) – Generate dynamic Open Graph images at the edge
-
-
 
 ### Hooks and Utilities
 
@@ -122,14 +109,11 @@ By following this roadmap and implementing the suggested improvements, you can e
 - `truncate` – Truncate a string to a specified length
 - [`use-debounce`](https://www.npmjs.com/package/use-debounce) – Debounce a function call / state update
 
-
 ### Code Quality
 
 - [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
 - [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
 - [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
-
-
 
 ### Testing app
 
@@ -141,14 +125,11 @@ Run a test like a pro with and vitest ui and react testing library.
 
 Integrate type checking and eslint and commitlint and husky for caching errors in compile time.
 
-
 ## 🚀 Deployment
 
 Easily deploy your React.js app with [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=github&utm_campaign=next-enterprise) by clicking the button below:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise)
-
-
 
 ### Contributing
 
@@ -158,7 +139,7 @@ The devtools community is possible thanks to thousands of kind volunteers like y
 
 Recent Contributions:
 
-![Alt](https://repobeats.axiom.co/api/embed/1aef2bf4570efff1b67e8cd368d640180b823713.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/1aef2bf4570efff1b67e8cd368d640180b823713.svg 'Repobeats analytics image')
 
 ### Platform, Build, and Deployment Status
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
-    <nav className="py-2 hidden lg:block pr-6">
+    <nav className="py-2 hidden lg:block pr-6  border-t border-border-lightest">
       <ol className="flex gap-2 md:gap-5">
         {navList.map((nav) => {
           return (
