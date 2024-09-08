@@ -4,7 +4,7 @@ import { StoreBalance } from './components/store-balance';
 
 export function StoreInsight() {
   return (
-    <div className="grid grid-cols-10 gap-6">
+    <div className="grid grid-cols-12 gap-6">
       <StoreBalance />
       <StorSurvey />
       <StorPerformance />

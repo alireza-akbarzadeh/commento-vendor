@@ -26,15 +26,15 @@ export function StoreChart() {
           data={chartData}
           startAngle={200}
           endAngle={450}
-          innerRadius={80}
-          outerRadius={100}
+          innerRadius={72}
+          outerRadius={90}
         >
           <PolarGrid
             gridType="circle"
             radialLines={false}
             stroke="none"
             className="first:fill-border-lightest last:fill-background-lightest"
-            polarRadius={[87, 74]}
+            polarRadius={[76, 71]}
           />
           <RadialBar dataKey="visitors" background cornerRadius={10} />
           <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>

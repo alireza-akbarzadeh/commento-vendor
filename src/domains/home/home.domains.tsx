@@ -1,3 +1,4 @@
+import { Banner } from './banner';
 import { UserStatus } from './components';
 import { Report } from './report';
 import { StoreInsight } from './store-insight';
@@ -12,6 +13,7 @@ export function HomeDomains() {
       <StoreInsight />
       <TopProducts />
       <StoreQueryTracker />
+      <Banner />
     </div>
   );
 }

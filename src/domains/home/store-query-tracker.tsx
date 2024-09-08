@@ -3,7 +3,7 @@ import { ErrorReportTracker } from './components/error-report-tracker';
 
 export function StoreQueryTracker() {
   return (
-    <div className="grid grid-cols-4 px-6">
+    <div className="grid gap-6 grid-cols-4">
       <ErrorReportTracker />
       <CustomerQueryTracker />
     </div>

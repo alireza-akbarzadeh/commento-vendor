@@ -2,8 +2,8 @@ import { Button, Icon } from 'components';
 
 export const ErrorReportTracker = () => {
   return (
-    <div className="col-span-4 md:col-span-2">
-      <div className="flex items-center  justify-between">
+    <div className="col-span-4 md:col-span-2 bg-background-lightest rounded-XL p-6">
+      <div className="flex items-center  justify-between  bg-background-lighter rounded-XS p-2">
         <div className="flex justify-between items-center gap-2">
           <div className="relative bg-textAndIcon-lighter size-2 rounded-full">
             <span className="bg-error-main size-1.5 absolute right-0 top-0 rounded-full" />

@@ -5,7 +5,7 @@ import { FormattedNumber, useIntl } from 'react-intl';
 export function StoreBalance() {
   const { formatMessage } = useIntl();
   return (
-    <div className="col-span-12 md:col-span-2 space-y-[42px] p-6">
+    <div className="col-span-12 md:col-span-3 space-y-[42px] p-6 bg-background-lightest rounded-XL">
       <div className="bg-info-main rounded-2xl h-[160px] px-4 pt-[19px] space-y-6">
         <div className="flex justify-between items-center">
           <p className="text-textAndIcon-lightest text-titleMedium">

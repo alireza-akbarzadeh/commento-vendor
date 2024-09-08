@@ -6,7 +6,7 @@ import { StoreChart } from './store-chart';
 export function StorPerformance() {
   const { formatMessage } = useIntl();
   return (
-    <div className="col-span-12 md:col-span-2 p-6">
+    <div className="col-span-10 md:col-span-3  bg-background-lightest p-6 rounded-XL">
       <div className="flex justify-between">
         <h4 className="text-textAndIcon-darker text-titleMedium">
           {formatMessage(homeMessages.storePerformance)}
@@ -42,7 +42,7 @@ export function StorPerformance() {
             <span className="text-textAndIcon-light text-labelXLarge">
               {formatMessage(homeMessages.level)}
             </span>
-            <span className="text-success-main">A++</span>
+            <span className="text-success-main">++A</span>
           </div>
           <p className="text-labelMedium text-textAndIcon-dark mt-4">
             ۳۰٪ تا سطح ‌B

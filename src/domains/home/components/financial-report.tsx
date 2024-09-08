@@ -17,7 +17,7 @@ export function FinancialReport() {
     { title: 'مانده تسویه', price: 2300000000 },
   ];
   return (
-    <div className="col-span-12 md:col-span-2 p-6 space-y-4">
+    <div className="col-span-12 md:col-span-3 p-6 space-y-4 bg-background-lightest rounded-XL">
       <div className="flex items-center justify-between">
         <h3 className="text-titleMedium text-textAndIcon-darker">گزارش مالی</h3>
         <Select>

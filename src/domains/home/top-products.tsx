@@ -13,7 +13,7 @@ import { homeMessages } from './home.messages';
 export function TopProducts() {
   const { formatMessage } = useIntl();
   return (
-    <div className="px-6">
+    <div className="p-6 bg-background-lightest rounded-XL">
       <div className="flex items-center justify-between gap-20">
         <div className="flex gap-[20px] items-center flex-1">
           <h3 className="text-titleMedium whitespace-nowrap">
