@@ -2,6 +2,7 @@ import { Button, Icon } from 'components';
 import { PageDirection } from './components';
 import { CURRENCY } from 'constant';
 import { FormattedNumber } from 'react-intl';
+import { ProductSummary } from './components/product-summary';
 
 export function ProductInfo() {
   return (
@@ -30,6 +31,7 @@ export function ProductInfo() {
           </Button>
         </div>
       </div>
+      <ProductSummary />
     </div>
   );
 }

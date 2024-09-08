@@ -19,13 +19,13 @@ export function UserProfileMenu() {
         <PopoverTrigger>
           <div className="flex items-center gap-2">
             <p className="text-labelMedium">دیجی لند</p>
-            <Icon name="account" />
+            <Icon name="down-arrow-1" />
           </div>
         </PopoverTrigger>
         <PopoverContent>
           <ul className="divide-y space-y-2">
             <li className="flex items-center gap-2">
-              <Icon name="user-location" />
+              <Icon name="account" />
               <p>علیرضا</p>
             </li>
             <li className="flex  items-center pt-1.5 gap-2">
