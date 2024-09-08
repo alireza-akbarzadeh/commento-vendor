@@ -4,7 +4,7 @@ import { cn } from 'lib/utils';
 import * as React from 'react';
 import { buttonVariants } from './button-variant';
 import { Spin } from '../spin';
-import { Icon, IconProps } from '../icon/icon';
+import { Icon, IconProps, IconSize } from '../icon/icon';
 
 export interface ButtonPropsBase
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -13,6 +13,7 @@ export interface ButtonPropsBase
   loading?: boolean;
   roundedFull?: boolean;
   iconPosition?: 'left' | 'right';
+  iconSize?: IconSize | number;
 }
 
 export type ButtonProps =
@@ -33,6 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       iconOnly,
       icon,
+      iconSize,
       iconPosition = 'right',
       ...props
     },
@@ -44,6 +46,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       icon && (
         <Icon
           className={iconPosition === 'left' ? 'ml-2' : 'mr-2'}
+          size={iconSize}
           name={icon}
         />
       );

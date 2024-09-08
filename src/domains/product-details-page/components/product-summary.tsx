@@ -7,7 +7,7 @@ import { ProductPicture } from './product-picture';
 
 export const ProductSummary = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-6 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-6 mt-6 gap-x-8">
       <div className="col-span-4  space-y-6">
         <SummaryItem title="دسته بندی" value="کالای دیجیتال" />
         <SummaryItem title="برند" value="اپل" />
@@ -34,7 +34,7 @@ export const ProductSummary = () => {
           }
         />
         <SummaryItem title="سطح شما" value="12" />
-        <SummaryItem title="رتبه شما بین سایر فروشندگان" value="A++" />
+        <SummaryItem title="رتبه شما بین سایر فروشندگان" value="++A" />
         <SummaryItem title="آخرین بروزرسانی" value="۱۴۰۳/۰۹/۱۴" />
         <SummaryItem
           title="محتوای محصول"
@@ -42,7 +42,7 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 w-[220px]">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 لینک محصول آی تی بازار
               </h4>
@@ -62,7 +62,7 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 w-[220px]">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 لینک محصول
               </h4>
@@ -85,7 +85,7 @@ export const ProductSummary = () => {
         <SummaryItem title="تعداد کلیک" value="۳۴۵۶۷" />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 w-[220px]">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 رتبه تعداد کلیک
               </h4>
@@ -98,7 +98,7 @@ export const ProductSummary = () => {
         />
         <SummaryItem title="نوع محصول" value="نو" />
       </div>
-      <div className="co-span-2">
+      <div className="col-span-2">
         <ProductPicture />
       </div>
     </div>

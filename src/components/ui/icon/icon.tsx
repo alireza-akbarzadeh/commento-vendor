@@ -5,6 +5,7 @@ import iconSet from './selection.json';
 import { cn } from 'lib/utils';
 
 type IconSize = 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+
 type IconProps = {
   size?: IconSize | number;
   name: IconType;
