@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+:root {
+  height: 100%;
+  background: #f9f9f9;
+}
+
 @font-face {
   font-family: 'Vazirmatn-Black';
   src: url('../fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');

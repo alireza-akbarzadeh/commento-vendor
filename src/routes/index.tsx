@@ -3,15 +3,11 @@ import { DashboardLayout, ErrorBoundray, RootLayout } from 'containers';
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-const FaqView = lazy(() => import('views/faq.view'));
-const ContactView = lazy(() => import('views/contact.view'));
-const AboutView = lazy(() => import('views/about.view'));
-const ServicesView = lazy(() => import('views/services.view'));
 const HomeView = lazy(() => import('views/home.view'));
-const ServiesView = lazy(() => import('views/services.view'));
-const LicenseView = lazy(() => import('views/license.view'));
-const ContributeView = lazy(() => import('views/contribute.view'));
-const StatusView = lazy(() => import('views/status.view'));
+const ReportsView = lazy(() => import('views/reports.view'));
+const ProductDetailsPage = lazy(
+  () => import('views/product-details-page.view')
+);
 
 export const router = createBrowserRouter([
   {
@@ -24,36 +20,12 @@ export const router = createBrowserRouter([
         element: <HomeView />,
       },
       {
-        path: 'faq',
-        element: <FaqView />,
+        path: 'reports',
+        element: <ReportsView />,
       },
       {
-        path: 'contribute',
-        element: <ContributeView />,
-      },
-      {
-        path: 'status',
-        element: <StatusView />,
-      },
-      {
-        path: 'license',
-        element: <LicenseView />,
-      },
-      {
-        path: 'services',
-        element: <ServicesView />,
-      },
-      {
-        path: 'contact',
-        element: <ContactView />,
-      },
-      {
-        path: 'about',
-        element: <AboutView />,
-      },
-      {
-        path: 'services',
-        element: <ServiesView />,
+        path: 'product-details-page',
+        element: <ProductDetailsPage />,
       },
     ],
   },

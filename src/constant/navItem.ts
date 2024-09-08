@@ -9,12 +9,12 @@ interface NavItem {
 export const navList: NavItem[] = [
   {
     title: 'داشبورد',
-    path: '/dashboard',
+    path: '/',
     icon: 'grid',
   },
   {
     title: 'مدیریت محصولات',
-    path: '/products',
+    path: '/product-details-page',
   },
   {
     title: 'گزارشات',
