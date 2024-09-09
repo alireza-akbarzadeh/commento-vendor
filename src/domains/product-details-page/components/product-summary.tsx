@@ -42,7 +42,7 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1 w-[220px]">
+            <div className="flex items-center gap-1 col-span-2">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 لینک محصول آی تی بازار
               </h4>
@@ -62,7 +62,7 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1 w-[220px]">
+            <div className="flex items-center gap-1  col-span-2">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 لینک محصول
               </h4>
@@ -85,7 +85,7 @@ export const ProductSummary = () => {
         <SummaryItem title="تعداد کلیک" value="۳۴۵۶۷" />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1 w-[220px]">
+            <div className="flex items-center gap-1  col-span-2">
               <h4 className="text-textAndIcon-light text-labelXLarge  ">
                 رتبه تعداد کلیک
               </h4>

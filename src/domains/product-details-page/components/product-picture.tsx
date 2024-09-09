@@ -58,7 +58,7 @@ export function ProductPicture() {
         <Button fullWidth variant="outline" className="rounded-M">
           غیر فعال شدن محصول
         </Button>
-        <Button fullWidth icon="Edit" className="rounded-M">
+        <Button fullWidth icon="Edit" iconPosition="left" className="rounded-M">
           ویرایش محصول
         </Button>
       </div>
