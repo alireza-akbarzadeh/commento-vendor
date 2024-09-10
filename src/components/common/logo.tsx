@@ -1,8 +1,10 @@
 import { LogoSvg } from 'assets';
+import { Link } from 'react-router-dom';
+
 export const Logo = () => {
   return (
-    <div className="w-[84px] h-10">
+    <Link className="w-[84px] h-10 cursor-pointer" to="/">
       <img src={LogoSvg} alt="logo" className="size-full object-contain" />
-    </div>
+    </Link>
   );
 };

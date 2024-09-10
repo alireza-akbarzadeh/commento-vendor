@@ -5,8 +5,11 @@ import {
   PopoverTrigger,
   ProfileImg,
 } from 'components';
+import { useNavigate } from 'react-router-dom';
 
 export function UserProfileMenu() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex gap-2">
       <ProfileImg src="https://github.com/shadcn.png" />
@@ -19,7 +22,10 @@ export function UserProfileMenu() {
         </PopoverTrigger>
         <PopoverContent>
           <ul className="divide-y space-y-2">
-            <li className="flex items-center gap-2">
+            <li
+              onClick={() => navigate('/profile')}
+              className="flex items-center gap-2 cursor-pointer"
+            >
               <Icon name="account" />
               <p>علیرضا</p>
             </li>
