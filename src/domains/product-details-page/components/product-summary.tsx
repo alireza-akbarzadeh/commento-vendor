@@ -7,7 +7,7 @@ import { ProductPicture } from './product-picture';
 
 export const ProductSummary = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-6 mt-6 gap-x-8">
+    <section className="grid grid-cols-1 md:grid-cols-6 mt-6 gap-x-8">
       <div className="col-span-4  space-y-6">
         <SummaryItem title="دسته بندی" value="کالای دیجیتال" />
         <SummaryItem title="برند" value="اپل" />
@@ -101,6 +101,6 @@ export const ProductSummary = () => {
       <div className="col-span-2">
         <ProductPicture />
       </div>
-    </div>
+    </section>
   );
 };

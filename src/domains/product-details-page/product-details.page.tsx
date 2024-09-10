@@ -1,4 +1,4 @@
-import { Comment } from './components';
+import { Comment, SimilarProduct } from './components';
 import { SellerProduct } from './components/seller-product';
 import { ProductInfo } from './product-info';
 
@@ -8,6 +8,7 @@ export function ProductDetailsPageDomain() {
       <ProductInfo />
       <SellerProduct />
       <Comment />
+      <SimilarProduct />
     </div>
   );
 }

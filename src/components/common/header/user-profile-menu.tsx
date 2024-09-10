@@ -1,20 +1,15 @@
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
   Icon,
   Popover,
   PopoverContent,
   PopoverTrigger,
+  ProfileImg,
 } from 'components';
 
 export function UserProfileMenu() {
   return (
     <div className="flex gap-2">
-      <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
+      <ProfileImg src="https://github.com/shadcn.png" />
       <Popover>
         <PopoverTrigger>
           <div className="flex items-center gap-2">

@@ -56,7 +56,7 @@ export function TopProducts() {
           نمایش همه ۴۵۶۷۸۹۹ محصول
         </p>
       </div>
-      <div className="grid grid-cols-8 gap-6">
+      <div className="grid grid-cols-8 gap-6 mt-8">
         <ProductItem />
         <ProductItem />
         <ProductItem />

@@ -1,12 +1,19 @@
 import { MacBook } from 'assets';
-import { Badge, Icon, Image } from 'components';
+import { Badge, Button, Icon, Image } from 'components';
 import { CURRENCY } from 'constant';
+import { globalMessages } from 'i18n/global.messages';
 
-import { FormattedNumber } from 'react-intl';
+import { FormattedNumber, useIntl } from 'react-intl';
 
-export function ProductItem() {
+type ProductItemProps = {
+  hasAction?: boolean;
+};
+
+export function ProductItem(props: ProductItemProps) {
+  const { hasAction } = props;
+  const { formatMessage } = useIntl();
   return (
-    <div className="col-span-2 mt-8 flex flex-col gap-[20px] bg-background-lighter p-4 rounded-XL ">
+    <div className="col-span-2 flex flex-col gap-[20px] bg-background-lighter p-4 rounded-XL ">
       <div className="flex items-center justify-between">
         <div className="flex gap-2 justify-between items-center text-labelMedium text-textAndIcon-dark">
           <span> کلیک</span>
@@ -49,6 +56,9 @@ export function ProductItem() {
           <span className="text-textAndIcon-light">{CURRENCY.IR}</span>
         </div>
       </div>
+      {hasAction && (
+        <Button fullWidth>{formatMessage(globalMessages.wishToSell)}</Button>
+      )}
     </div>
   );
 }

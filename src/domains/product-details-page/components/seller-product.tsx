@@ -4,7 +4,7 @@ import { FormattedNumber } from 'react-intl';
 
 export function SellerProduct() {
   return (
-    <div className="bg-background-lightest rounded-M p-6">
+    <section className="bg-background-lightest rounded-M p-6">
       <h3 className="text-textAndIcon-darker text-titleSmall">
         فروشندگان این کالا
       </h3>
@@ -39,6 +39,6 @@ export function SellerProduct() {
           <Button className="w-[143px] rounded-M">مشاهده فروشنده</Button>
         </div>
       ))}
-    </div>
+    </section>
   );
 }

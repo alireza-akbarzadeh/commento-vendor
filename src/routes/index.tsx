@@ -5,6 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 const HomeView = lazy(() => import('views/home.view'));
 const ReportsView = lazy(() => import('views/reports.view'));
+const StoreDtailsView = lazy(() => import('views/store-details.view'));
 const ProductDetailsPage = lazy(
   () => import('views/product-details-page.view')
 );
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: 'reports',
         element: <ReportsView />,
+      },
+      {
+        path: 'store-details',
+        element: <StoreDtailsView />,
       },
       {
         path: 'product-details-page',

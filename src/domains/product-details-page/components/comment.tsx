@@ -8,13 +8,9 @@ import {
 } from 'components';
 import { CommentItem } from './comment-item';
 
-type CommentProps = {};
-
-export function Comment(props: CommentProps) {
-  const {} = props;
-
+export function Comment() {
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <section className="grid grid-cols-2 gap-6">
       <div className="bg-background-lightest rounded-L p-6 flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <h3 className="text-titleMedium text-textAndIcon-darker">
@@ -92,6 +88,6 @@ export function Comment(props: CommentProps) {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

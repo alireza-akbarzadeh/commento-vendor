@@ -1,14 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage, Badge, Button } from 'components';
+import { Badge, Button, ProfileImg } from 'components';
 
 export function UserStatus() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-8 gap-6  gap-y-5 lg:gap-y-0">
       <div className="col-span-2 flex justify-between  bg-background-lightest p-6 rounded-XL ">
         <div className="flex items-center gap-2 ">
-          <Avatar className="size-11">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
+          <ProfileImg size="medium" src="https://github.com/shadcn.png" />
           <p className="text-titleMedium">دیجی لند</p>
         </div>
         <Button>پروفایل</Button>
