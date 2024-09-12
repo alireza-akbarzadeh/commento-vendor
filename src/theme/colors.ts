@@ -43,8 +43,8 @@ export const colors = {
   },
   border: {
     main: '#EAEDED',
-    light: '#E1E3E3',
-    lighter: '#CACCCC',
+    light: '#CACCCC',
+    lighter: '#E1E3E3',
     lightest: '#EAEDED',
     dark: '#535454',
     darker: '#323333',

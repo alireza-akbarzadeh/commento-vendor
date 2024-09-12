@@ -1,7 +1,20 @@
 import { ReactNode } from 'react';
-import { ProfileSidebar, StoreInformation } from './components';
+import { ProfileSidebar } from './containers';
+import {
+  UserAuthority,
+  VendorScore,
+  StoreSttings,
+  StoreInformation,
+  Notification,
+  Document,
+  ReportIssue,
+  BankAccount,
+  CustomerQuestion,
+} from './components';
 import { ProfileMenuList } from './constant';
 import { useSearchParams } from 'react-router-dom';
+import { Contract } from './components/contract';
+import { Supoort } from './components/support';
 
 export function ProfileDomains() {
   const [searchParams] = useSearchParams();
@@ -12,22 +25,24 @@ export function ProfileDomains() {
 
   const profilePages: Record<ProfileMenuLink, ReactNode> = {
     'store-information': <StoreInformation />,
-    'bank-account': <p>Bank Account</p>,
-    'customer-question': <p>Customer Question</p>,
-    'store-setting': <p>store setting</p>,
-    'vendor-issue-report': <p>vendor-issue-report</p>,
-    'document-and-paper': <p>document and paper</p>,
-    'user-authority': <p>user-authority</p>,
-    'score-Vendor-level': <p>score-Vendor-level</p>,
-    contract: <p>contract</p>,
-    support: <p>support</p>,
-    notification: <p>notification</p>,
+    'bank-account': <BankAccount />,
+    'customer-question': <CustomerQuestion />,
+    'store-setting': <StoreSttings />,
+    'vendor-issue-report': <ReportIssue />,
+    'document-and-paper': <Document />,
+    'user-authority': <UserAuthority />,
+    'score-Vendor-level': <VendorScore />,
+    contract: <Contract />,
+    support: <Supoort />,
+    notification: <Notification />,
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-background-lightest p-6 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 bg-background-lightest p-6 mt-6">
       <ProfileSidebar />
-      {profilePages[currentPage as ProfileMenuLink] || <p>not exist</p>}
+      <div className="col-span-12 md:col-span-9">
+        {profilePages[currentPage as ProfileMenuLink] || <p>not exist</p>}
+      </div>
     </div>
   );
 }

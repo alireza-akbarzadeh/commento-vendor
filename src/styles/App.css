@@ -9,6 +9,16 @@ body,
   background: #f9f9f9;
 }
 
+.float-label-input {
+  margin: 32px 0;
+}
+
+.float-label-input:focus-within label,
+.float-label-input input:not(:placeholder-shown) + label {
+  transform: translateY(-1.5rem) scale(0.75);
+  background-color: white;
+}
+
 @font-face {
   font-family: 'Vazirmatn-Black';
   src: url('../fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');

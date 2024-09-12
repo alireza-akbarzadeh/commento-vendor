@@ -31,9 +31,17 @@ export function InputController<
     <FormField
       render={({ field }) => (
         <FormItem>
-          {label && <FormLabel>{label}</FormLabel>}
           <FormControl>
-            <Input placeholder="user name" {...field} {...inputProps} />
+            <Input
+              label={
+                <FormLabel className="text-bodySmall text-textAndIcon-dark">
+                  {label}
+                  {inputControll.rules?.required ? ' *' : ''}
+                </FormLabel>
+              }
+              {...field}
+              {...inputProps}
+            />
           </FormControl>
           {description && <FormDescription>{description}</FormDescription>}
           <FormMessage />
@@ -44,8 +52,3 @@ export function InputController<
     />
   );
 }
-
-InputController.defaultProps = {
-  description: false,
-  inputProps: {},
-};

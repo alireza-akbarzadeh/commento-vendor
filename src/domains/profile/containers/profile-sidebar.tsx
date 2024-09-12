@@ -13,7 +13,7 @@ export function ProfileSidebar() {
   const currentPage = searchParams.get('page');
 
   return (
-    <div className="col-span-3 border border-border-lighter rounded-S p-6">
+    <div className="col-span-12 md:col-span-3 border border-border-lighter rounded-S p-6">
       <div className="flex flex-col items-center justify-center gap-4 ">
         <ProfileImg size="large" src="https://github.com/shadcn.png" />
         <h3 className="text-textAndIcon-dark text-titleMedium">

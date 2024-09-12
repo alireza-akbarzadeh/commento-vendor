@@ -15,4 +15,8 @@ export const globalMessages = defineMessages({
     id: `${scope}.submitChanges`,
     defaultMessage: 'ثبت تغییرات',
   },
+  editInformation: {
+    id: `${scope}.editInformation`,
+    defaultMessage: 'ویرایش اطلاعات',
+  },
 });
