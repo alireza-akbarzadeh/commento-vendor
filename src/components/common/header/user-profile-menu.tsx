@@ -5,6 +5,7 @@ import {
   PopoverTrigger,
   ProfileImg,
 } from 'components';
+import { ROUTE_NAME } from 'constant';
 import { useNavigate } from 'react-router-dom';
 
 export function UserProfileMenu() {
@@ -23,7 +24,7 @@ export function UserProfileMenu() {
         <PopoverContent>
           <ul className="divide-y space-y-2">
             <li
-              onClick={() => navigate('/profile')}
+              onClick={() => navigate(ROUTE_NAME.UserProfile)}
               className="flex items-center gap-2 cursor-pointer"
             >
               <Icon name="account" />

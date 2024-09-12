@@ -6,7 +6,7 @@ import {
   CardHeader,
 } from 'components/ui/card/card';
 
-import { isRouteErrorResponse, Link, useRouteError } from 'react-router-dom';
+import { isRouteErrorResponse, NavLink, useRouteError } from 'react-router-dom';
 
 export function ErrorBoundray() {
   const error = useRouteError() as Error;
@@ -36,7 +36,7 @@ export function ErrorBoundray() {
           </CardContent>
           <CardFooter>
             <Button fullWidth variant="info">
-              <Link to="/">Try again</Link>
+              <NavLink to="/">Try again</NavLink>
             </Button>
           </CardFooter>
         </Card>

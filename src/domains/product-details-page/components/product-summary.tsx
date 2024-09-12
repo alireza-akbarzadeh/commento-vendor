@@ -2,7 +2,7 @@ import { CURRENCY } from 'constant';
 import { SummaryItem } from './summary-item';
 import { FormattedNumber } from 'react-intl';
 import { Badge } from 'components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { ProductPicture } from './product-picture';
 
 export const ProductSummary = () => {
@@ -52,12 +52,12 @@ export const ProductSummary = () => {
             </div>
           }
           customValue={
-            <Link
+            <NavLink
               className="text-info-main text-labelXLarge"
               to="https://www.itbazar.com/p_100083.aspx"
             >
               https://www.itbazar.com/p_100083.aspx
-            </Link>
+            </NavLink>
           }
         />
         <SummaryItem

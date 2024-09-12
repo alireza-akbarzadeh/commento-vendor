@@ -1,3 +1,4 @@
+import { ROUTE_NAME } from 'constant';
 import { Navigate, Outlet } from 'react-router-dom';
 
 type TProtectedRoute = {
@@ -6,5 +7,9 @@ type TProtectedRoute = {
 };
 
 export function ProtectedRoute({ isPublic, isAuthorized }: TProtectedRoute) {
-  return isPublic || isAuthorized ? <Outlet /> : <Navigate to="/login" />;
+  return isPublic || isAuthorized ? (
+    <Outlet />
+  ) : (
+    <Navigate to={ROUTE_NAME.Login} />
+  );
 }

@@ -5,9 +5,8 @@ import { globalMessages } from 'i18n/global.messages';
 
 export function StoreInformation() {
   const { formatMessage } = useIntl();
-
   return (
-    <div className="col-span-8">
+    <div className="col-span-9">
       <div className="flex items-center justify-between">
         <h3 className="text-titleLarge text-textAndIcon-dark">
           {formatMessage(profileMessages.storeInformation)}
