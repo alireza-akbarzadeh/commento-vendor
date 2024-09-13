@@ -10,11 +10,11 @@ import {
   ReportIssue,
   BankAccount,
   CustomerQuestion,
-} from './components';
+  Contract,
+  Support,
+} from './containers';
 import { ProfileMenuList } from './constant';
 import { useSearchParams } from 'react-router-dom';
-import { Contract } from './components/contract';
-import { Supoort } from './components/support';
 
 export function ProfileDomains() {
   const [searchParams] = useSearchParams();
@@ -33,7 +33,7 @@ export function ProfileDomains() {
     'user-authority': <UserAuthority />,
     'score-Vendor-level': <VendorScore />,
     contract: <Contract />,
-    support: <Supoort />,
+    support: <Support />,
     notification: <Notification />,
   };
 

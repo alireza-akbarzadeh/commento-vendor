@@ -56,7 +56,7 @@ export function StoreInformation() {
           <div className="grid grid-cols-4  md:grid-cols-8 lg:grid-cols-12 gap-x-3">
             <div className="col-span-4">
               <InputController
-                label="نام فروشگاه"
+                label={formatMessage(profileMessages.storeName)}
                 inputControll={{
                   control: form.control,
                   name: 'storeName',
@@ -66,7 +66,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="نام کامل فروشنده"
+                label={formatMessage(profileMessages.vendorFullName)}
                 inputControll={{
                   control: form.control,
                   name: 'vendorFullName',
@@ -76,7 +76,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="کد ملی"
+                label={formatMessage(profileMessages.vendorNationalCode)}
                 inputControll={{
                   control: form.control,
                   name: 'nationalCode',
@@ -86,7 +86,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="شماره تلفن همراه"
+                label={formatMessage(profileMessages.phoneNumber)}
                 inputControll={{
                   control: form.control,
                   name: 'phoneNumber',
@@ -96,7 +96,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="ایمیل"
+                label={formatMessage(profileMessages.emailAddress)}
                 inputControll={{
                   control: form.control,
                   name: 'email',
@@ -106,7 +106,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="وب سایت"
+                label={formatMessage(profileMessages.websiteAddress)}
                 inputControll={{
                   control: form.control,
                   name: 'website',
@@ -116,7 +116,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="تاریخ تولد"
+                label={formatMessage(profileMessages.birthDate)}
                 inputControll={{
                   control: form.control,
                   name: 'birthDate',
@@ -126,7 +126,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="شهر"
+                label={formatMessage(profileMessages.city)}
                 inputControll={{
                   control: form.control,
                   name: 'city',
@@ -136,7 +136,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="استان"
+                label={formatMessage(profileMessages.state)}
                 inputControll={{
                   control: form.control,
                   name: 'state',
@@ -146,7 +146,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-8">
               <InputController
-                label="آدرس"
+                label={formatMessage(profileMessages.address)}
                 inputControll={{
                   control: form.control,
                   name: 'address',
@@ -155,7 +155,7 @@ export function StoreInformation() {
               />
               <div className="grid grid-cols-2 gap-3">
                 <InputController
-                  label="کد پستی"
+                  label={formatMessage(profileMessages.postalCode)}
                   inputControll={{
                     control: form.control,
                     name: 'postalCode',
@@ -163,7 +163,7 @@ export function StoreInformation() {
                   }}
                 />
                 <InputController
-                  label="شماره ثابت"
+                  label={formatMessage(profileMessages.telephoneNumber)}
                   inputControll={{
                     control: form.control,
                     name: 'tellphoneNumber',
@@ -177,7 +177,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="آدرس واتساپ"
+                label={formatMessage(profileMessages.addressWhatsApp)}
                 inputControll={{
                   control: form.control,
                   name: 'whatsAppAddress',
@@ -187,7 +187,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="آدرس تلگرام"
+                label={formatMessage(profileMessages.addressTelegram)}
                 inputControll={{
                   control: form.control,
                   name: 'telegramAddress',
@@ -197,7 +197,7 @@ export function StoreInformation() {
             </div>
             <div className="col-span-4">
               <InputController
-                label="آدرس اینستاگرام"
+                label={formatMessage(profileMessages.addressInstagram)}
                 inputControll={{
                   control: form.control,
                   name: 'instaGramAddress',

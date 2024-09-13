@@ -47,4 +47,64 @@ export const profileMessages = defineMessages({
     id: `${scope}.scoreAndVendorLevel`,
     defaultMessage: 'امتیاز و سطح فروشنده',
   },
+  storeName: {
+    id: `${scope}.storeName`,
+    defaultMessage: 'نام فروشگاه',
+  },
+  vendorFullName: {
+    id: `${scope}.vendorFullName`,
+    defaultMessage: 'نام و نام خانوادگی مالک',
+  },
+  vendorNationalCode: {
+    id: `${scope}.vendorNationalCode`,
+    defaultMessage: 'شماره ملی مالک',
+  },
+  phoneNumber: {
+    id: `${scope}.phoneNumber`,
+    defaultMessage: 'شماره همراه',
+  },
+  emailAddress: {
+    id: `${scope}.emailAddress`,
+    defaultMessage: 'آدرس ایمیل',
+  },
+  websiteAddress: {
+    id: `${scope}.websiteAddress`,
+    defaultMessage: 'آدرس سایت',
+  },
+  birthDate: {
+    id: `${scope}.birthDate`,
+    defaultMessage: 'تاریخ تولد',
+  },
+  state: {
+    id: `${scope}.state`,
+    defaultMessage: 'استان',
+  },
+  city: {
+    id: `${scope}.city`,
+    defaultMessage: 'شهر',
+  },
+  address: {
+    id: `${scope}.address`,
+    defaultMessage: 'آدرس',
+  },
+  postalCode: {
+    id: `${scope}.postalCode`,
+    defaultMessage: 'کد پستی',
+  },
+  telephoneNumber: {
+    id: `${scope}.telephoneNumber`,
+    defaultMessage: 'تلفن ثابت',
+  },
+  addressWhatsApp: {
+    id: `${scope}.addressWhatsApp`,
+    defaultMessage: 'آدرس واتساپ',
+  },
+  addressInstagram: {
+    id: `${scope}.addressInstagram`,
+    defaultMessage: 'آدرس اینستاگرام',
+  },
+  addressTelegram: {
+    id: `${scope}.addressTelegram`,
+    defaultMessage: 'آدرس تلگرام',
+  },
 });
