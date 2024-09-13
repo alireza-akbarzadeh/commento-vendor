@@ -19,4 +19,8 @@ export const globalMessages = defineMessages({
     id: `${scope}.editInformation`,
     defaultMessage: 'ویرایش اطلاعات',
   },
+  cancel: {
+    id: `${scope}.cancel`,
+    defaultMessage: 'انصراف',
+  },
 });

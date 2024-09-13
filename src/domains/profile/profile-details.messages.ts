@@ -107,4 +107,16 @@ export const profileMessages = defineMessages({
     id: `${scope}.addressTelegram`,
     defaultMessage: 'آدرس تلگرام',
   },
+  openNewAccount: {
+    id: `${scope}.openNewAccount`,
+    defaultMessage: 'افزودن حساب جدید',
+  },
+  backToDefaultAccount: {
+    id: `${scope}.backToDefaultAccount`,
+    defaultMessage: 'تغییر حساب پیش فرض',
+  },
+  addAccount: {
+    id: `${scope}.addAccount`,
+    defaultMessage: 'افزودن حساب',
+  },
 });

@@ -53,7 +53,7 @@ export function StoreInformation() {
         {mode === 'read' ? (
           <ReadStoreInformation />
         ) : (
-          <div className="grid grid-cols-4  md:grid-cols-8 lg:grid-cols-12 gap-x-3">
+          <div className="grid grid-cols-4 gap-y-8  md:grid-cols-8 lg:grid-cols-12 gap-x-3 mt-8">
             <div className="col-span-4">
               <InputController
                 label={formatMessage(profileMessages.storeName)}

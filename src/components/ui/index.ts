@@ -22,6 +22,19 @@ export {
   AlertDialogContent,
 } from './alert-dialog';
 
+export {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+  DialogOverlay,
+  DialogPortal,
+} from './dialog';
+
 export { Badge, type BadgeProps, badgeVariants } from './badge';
 export {
   BreadcrumbItem,
