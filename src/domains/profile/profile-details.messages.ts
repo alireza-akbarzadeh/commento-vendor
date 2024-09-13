@@ -139,6 +139,10 @@ export const profileMessages = defineMessages({
     id: `${scope}.deleteAccount`,
     defaultMessage: 'حذف حساب',
   },
+  question: {
+    id: `${scope}.question`,
+    defaultMessage: 'پرسش ها',
+  },
   deleteAccountConfirmation: {
     id: `${scope}.deleteAccountConfirmation`,
     defaultMessage: 'آیا از حذف حساب خود اطمینان دارید؟',
