@@ -1,7 +1,7 @@
 import { MelatPng } from 'assets';
 import { useIntl } from 'react-intl';
-import { CardAccout } from '../components';
-import { OpenNewAccount } from '../components/open-new-account';
+
+import { OpenNewAccount, CardAccout } from '../components';
 import { profileMessages } from '../profile-details.messages';
 
 export function BankAccount() {

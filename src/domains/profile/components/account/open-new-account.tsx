@@ -11,8 +11,9 @@ import {
   Input,
 } from 'components';
 import { useIntl } from 'react-intl';
-import { profileMessages } from '../profile-details.messages';
+
 import { globalMessages } from 'i18n/global.messages';
+import { profileMessages } from 'domains/profile/profile-details.messages';
 
 export function OpenNewAccount() {
   const { formatMessage } = useIntl();

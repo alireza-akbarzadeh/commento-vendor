@@ -8,20 +8,7 @@ export {
 export { Popover, PopoverContent, PopoverTrigger } from './popover';
 export { Alert, AlertDescription, AlertTitle } from './alert';
 export { Avatar, AvatarFallback, AvatarImage } from './avatar';
-export {
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogTrigger,
-  AlertDialogTitle,
-  AlertDialogPortal,
-  AlertDialogOverlay,
-  AlertDialogDescription,
-  AlertDialogCancel,
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-} from './alert-dialog';
-
+export * from './form';
 export {
   Dialog,
   DialogTrigger,

@@ -119,4 +119,28 @@ export const profileMessages = defineMessages({
     id: `${scope}.addAccount`,
     defaultMessage: 'افزودن حساب',
   },
+  defaultAccount: {
+    id: `${scope}.defaultAccount`,
+    defaultMessage: 'حساب پیش فرض',
+  },
+  selectAccount: {
+    id: `${scope}.selectAccount`,
+    defaultMessage: 'انتخاب حساب',
+  },
+  bank: {
+    id: `${scope}.bank`,
+    defaultMessage: 'بانک',
+  },
+  cardNumber: {
+    id: `${scope}.cardNumber`,
+    defaultMessage: 'شماره شبا',
+  },
+  deleteAccount: {
+    id: `${scope}.deleteAccount`,
+    defaultMessage: 'حذف حساب',
+  },
+  deleteAccountConfirmation: {
+    id: `${scope}.deleteAccountConfirmation`,
+    defaultMessage: 'آیا از حذف حساب خود اطمینان دارید؟',
+  },
 });

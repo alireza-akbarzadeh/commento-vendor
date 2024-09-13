@@ -23,4 +23,8 @@ export const globalMessages = defineMessages({
     id: `${scope}.cancel`,
     defaultMessage: 'انصراف',
   },
+  confirm: {
+    id: `${scope}.confirm`,
+    defaultMessage: 'تایید',
+  },
 });
