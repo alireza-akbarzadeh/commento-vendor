@@ -1,35 +1,35 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from 'lib/utils';
-import { Icon, IconProps } from 'components';
-import * as React from 'react';
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "lib/utils";
+import { Icon, IconProps } from "components";
+import * as React from "react";
 
-import { Label } from './label';
-import { Button } from '../button/button';
+import { Label } from "./label";
+import { Button } from "../button/button";
 
 const inputVariants = cva(
-  'flex h-12 w-full border border-border-light bg-background-lightest px-3 text-sm ring-offset-background rounded-S file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50',
+  "flex h-12 w-full border border-border-light bg-background-lightest px-3 text-sm ring-offset-background rounded-S file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          'border-primary text-primary-foreground hover:border-primary/90 placeholder-primary-foreground focus-visible:ring-ring',
+          "border-primary text-primary-foreground hover:border-primary/90 placeholder-primary-foreground focus-visible:ring-ring",
         destructive:
-          'border-rose-600 focus:ring ring-rose-600 border-rose-400 hover:border-rose-600/90',
-        outline: 'border-none',
-        secondary: 'border-secondary  hover:border-secondary/80',
-        info: 'border-sky-500/100 text-sky-foreground hover:ring-sky-600 placeholder-sky-500/100',
-        text: 'border-b',
+          "border-rose-600 focus:ring ring-rose-600 border-rose-400 hover:border-rose-600/90",
+        outline: "border-none",
+        secondary: "border-secondary  hover:border-secondary/80",
+        info: "border-sky-500/100 text-sky-foreground hover:ring-sky-600 placeholder-sky-500/100",
+        text: "border-b",
       },
-      fullWidth: { true: 'w-full' },
+      fullWidth: { true: "w-full" },
     },
     defaultVariants: {
       fullWidth: false,
     },
-  }
+  },
 );
 
 interface InputIconProps extends IconProps {
-  position: 'end' | 'start';
+  position: "end" | "start";
   onIconCLick?: () => void;
 }
 
@@ -58,11 +58,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       testId,
       ...props
     },
-    ref
+    ref,
   ) => {
     const { onIconCLick, name, position, ...restIconProps } = icon || {};
     return (
-      <div className="relative float-label-input">
+      <div className="float-label-input relative">
         <input
           type={type}
           data-testid={testId}
@@ -74,7 +74,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
         <Label
           htmlFor={props.id}
-          className={`absolute top-4 right-2 text-gray-400 pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker ${labelClassName}`}
+          className={`text-grey-darker pointer-events-none absolute right-2 top-4 bg-white px-2 text-gray-400 transition duration-200 ease-in-out ${labelClassName}`}
           style={labelStyles}
         >
           {label}
@@ -85,25 +85,25 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             asChild
             variant="text"
             className={cn(
-              'ml-2 absolute  top-[50%] transform -translate-y-1/2 -translate-x-1/2',
+              "absolute top-[50%] ml-2 -translate-x-1/2 -translate-y-1/2 transform",
               {
-                'left-0': position === 'start',
-                'right-0': position === 'end',
-              }
+                "left-0": position === "start",
+                "right-0": position === "end",
+              },
             )}
           >
             <Icon
               size="medium"
-              name={name as IconProps['name']}
+              name={name as IconProps["name"]}
               {...restIconProps}
             />
           </Button>
         )}
       </div>
     );
-  }
+  },
 );
 
-Input.displayName = 'Input';
+Input.displayName = "Input";
 
 export { Input };

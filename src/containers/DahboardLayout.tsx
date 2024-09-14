@@ -1,6 +1,6 @@
-import { Suspense } from 'react';
-import { Loading } from './loading';
-import { ProtectedRoute } from './ProtectedRoute';
+import { Suspense } from "react";
+import { Loading } from "./loading";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export function DashboardLayout() {
   return (

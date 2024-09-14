@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Label,
@@ -6,15 +6,15 @@ import {
   PolarRadiusAxis,
   RadialBar,
   RadialBarChart,
-} from 'recharts';
-import { ChartConfig, ChartContainer } from 'components/ui/chart';
+} from "recharts";
+import { ChartConfig, ChartContainer } from "components/ui/chart";
 
-const chartData = [{ browser: 'safari', visitors: 70, fill: '#00996B' }];
+const chartData = [{ browser: "safari", visitors: 70, fill: "#00996B" }];
 
 const chartConfig = {
   safari: {
-    label: 'Safari',
-    color: 'hsl(var(--chart-2))',
+    label: "Safari",
+    color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
 
@@ -40,7 +40,7 @@ export function StoreChart() {
           <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
             <Label
               content={({ viewBox }) => {
-                if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
+                if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                   return (
                     <text
                       x={viewBox.cx}

@@ -1,4 +1,4 @@
-import { DataVisualizer, FinancialReport } from './components';
+import { DataVisualizer, FinancialReport } from "./components";
 
 export const Report = () => {
   return (

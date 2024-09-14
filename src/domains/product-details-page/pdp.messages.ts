@@ -1,10 +1,10 @@
-import { defineMessages } from 'react-intl';
+import { defineMessages } from "react-intl";
 
-const scope = 'Domains.pdpMessages';
+const scope = "Domains.pdpMessages";
 
 export const pdpMessages = defineMessages({
   vendorSimilarProduct: {
     id: `${scope}.vendorSimilarProduct`,
-    defaultMessage: 'محصولات مشابه سایر فروشندگان',
+    defaultMessage: "محصولات مشابه سایر فروشندگان",
   },
 });

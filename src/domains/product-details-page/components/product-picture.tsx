@@ -1,60 +1,60 @@
-import { IphonePng } from 'assets';
-import { Badge, Button, Image } from 'components';
+import { IphonePng } from "assets";
+import { Badge, Button, Image } from "components";
 
 export function ProductPicture() {
   return (
     <>
-      <div className="bg-background-lighter rounded-M p-6">
+      <div className="rounded-M bg-background-lighter p-6">
         <div className="flex items-center justify-between">
-          <p className="text-titleSmall text-primary-main">تصویر محصول</p>
-          <Badge className=" rounded-XS px-4" variant="success">
+          <p className="text-primary-main text-titleSmall">تصویر محصول</p>
+          <Badge className="rounded-XS px-4" variant="success">
             انتشار یافته
           </Badge>
         </div>
-        <div className="bg-background-light mt-3 rounded-S px-[51px] py-[48px]">
+        <div className="mt-3 rounded-S bg-background-light px-[51px] py-[48px]">
           <Image
             src={IphonePng}
             alt="iphone"
-            className="size-[289px] mx-auto"
+            className="mx-auto size-[289px]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 mt-3 gap-x-2">
-          <div className="bg-background-light relative  rounded-XS p-2.5">
+        <div className="mt-3 grid grid-cols-1 gap-x-2 md:grid-cols-4">
+          <div className="relative rounded-XS bg-background-light p-2.5">
             <Image
               src={IphonePng}
               alt="iphone"
-              className="size-[74px] mx-auto"
+              className="mx-auto size-[74px]"
             />
-            <div className="absolute z-10  -top-2  translate-x-[45px] right-0">
+            <div className="absolute -top-2 right-0 z-10 translate-x-[45px]">
               <Button iconOnly icon="Trash" variant="text" />
             </div>
           </div>
-          <div className="bg-background-light relative  rounded-XS p-2.5">
+          <div className="relative rounded-XS bg-background-light p-2.5">
             <Image
               src={IphonePng}
               alt="iphone"
-              className="size-[74px] mx-auto"
+              className="mx-auto size-[74px]"
             />
-            <div className="absolute z-10  -top-2  translate-x-[45px] right-0">
+            <div className="absolute -top-2 right-0 z-10 translate-x-[45px]">
               <Button iconOnly icon="Trash" variant="text" />
             </div>
           </div>
-          <div className="bg-background-light relative  rounded-XS p-2.5">
+          <div className="relative rounded-XS bg-background-light p-2.5">
             <Image
               src={IphonePng}
               alt="iphone"
-              className="size-[74px] mx-auto"
+              className="mx-auto size-[74px]"
             />
-            <div className="absolute z-10  -top-2  translate-x-[45px] right-0">
+            <div className="absolute -top-2 right-0 z-10 translate-x-[45px]">
               <Button iconOnly icon="Trash" variant="text" />
             </div>
           </div>
-          <div className="border-dashed border-[3px] border-border-lighter  rounded-XS flex items-center justify-center">
+          <div className="flex items-center justify-center rounded-XS border-[3px] border-dashed border-border-lighter">
             <Button iconOnly icon="Add-New" iconSize="xLarge" variant="text" />
           </div>
         </div>
       </div>
-      <div className="flex gap-4 mt-3">
+      <div className="mt-3 flex gap-4">
         <Button fullWidth variant="outline" className="rounded-M">
           غیر فعال شدن محصول
         </Button>

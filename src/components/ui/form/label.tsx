@@ -1,10 +1,10 @@
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from 'lib/utils';
-import * as React from 'react';
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "lib/utils";
+import * as React from "react";
 
 const labelVariants = cva(
-  'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
 );
 
 // Define props interface for the Label component
@@ -19,7 +19,7 @@ const Label: React.ForwardRefExoticComponent<
     VariantProps<typeof labelVariants> &
     React.RefAttributes<HTMLLabelElement>
 > = React.forwardRef(({ className, asChild, htmlFor, ...props }, ref) => {
-  const Comp = asChild ? Slot : 'label';
+  const Comp = asChild ? Slot : "label";
   const labelProps = htmlFor ? { htmlFor } : {};
 
   return (
@@ -32,6 +32,6 @@ const Label: React.ForwardRefExoticComponent<
   );
 });
 
-Label.displayName = 'Label';
+Label.displayName = "Label";
 
 export { Label };

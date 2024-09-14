@@ -1,1 +1,1 @@
-export { ProductDetailsPageDomain } from './product-details.page';
+export { ProductDetailsPageDomain } from "./product-details.page";

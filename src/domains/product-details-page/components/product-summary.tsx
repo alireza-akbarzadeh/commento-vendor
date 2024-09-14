@@ -1,20 +1,20 @@
-import { CURRENCY } from 'constant';
-import { SummaryItem } from './summary-item';
-import { FormattedNumber } from 'react-intl';
-import { Badge } from 'components';
-import { Link, NavLink } from 'react-router-dom';
-import { ProductPicture } from './product-picture';
+import { CURRENCY } from "constant";
+import { SummaryItem } from "./summary-item";
+import { FormattedNumber } from "react-intl";
+import { Badge } from "components";
+import { Link, NavLink } from "react-router-dom";
+import { ProductPicture } from "./product-picture";
 
 export const ProductSummary = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-6 mt-6 gap-x-8">
-      <div className="col-span-4  space-y-6">
+    <section className="mt-6 grid grid-cols-1 gap-x-8 md:grid-cols-6">
+      <div className="col-span-4 space-y-6">
         <SummaryItem title="دسته بندی" value="کالای دیجیتال" />
         <SummaryItem title="برند" value="اپل" />
         <SummaryItem
           title="تا کمترین قیمت"
           customValue={
-            <div className="flex gap-1 items-center">
+            <div className="flex items-center gap-1">
               <FormattedNumber value={1087706} currency="IRR" />
               <span className="text-textAndIcon-light">{CURRENCY.IR}</span>
             </div>
@@ -23,11 +23,11 @@ export const ProductSummary = () => {
         <SummaryItem
           title="تا کمترین قیمت"
           customValue={
-            <div className="flex gap-2 items-center">
-              <Badge variant="error" className="px-4 rounded-S">
+            <div className="flex items-center gap-2">
+              <Badge variant="error" className="rounded-S px-4">
                 نردبان شده
               </Badge>
-              <Badge variant="info" className="px-4 rounded-S ">
+              <Badge variant="info" className="rounded-S px-4">
                 تخفیف
               </Badge>
             </div>
@@ -42,8 +42,8 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1 col-span-2">
-              <h4 className="text-textAndIcon-light text-labelXLarge  ">
+            <div className="col-span-2 flex items-center gap-1">
+              <h4 className="text-textAndIcon-light text-labelXLarge">
                 لینک محصول آی تی بازار
               </h4>
               <span className="text-textAndIcon-light text-labelSmall">
@@ -62,8 +62,8 @@ export const ProductSummary = () => {
         />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1  col-span-2">
-              <h4 className="text-textAndIcon-light text-labelXLarge  ">
+            <div className="col-span-2 flex items-center gap-1">
+              <h4 className="text-textAndIcon-light text-labelXLarge">
                 لینک محصول
               </h4>
               <span className="text-textAndIcon-light text-labelSmall">
@@ -85,8 +85,8 @@ export const ProductSummary = () => {
         <SummaryItem title="تعداد کلیک" value="۳۴۵۶۷" />
         <SummaryItem
           customTitle={
-            <div className="flex items-center gap-1  col-span-2">
-              <h4 className="text-textAndIcon-light text-labelXLarge  ">
+            <div className="col-span-2 flex items-center gap-1">
+              <h4 className="text-textAndIcon-light text-labelXLarge">
                 رتبه تعداد کلیک
               </h4>
               <span className="text-textAndIcon-light text-labelSmall">

@@ -1,7 +1,7 @@
-import { Suspense } from 'react';
-import { Loading } from './loading';
-import { ProtectedRoute } from './ProtectedRoute';
-import { Header, Navbar } from 'components';
+import { Suspense } from "react";
+import { Loading } from "./loading";
+import { ProtectedRoute } from "./ProtectedRoute";
+import { Header, Navbar } from "components";
 
 export function RootLayout() {
   return (
@@ -11,8 +11,8 @@ export function RootLayout() {
         <Loading />
       }
     >
-      <div className="font-vazirmatn-semibold antialiased py-10 px-[72px] bg-background-lighter">
-        <div className="bg-background-lightest border border-border-lightest rounded-S">
+      <div className="bg-background-lighter px-[72px] py-10 font-vazirmatn-semibold antialiased">
+        <div className="rounded-S border border-border-lightest bg-background-lightest">
           <Header />
           <Navbar />
         </div>

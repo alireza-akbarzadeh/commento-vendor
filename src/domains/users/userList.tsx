@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export interface User {
   id: number;
@@ -18,7 +18,7 @@ export function Users() {
     isLoading,
     isError,
   } = useQuery<User[]>({
-    queryKey: ['users'],
+    queryKey: ["users"],
     queryFn: fetchUsers,
   });
 
@@ -26,8 +26,8 @@ export function Users() {
   if (isError) return <div>Error fetching data</div>;
 
   return users?.map((user) => (
-    <div className="p-4 mb-4 bg-gray-100 rounded-md shadow-md">
-      <h3 className="text-xl font-semibold mb-2">{user?.name}</h3>
+    <div className="mb-4 rounded-md bg-gray-100 p-4 shadow-md">
+      <h3 className="mb-2 text-xl font-semibold">{user?.name}</h3>
       <p>
         <strong>Username:</strong> {user?.username}
       </p>

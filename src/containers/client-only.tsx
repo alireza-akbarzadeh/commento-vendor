@@ -1,5 +1,5 @@
-import { useIsMounted } from 'hooks';
-import { PropsWithChildren } from 'react';
+import { useIsMounted } from "hooks";
+import { PropsWithChildren } from "react";
 
 function ClientOnly<T>(props: PropsWithChildren<T>) {
   const { children, ...rest } = props;

@@ -1,3 +1,3 @@
-import { db } from './db';
+import { db } from "./db";
 
-export const handlers = [...db.product.toHandlers('rest')];
+export const handlers = [...db.product.toHandlers("rest")];

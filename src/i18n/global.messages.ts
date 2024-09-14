@@ -1,30 +1,30 @@
-import { defineMessages } from 'react-intl';
+import { defineMessages } from "react-intl";
 
-const scope = 'Domains.globalMessages';
+const scope = "Domains.globalMessages";
 
 export const globalMessages = defineMessages({
   viewAll: {
     id: `${scope}.viewAll`,
-    defaultMessage: 'نمایش همه',
+    defaultMessage: "نمایش همه",
   },
   wishToSell: {
     id: `${scope}.wishToSell`,
-    defaultMessage: 'میخواهم بفروشم',
+    defaultMessage: "میخواهم بفروشم",
   },
   submitChanges: {
     id: `${scope}.submitChanges`,
-    defaultMessage: 'ثبت تغییرات',
+    defaultMessage: "ثبت تغییرات",
   },
   editInformation: {
     id: `${scope}.editInformation`,
-    defaultMessage: 'ویرایش اطلاعات',
+    defaultMessage: "ویرایش اطلاعات",
   },
   cancel: {
     id: `${scope}.cancel`,
-    defaultMessage: 'انصراف',
+    defaultMessage: "انصراف",
   },
   confirm: {
     id: `${scope}.confirm`,
-    defaultMessage: 'تایید',
+    defaultMessage: "تایید",
   },
 });

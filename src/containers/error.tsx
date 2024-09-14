@@ -1,12 +1,12 @@
-import { Button } from 'components';
+import { Button } from "components";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from 'components/ui/card/card';
+} from "components/ui/card/card";
 
-import { isRouteErrorResponse, NavLink, useRouteError } from 'react-router-dom';
+import { isRouteErrorResponse, NavLink, useRouteError } from "react-router-dom";
 
 export function ErrorBoundray() {
   const error = useRouteError() as Error;
@@ -14,7 +14,7 @@ export function ErrorBoundray() {
   return (
     <div
       id="error"
-      className="flex items-center justify-center h-screen bg-gray-500/40"
+      className="flex h-screen items-center justify-center bg-gray-500/40"
     >
       {isRouteErrorResponse(error) ? (
         <p className="text-3xl font-bold">This page does not exist..</p>
@@ -22,14 +22,14 @@ export function ErrorBoundray() {
         <Card className="space-y-6">
           <CardHeader>Ops..</CardHeader>
           <CardContent>
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="mb-4 text-2xl font-bold">
               We are sorry... something went wrong
             </h2>
-            <p className="text-lg mb-2">
+            <p className="mb-2 text-lg">
               We cannot process your request at this moment.
             </p>
             {error && (
-              <p className="text-red-500 text-sm mb-4">
+              <p className="mb-4 text-sm text-red-500">
                 ERROR: {error.message}
               </p>
             )}

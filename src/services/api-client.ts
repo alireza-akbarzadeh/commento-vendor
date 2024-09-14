@@ -1,11 +1,11 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from "axios";
 
 export interface FetchResponse<T> {
   data: T[];
 }
 
 const axiosInstance = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com',
+  baseURL: "https://jsonplaceholder.typicode.com",
   // params: {
   //   key,
   // },
@@ -29,7 +29,7 @@ class APICLient<T> {
   // eslint-disable-next-line class-methods-use-this
   post = (data: T) =>
     axiosInstance
-      .post<FetchResponse<T>>('/genres', data)
+      .post<FetchResponse<T>>("/genres", data)
       .then((res) => res.data);
 }
 

@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from "react";
 
 type UseIterator<TIndex> = {
   initialIndex?: number;
@@ -7,7 +7,7 @@ type UseIterator<TIndex> = {
 
 type UseIteratorReturnType<TIndex> = [TIndex, () => void, () => void];
 export const useIterator = <TIterator>(
-  props: UseIterator<TIterator>
+  props: UseIterator<TIterator>,
 ): UseIteratorReturnType<TIterator> => {
   const { initialIndex = 0, items = [] } = props;
   const [i, setIndex] = useState<number>(initialIndex);

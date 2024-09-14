@@ -1,6 +1,6 @@
-import { StorPerformance } from './components/store-performance/store-performance';
-import { StorSurvey } from './components/store-survey';
-import { StoreBalance } from './components/store-balance';
+import { StorPerformance } from "./components/store-performance/store-performance";
+import { StorSurvey } from "./components/store-survey";
+import { StoreBalance } from "./components/store-balance";
 
 export function StoreInsight() {
   return (

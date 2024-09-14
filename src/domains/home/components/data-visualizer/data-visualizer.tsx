@@ -1,38 +1,38 @@
-import { CartesianGrid, Line, LineChart, XAxis } from 'recharts';
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from 'components';
-import { TabsVisualizer } from './tabs-visualizer';
+} from "components";
+import { TabsVisualizer } from "./tabs-visualizer";
 
 export const DataVisualizer = () => {
   const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 },
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
   ];
 
   const chartConfig = {
     desktop: {
-      label: 'Desktop',
-      color: '#000000',
+      label: "Desktop",
+      color: "#000000",
     },
     mobile: {
-      label: 'Mobile',
-      color: '#D0E3F5',
+      label: "Mobile",
+      color: "#D0E3F5",
     },
   } satisfies ChartConfig;
 
   return (
-    <div className="col-span-12 md:col-span-9 p-6 bg-background-lightest rounded-XL">
+    <div className="col-span-12 rounded-XL bg-background-lightest p-6 md:col-span-9">
       <TabsVisualizer />
-      <ChartContainer config={chartConfig} className="w-full h-[220px]">
+      <ChartContainer config={chartConfig} className="h-[220px] w-full">
         <LineChart
           accessibilityLayer
           data={chartData}

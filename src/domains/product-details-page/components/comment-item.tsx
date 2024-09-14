@@ -1,5 +1,5 @@
-import { Separator } from '@radix-ui/react-select';
-import { Badge, Icon } from 'components';
+import { Separator } from "@radix-ui/react-select";
+import { Badge, Icon } from "components";
 
 type CommentItemProps = {
   userName: string;
@@ -26,34 +26,34 @@ export function CommentItem(props: CommentItemProps) {
 
   return (
     <>
-      <div className="flex justify-between items-center py-[15px]">
-        <div className="flex gap-2 items-center">
+      <div className="flex items-center justify-between py-[15px]">
+        <div className="flex items-center gap-2">
           {isRated ? (
             <Badge
               variant="success"
-              className="flex items-center gap-1 rounded-S "
+              className="flex items-center gap-1 rounded-S"
             >
               <Icon name="Favorite" className="text-success-main" />
               ۴.۴
             </Badge>
           ) : (
-            <Icon name="Help" className="text-textAndIcon-light " />
+            <Icon name="Help" className="text-textAndIcon-light" />
           )}
           <p className="text-labelLarge">{title}</p>
         </div>
         <div className="flex items-center gap-2">
           <p className="text-textAndIcon-dark text-labelMedium">{userName}</p>
           <span className="text-textAndIcon-light">|</span>
-          <p className="text-textAndIcon-dark text-labelMedium pt-1">{date}</p>
+          <p className="pt-1 text-textAndIcon-dark text-labelMedium">{date}</p>
         </div>
       </div>
-      <Separator className="border border-border-lightest my-4" />
-      <p className="text-bodyLarge text-textAndIcon-darker">{description}</p>
+      <Separator className="my-4 border border-border-lightest" />
+      <p className="text-textAndIcon-darker text-bodyLarge">{description}</p>
       <div
-        className={`flex items-center ${howsRated ? 'justify-between' : 'justify-end'}  mt-4`}
+        className={`flex items-center ${howsRated ? "justify-between" : "justify-end"} mt-4`}
       >
         {howsRated && (
-          <div className="flex items-center gap-2 ">
+          <div className="flex items-center gap-2">
             <Icon name="account" className="text-textAndIcon-dark" />
             <span className="text-textAndIcon-dark text-bodyMedium">
               {howsRated}

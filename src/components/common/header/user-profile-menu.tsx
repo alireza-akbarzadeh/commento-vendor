@@ -4,9 +4,9 @@ import {
   PopoverContent,
   PopoverTrigger,
   ProfileImg,
-} from 'components';
-import { ROUTE_NAME } from 'constant';
-import { useNavigate } from 'react-router-dom';
+} from "components";
+import { ROUTE_NAME } from "constant";
+import { useNavigate } from "react-router-dom";
 
 export function UserProfileMenu() {
   const navigate = useNavigate();
@@ -22,15 +22,15 @@ export function UserProfileMenu() {
           </div>
         </PopoverTrigger>
         <PopoverContent>
-          <ul className="divide-y space-y-2">
+          <ul className="space-y-2 divide-y">
             <li
               onClick={() => navigate(ROUTE_NAME.UserProfile)}
-              className="flex items-center gap-2 cursor-pointer"
+              className="flex cursor-pointer items-center gap-2"
             >
               <Icon name="account" />
               <p>علیرضا</p>
             </li>
-            <li className="flex  items-center pt-1.5 gap-2">
+            <li className="flex items-center gap-2 pt-1.5">
               <Icon name="Logout" />
               <p>خروج</p>
             </li>

@@ -5,21 +5,21 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from 'components';
-import { ReportItem } from './financial-report/report-item';
+} from "components";
+import { ReportItem } from "./financial-report/report-item";
 
 export function FinancialReport() {
   const financialList = [
-    { title: 'هزینه حمل', price: 2300000000 },
-    { title: 'کمسیون', price: 2300000000 },
-    { title: 'تخفیف فروشنده ', price: 2300000000 },
-    { title: 'تسویه تا کنون ', price: 2300000000 },
-    { title: 'مانده تسویه', price: 2300000000 },
+    { title: "هزینه حمل", price: 2300000000 },
+    { title: "کمسیون", price: 2300000000 },
+    { title: "تخفیف فروشنده ", price: 2300000000 },
+    { title: "تسویه تا کنون ", price: 2300000000 },
+    { title: "مانده تسویه", price: 2300000000 },
   ];
   return (
-    <div className="col-span-12 md:col-span-3 p-6 space-y-4 bg-background-lightest rounded-XL">
+    <div className="col-span-12 space-y-4 rounded-XL bg-background-lightest p-6 md:col-span-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-titleMedium text-textAndIcon-darker">گزارش مالی</h3>
+        <h3 className="text-textAndIcon-darker text-titleMedium">گزارش مالی</h3>
         <Select>
           <SelectTrigger className="w-[128px]">
             <SelectValue placeholder="هفته جاری" />

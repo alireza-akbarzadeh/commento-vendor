@@ -1,33 +1,33 @@
-import { zodResolver } from '@hookform/resolvers/zod';
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Button } from 'components';
+import { Button } from "components";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from 'components/ui/card/card';
-import { CheckboxController } from 'components/ui/form/checkbox-controller';
-import { Form } from 'components/ui/form/form';
-import { InputController } from 'components/ui/form/input-controller';
-import { useToast } from 'components/ui/toast';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+} from "components/ui/card/card";
+import { CheckboxController } from "components/ui/form/checkbox-controller";
+import { Form } from "components/ui/form/form";
+import { InputController } from "components/ui/form/input-controller";
+import { useToast } from "components/ui/toast";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 type FormValues = z.infer<typeof formSchema>;
 
 const formSchema = z
   .object({
     username: z.string().min(4, {
-      message: 'Username must be at least 4 characters.',
+      message: "Username must be at least 4 characters.",
     }),
-    email: z.string().email({ message: 'Invalid email address.' }),
+    email: z.string().email({ message: "Invalid email address." }),
     password: z
       .string()
-      .min(8, { message: 'Password must be at least 8 characters.' }),
+      .min(8, { message: "Password must be at least 8 characters." }),
     confirmPassword: z
       .string()
-      .min(8, { message: 'The passwords did not match' }),
+      .min(8, { message: "The passwords did not match" }),
     agreement: z.boolean().default(false).optional(),
     isShowPass: z.boolean().optional(),
     isShowConfrimPass: z.boolean().optional(),
@@ -35,8 +35,8 @@ const formSchema = z
   .superRefine(({ confirmPassword, password }, ctx) => {
     if (confirmPassword !== password) {
       ctx.addIssue({
-        code: 'custom',
-        message: 'The passwords did not match',
+        code: "custom",
+        message: "The passwords did not match",
       });
     }
   });
@@ -45,10 +45,10 @@ export function SignUp() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       agreement: false,
       isShowPass: false,
       isShowConfrimPass: false,
@@ -57,7 +57,7 @@ export function SignUp() {
   const { toast } = useToast();
   function onSubmit(values: FormValues) {
     toast({
-      title: 'Scheduled: Catch up',
+      title: "Scheduled: Catch up",
 
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
@@ -66,8 +66,8 @@ export function SignUp() {
       ),
     });
   }
-  const isShowPass = form.watch('isShowPass');
-  const isShowConfrimPass = form.watch('isShowConfrimPass');
+  const isShowPass = form.watch("isShowPass");
+  const isShowConfrimPass = form.watch("isShowConfrimPass");
 
   return (
     <div className="container mt-10">
@@ -81,20 +81,20 @@ export function SignUp() {
               <InputController
                 label="Username"
                 description="you should enter your username here"
-                inputProps={{ testId: 'username' }}
+                inputProps={{ testId: "username" }}
                 inputControll={{
                   control: form.control,
-                  name: 'username',
-                  defaultValue: 'adasdadasdas',
+                  name: "username",
+                  defaultValue: "adasdadasdas",
                 }}
               />
               <InputController
                 label="Email"
                 description="you should enter your email here"
-                inputProps={{ testId: 'email' }}
+                inputProps={{ testId: "email" }}
                 inputControll={{
                   control: form.control,
-                  name: 'email',
+                  name: "email",
                 }}
               />
 
@@ -103,20 +103,20 @@ export function SignUp() {
                 description="you should enter your password here"
                 inputControll={{
                   control: form.control,
-                  name: 'password',
+                  name: "password",
                 }}
                 inputProps={{
-                  type: isShowPass ? 'type' : 'password',
-                  testId: 'password',
-                  placeholder: 'Enter your password',
+                  type: isShowPass ? "type" : "password",
+                  testId: "password",
+                  placeholder: "Enter your password",
                   icon: {
-                    name: isShowPass ? 'EyeOff' : 'Eye',
-                    position: 'end',
-                    className: 'cursor-pointer',
+                    name: isShowPass ? "EyeOff" : "Eye",
+                    position: "end",
+                    className: "cursor-pointer",
                     onIconCLick: () => {
                       form.setValue(
-                        'isShowPass',
-                        !form.getValues('isShowPass')
+                        "isShowPass",
+                        !form.getValues("isShowPass"),
                       );
                     },
                   },
@@ -127,20 +127,20 @@ export function SignUp() {
                 description="you should enter your confirm password here"
                 inputControll={{
                   control: form.control,
-                  name: 'confirmPassword',
+                  name: "confirmPassword",
                 }}
                 inputProps={{
-                  type: isShowConfrimPass ? 'type' : 'password',
-                  testId: 'confirmPassword',
-                  placeholder: 'Enter your Confirm password',
+                  type: isShowConfrimPass ? "type" : "password",
+                  testId: "confirmPassword",
+                  placeholder: "Enter your Confirm password",
                   icon: {
-                    name: isShowConfrimPass ? 'EyeOff' : 'Eye',
-                    position: 'end',
-                    className: 'cursor-pointer',
+                    name: isShowConfrimPass ? "EyeOff" : "Eye",
+                    position: "end",
+                    className: "cursor-pointer",
                     onIconCLick: () => {
                       form.setValue(
-                        'isShowConfrimPass',
-                        !form.getValues('isShowConfrimPass')
+                        "isShowConfrimPass",
+                        !form.getValues("isShowConfrimPass"),
                       );
                     },
                   },
@@ -151,7 +151,7 @@ export function SignUp() {
                 itemClassName="rounded-md border p-4"
                 checkboxControll={{
                   control: form.control,
-                  name: 'agreement',
+                  name: "agreement",
                 }}
               />
               <Button

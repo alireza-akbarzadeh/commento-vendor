@@ -1,12 +1,14 @@
-import { useIntl } from 'react-intl';
-import { profileMessages } from '../profile-details.messages';
+import { useIntl } from "react-intl";
+import { profileMessages } from "../profile-details.messages";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
   Icon,
-} from 'components';
+  Image,
+} from "components";
+import { MacBook } from "assets";
 
 export function CustomerQuestion() {
   const { formatMessage } = useIntl();
@@ -14,14 +16,14 @@ export function CustomerQuestion() {
     <>
       <h3>{formatMessage(profileMessages.question)}</h3>
       <div className="mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-          <div className="border py-[27px] border-l-border-lighter rounded-M flex flex-col items-center justify-center">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-4">
+          <div className="flex flex-col items-center justify-center rounded-M border border-l-border-lighter py-[27px]">
             <Icon name="shield-question" size={40} />
             <div className="flex items-center gap-2">
-              <div className="relative bg-textAndIcon-lighter size-[12px] rounded-full">
-                <span className="bg-error-main size-[10px] absolute -right-1 -top-1 rounded-full" />
+              <div className="relative size-[12px] rounded-full bg-textAndIcon-lighter">
+                <span className="absolute -right-1 -top-1 size-[10px] rounded-full bg-error-main" />
               </div>
-              <p className="text-labelXLarge text-textAndIcon-darker">
+              <p className="text-textAndIcon-darker text-labelXLarge">
                 خوانده نشده
               </p>
               <span className="text-textAndIcon-light text-labelMedium">
@@ -29,13 +31,13 @@ export function CustomerQuestion() {
               </span>
             </div>
           </div>
-          <div className="border py-[27px] border-l-border-lighter rounded-M flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center rounded-M border border-l-border-lighter py-[27px]">
             <Icon name="shield-question" size={40} />
             <div className="flex items-center gap-2">
-              <div className="relative bg-textAndIcon-lighter size-[12px] rounded-full">
-                <span className="bg-error-main size-[10px] absolute -right-1 -top-1 rounded-full" />
+              <div className="relative size-[12px] rounded-full bg-textAndIcon-lighter">
+                <span className="absolute -right-1 -top-1 size-[10px] rounded-full bg-error-main" />
               </div>
-              <p className="text-labelXLarge text-textAndIcon-darker">
+              <p className="text-textAndIcon-darker text-labelXLarge">
                 پاسخ داده نشده
               </p>
               <span className="text-textAndIcon-light text-labelMedium">
@@ -43,11 +45,11 @@ export function CustomerQuestion() {
               </span>
             </div>
           </div>
-          <div className="border py-[27px] border-l-border-lighter rounded-M flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center rounded-M border border-l-border-lighter py-[27px]">
             <Icon name="shield-question" size={40} />
             <div className="flex items-center gap-2">
-              <div className="relative bg-textAndIcon-lighter size-[12px] rounded-full" />
-              <p className="text-labelXLarge text-textAndIcon-darker">
+              <div className="relative size-[12px] rounded-full bg-textAndIcon-lighter" />
+              <p className="text-textAndIcon-darker text-labelXLarge">
                 پاسخ داده نشده
               </p>
               <span className="text-textAndIcon-light text-labelMedium">
@@ -55,11 +57,11 @@ export function CustomerQuestion() {
               </span>
             </div>
           </div>
-          <div className="border py-[27px] border-l-border-lighter rounded-M flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center rounded-M border border-l-border-lighter py-[27px]">
             <Icon name="shield-question" size={40} />
             <div className="flex items-center gap-2">
-              <div className="relative bg-textAndIcon-lighter size-[12px] rounded-full" />
-              <p className="text-labelXLarge text-textAndIcon-darker">
+              <div className="relative size-[12px] rounded-full bg-textAndIcon-lighter" />
+              <p className="text-textAndIcon-darker text-labelXLarge">
                 کل پرسش ها
               </p>
               <span className="text-textAndIcon-light text-labelMedium">
@@ -82,7 +84,22 @@ export function CustomerQuestion() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                <div className="grid grid-cols-4">
+                  <div className="flex flex-col gap-3">
+                    <p className="text-textAndIcon-dark text-labelLarge">
+                      {formatMessage(profileMessages.dateAndTimeQuestion)}
+                    </p>
+                    <p className="text-textAndIcon-dark text-labelLarge">
+                      ۱۴۰۳/۰۹/۱۲-۱۸:۳۰
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <div className="px-4 py-3">
+                      <Image src={MacBook} alt="macbook" />
+                    </div>
+                    <div className="flex flex-col gap-3"></div>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

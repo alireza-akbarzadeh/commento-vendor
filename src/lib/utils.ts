@@ -1,6 +1,6 @@
-import { type ClassValue, clsx } from 'clsx';
+import { type ClassValue, clsx } from "clsx";
 
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -24,18 +24,18 @@ const countDown = ({ value, fn, delay = 1000 }: ICountDown) => {
 };
 
 const deepPick = <T, K extends keyof T>(fields: string, object: T): T[K] => {
-  const [first, ...remaining] = fields.split('.');
+  const [first, ...remaining] = fields.split(".");
   const value = object[first as keyof T];
-  if (typeof value === 'undefined') {
+  if (typeof value === "undefined") {
     throw new Error(`Property '${first}' not found in object`);
   }
   if (remaining.length === 0) {
     return value as T[K];
   }
-  if (typeof value !== 'object' || value === null) {
+  if (typeof value !== "object" || value === null) {
     throw new Error(`Invalid property '${first}'`);
   }
-  return deepPick(remaining.join('.'), value as unknown) as T[K];
+  return deepPick(remaining.join("."), value as unknown) as T[K];
 };
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);

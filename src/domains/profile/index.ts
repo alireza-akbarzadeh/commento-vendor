@@ -1,1 +1,1 @@
-export { ProfileDomains } from './profile.domains';
+export { ProfileDomains } from "./profile.domains";

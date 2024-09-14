@@ -1,4 +1,4 @@
-import { Icon } from 'components';
+import { Icon } from "components";
 
 export function WalletBalance() {
   return (

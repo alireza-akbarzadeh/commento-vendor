@@ -5,19 +5,19 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from 'components';
-import { CommentItem } from './comment-item';
+} from "components";
+import { CommentItem } from "./comment-item";
 
 export function Comment() {
   return (
     <section className="grid grid-cols-2 gap-6">
-      <div className="bg-background-lightest rounded-L p-6 flex flex-col gap-6">
+      <div className="flex flex-col gap-6 rounded-L bg-background-lightest p-6">
         <div className="flex items-center justify-between">
-          <h3 className="text-titleMedium text-textAndIcon-darker">
+          <h3 className="text-textAndIcon-darker text-titleMedium">
             دیدگاه و امتیاز کاربران (۲۳)
           </h3>
-          <div className="flex gap-2 items-center">
-            <p className="text-labelLarge text-textAndIcon-dark">
+          <div className="flex items-center gap-2">
+            <p className="text-textAndIcon-dark text-labelLarge">
               مرتب سازی بر اساس
             </p>
             <Select>
@@ -35,7 +35,7 @@ export function Comment() {
         {Array.from({ length: 3 }).map((_, index) => (
           <div
             key={index}
-            className="border border-border-lightest rounded-M p-4"
+            className="rounded-M border border-border-lightest p-4"
           >
             <CommentItem
               title="دیدگاه و امتیاز کاربران (۲۳)"
@@ -50,13 +50,13 @@ export function Comment() {
           </div>
         ))}
       </div>
-      <div className="bg-background-lightest rounded-L p-6 flex flex-col gap-6">
+      <div className="flex flex-col gap-6 rounded-L bg-background-lightest p-6">
         <div className="flex items-center justify-between">
-          <h3 className="text-titleMedium text-textAndIcon-darker">
+          <h3 className="text-textAndIcon-darker text-titleMedium">
             پرسش و پاسخ (۲۳)
           </h3>
-          <div className="flex gap-2 items-center">
-            <p className="text-labelLarge text-textAndIcon-dark">
+          <div className="flex items-center gap-2">
+            <p className="text-textAndIcon-dark text-labelLarge">
               مرتب سازی بر اساس
             </p>
             <Select>
@@ -74,7 +74,7 @@ export function Comment() {
         {Array.from({ length: 3 }).map((_, index) => (
           <div
             key={index}
-            className="border border-border-lightest rounded-M p-4"
+            className="rounded-M border border-border-lightest p-4"
           >
             <CommentItem
               title="دیدگاه و امتیاز کاربران (۲۳)"

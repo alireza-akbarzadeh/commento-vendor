@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -12,7 +12,7 @@ export function Image(props: ImageProps) {
   const {
     src,
     alt,
-    className = '',
+    className = "",
     fallbackSrc,
     placeholderSrc,
     lazy = true,
@@ -27,16 +27,16 @@ export function Image(props: ImageProps) {
         <img
           src={placeholderSrc}
           alt="loading"
-          className="absolute inset-0 w-full h-full object-cover blur-sm"
+          className="absolute inset-0 h-full w-full object-cover blur-sm"
         />
       )}
       <img
-        src={hasError ? fallbackSrc || placeholderSrc || '' : src}
+        src={hasError ? fallbackSrc || placeholderSrc || "" : src}
         alt={alt}
-        className={`object-cover transition-opacity duration-500 size-full ${
-          loaded ? 'opacity-100' : 'opacity-0'
+        className={`size-full object-cover transition-opacity duration-500 ${
+          loaded ? "opacity-100" : "opacity-0"
         }`}
-        loading={lazy ? 'lazy' : undefined}
+        loading={lazy ? "lazy" : undefined}
         onLoad={() => setLoaded(true)}
         onError={() => setHasError(true)}
         {...rest}

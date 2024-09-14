@@ -4,7 +4,7 @@ import {
   useContext,
   useMemo,
   useState,
-} from 'react';
+} from "react";
 
 // Define the shape of the user object
 interface User {
@@ -27,7 +27,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };
@@ -54,7 +54,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
       login,
       logout,
     }),
-    [user]
+    [user],
   );
 
   return (

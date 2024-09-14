@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
-import { UserITem } from '../userItem';
+import { UserITem } from "../userItem";
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -21,7 +21,7 @@ export const Primary: Story = {
   loaders: [
     async () => ({
       todo: await (
-        await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        await fetch("https://jsonplaceholder.typicode.com/todos/1")
       ).json(),
     }),
   ],

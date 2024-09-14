@@ -1,14 +1,14 @@
 export function Development(): JSX.Element {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-md py-8 px-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold mb-6 text-center">Contribute View</h2>
-        <p className="text-gray-700 text-center mb-8">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100">
+      <div className="max-w-md rounded-lg bg-white px-6 py-8 shadow-lg">
+        <h2 className="mb-6 text-center text-3xl font-bold">Contribute View</h2>
+        <p className="mb-8 text-center text-gray-700">
           This page is currently under development. Stay tuned!
         </p>
         <div className="flex justify-center">
           <img
-            className="w-64 h-64 object-cover object-center rounded-full"
+            className="h-64 w-64 rounded-full object-cover object-center"
             src="/images/under_construction.svg"
             alt="Under Construction"
           />

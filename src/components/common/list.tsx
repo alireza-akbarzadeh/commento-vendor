@@ -1,7 +1,7 @@
 // eslint-disable react/no-unknown-property
 
-import { FC } from 'react';
-import { Fragment } from 'react/jsx-runtime';
+import { FC } from "react";
+import { Fragment } from "react/jsx-runtime";
 
 interface IPersonList<T> {
   items: T[];

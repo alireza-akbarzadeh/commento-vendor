@@ -1,4 +1,4 @@
-import { SyntheticEvent } from 'react';
+import { SyntheticEvent } from "react";
 
 type TVideoState = {
   isEnd: boolean;
@@ -9,16 +9,16 @@ type TVideoState = {
 };
 
 type TProsessState =
-  | 'video-end'
-  | 'play'
-  | 'pause'
-  | 'video-last'
-  | 'video-reset';
+  | "video-end"
+  | "play"
+  | "pause"
+  | "video-last"
+  | "video-reset";
 
 type TReturnUseCarouselController = {
   handleProsess: (
     prosess: TProsessState,
-    i?: number
+    i?: number,
   ) => TVideoState | undefined;
   videoRef: React.MutableRefObject<HTMLVideoElement[]>;
   videoSpanRef: React.MutableRefObject<HTMLSpanElement[]>;
@@ -27,7 +27,7 @@ type TReturnUseCarouselController = {
   video: TVideoState;
   handleLoadedMetaData: (
     index: number,
-    event: SyntheticEvent<HTMLVideoElement, Event>
+    event: SyntheticEvent<HTMLVideoElement, Event>,
   ) => void;
 };
 

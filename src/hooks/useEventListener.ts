@@ -1,15 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import type { RefObject } from 'react';
+import type { RefObject } from "react";
 
-import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 
 // MediaQueryList Event based useEventListener interface
 function useEventListener<K extends keyof MediaQueryListEventMap>(
   eventName: K,
   handler: (event: MediaQueryListEventMap[K]) => void,
   element: RefObject<MediaQueryList>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ): void;
 
 // Window Event based useEventListener interface
@@ -17,7 +17,7 @@ function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: (event: WindowEventMap[K]) => void,
   element?: undefined,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ): void;
 
 // Element Event based useEventListener interface
@@ -28,7 +28,7 @@ function useEventListener<
   eventName: K,
   handler: (event: HTMLElementEventMap[K]) => void,
   element: RefObject<T>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ): void;
 
 // Document Event based useEventListener interface
@@ -36,7 +36,7 @@ function useEventListener<K extends keyof DocumentEventMap>(
   eventName: K,
   handler: (event: DocumentEventMap[K]) => void,
   element: RefObject<Document>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ): void;
 
 function useEventListener<
@@ -51,10 +51,10 @@ function useEventListener<
       | WindowEventMap[KW]
       | HTMLElementEventMap[KH]
       | MediaQueryListEventMap[KM]
-      | Event
+      | Event,
   ) => void,
   element?: RefObject<T>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ) {
   // Create a ref that stores handler
   const savedHandler = useRef(handler);

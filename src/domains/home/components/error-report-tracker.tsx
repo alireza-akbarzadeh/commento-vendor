@@ -1,36 +1,36 @@
-import { Button, Icon } from 'components';
+import { Button, Icon } from "components";
 
 export const ErrorReportTracker = () => {
   return (
-    <div className="col-span-4 md:col-span-2 bg-background-lightest rounded-XL p-6">
-      <div className="flex items-center  justify-between  bg-background-lighter rounded-XS p-2">
-        <div className="flex justify-between items-center gap-2">
-          <div className="relative bg-textAndIcon-lighter size-2 rounded-full">
-            <span className="bg-error-main size-1.5 absolute right-0 top-0 rounded-full" />
+    <div className="col-span-4 rounded-XL bg-background-lightest p-6 md:col-span-2">
+      <div className="flex items-center justify-between rounded-XS bg-background-lighter p-2">
+        <div className="flex items-center justify-between gap-2">
+          <div className="relative size-2 rounded-full bg-textAndIcon-lighter">
+            <span className="absolute right-0 top-0 size-1.5 rounded-full bg-error-main" />
           </div>
-          <h3 className="text-titleMedium text-textAndIcon-darker">
+          <h3 className="text-textAndIcon-darker text-titleMedium">
             آخرین خطاهای گزارش شده
           </h3>
         </div>
         <Button variant="text">نمایش همه</Button>
       </div>
       <div className="mt-6 flex flex-col gap-[20px]">
-        <div className="flex justify-between items-center">
-          <div className="flex gap-1 items-center">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
             <Icon name="Exclamation-Mark" className="text-error-main" />
-            <p className="text-labelLarge text-textAndIcon-dark">
-              لورم ایپسوم متن ساختگی با تولید{' '}
+            <p className="text-textAndIcon-dark text-labelLarge">
+              لورم ایپسوم متن ساختگی با تولید{" "}
             </p>
           </div>
           <Button variant="text">مشاهده</Button>
         </div>
       </div>
       <div className="mt-6 flex flex-col gap-[20px]">
-        <div className="flex justify-between items-center">
-          <div className="flex gap-1 items-center">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
             <Icon name="Exclamation-Mark" className="text-error-main" />
-            <p className="text-labelLarge text-textAndIcon-dark">
-              لورم ایپسوم متن ساختگی با تولید{' '}
+            <p className="text-textAndIcon-dark text-labelLarge">
+              لورم ایپسوم متن ساختگی با تولید{" "}
             </p>
           </div>
           <Button variant="text">مشاهده</Button>

@@ -1,150 +1,154 @@
-import { defineMessages } from 'react-intl';
+import { defineMessages } from "react-intl";
 
-const scope = 'Domains.storeDetailsMessages';
+const scope = "Domains.storeDetailsMessages";
 
 export const profileMessages = defineMessages({
   storeInformation: {
     id: `${scope}.storeInformation`,
-    defaultMessage: 'اطلاعات فروشگاه',
+    defaultMessage: "اطلاعات فروشگاه",
   },
   backAccount: {
     id: `${scope}.backAccount`,
-    defaultMessage: 'اطلاعات بانکی',
+    defaultMessage: "اطلاعات بانکی",
   },
   customerQuestion: {
     id: `${scope}.customerQuestion`,
-    defaultMessage: 'پرسشهای مشتریان',
+    defaultMessage: "پرسشهای مشتریان",
   },
   notification: {
     id: `${scope}.notification`,
-    defaultMessage: 'نوتیفکیشن',
+    defaultMessage: "نوتیفکیشن",
   },
   contract: {
     id: `${scope}.contract`,
-    defaultMessage: 'قرارداد',
+    defaultMessage: "قرارداد",
   },
   documentAndPapers: {
     id: `${scope}.documentAndPapers`,
-    defaultMessage: 'اسناد و مدارک',
+    defaultMessage: "اسناد و مدارک",
   },
   storeSetting: {
     id: `${scope}.storeSetting`,
-    defaultMessage: 'تنظیمات فروشگاه',
+    defaultMessage: "تنظیمات فروشگاه",
   },
   customerIssueReport: {
     id: `${scope}.customerIssueReport`,
-    defaultMessage: 'گزارش مشکلات مشتریان',
+    defaultMessage: "گزارش مشکلات مشتریان",
   },
   usersAuthority: {
     id: `${scope}.usersAuthority`,
-    defaultMessage: 'کاربران و دسترسی ها',
+    defaultMessage: "کاربران و دسترسی ها",
   },
   support: {
     id: `${scope}.support`,
-    defaultMessage: 'پشتیبانی',
+    defaultMessage: "پشتیبانی",
   },
   scoreAndVendorLevel: {
     id: `${scope}.scoreAndVendorLevel`,
-    defaultMessage: 'امتیاز و سطح فروشنده',
+    defaultMessage: "امتیاز و سطح فروشنده",
   },
   storeName: {
     id: `${scope}.storeName`,
-    defaultMessage: 'نام فروشگاه',
+    defaultMessage: "نام فروشگاه",
   },
   vendorFullName: {
     id: `${scope}.vendorFullName`,
-    defaultMessage: 'نام و نام خانوادگی مالک',
+    defaultMessage: "نام و نام خانوادگی مالک",
   },
   vendorNationalCode: {
     id: `${scope}.vendorNationalCode`,
-    defaultMessage: 'شماره ملی مالک',
+    defaultMessage: "شماره ملی مالک",
   },
   phoneNumber: {
     id: `${scope}.phoneNumber`,
-    defaultMessage: 'شماره همراه',
+    defaultMessage: "شماره همراه",
   },
   emailAddress: {
     id: `${scope}.emailAddress`,
-    defaultMessage: 'آدرس ایمیل',
+    defaultMessage: "آدرس ایمیل",
   },
   websiteAddress: {
     id: `${scope}.websiteAddress`,
-    defaultMessage: 'آدرس سایت',
+    defaultMessage: "آدرس سایت",
   },
   birthDate: {
     id: `${scope}.birthDate`,
-    defaultMessage: 'تاریخ تولد',
+    defaultMessage: "تاریخ تولد",
   },
   state: {
     id: `${scope}.state`,
-    defaultMessage: 'استان',
+    defaultMessage: "استان",
   },
   city: {
     id: `${scope}.city`,
-    defaultMessage: 'شهر',
+    defaultMessage: "شهر",
   },
   address: {
     id: `${scope}.address`,
-    defaultMessage: 'آدرس',
+    defaultMessage: "آدرس",
   },
   postalCode: {
     id: `${scope}.postalCode`,
-    defaultMessage: 'کد پستی',
+    defaultMessage: "کد پستی",
   },
   telephoneNumber: {
     id: `${scope}.telephoneNumber`,
-    defaultMessage: 'تلفن ثابت',
+    defaultMessage: "تلفن ثابت",
   },
   addressWhatsApp: {
     id: `${scope}.addressWhatsApp`,
-    defaultMessage: 'آدرس واتساپ',
+    defaultMessage: "آدرس واتساپ",
   },
   addressInstagram: {
     id: `${scope}.addressInstagram`,
-    defaultMessage: 'آدرس اینستاگرام',
+    defaultMessage: "آدرس اینستاگرام",
   },
   addressTelegram: {
     id: `${scope}.addressTelegram`,
-    defaultMessage: 'آدرس تلگرام',
+    defaultMessage: "آدرس تلگرام",
   },
   openNewAccount: {
     id: `${scope}.openNewAccount`,
-    defaultMessage: 'افزودن حساب جدید',
+    defaultMessage: "افزودن حساب جدید",
   },
   backToDefaultAccount: {
     id: `${scope}.backToDefaultAccount`,
-    defaultMessage: 'تغییر حساب پیش فرض',
+    defaultMessage: "تغییر حساب پیش فرض",
   },
   addAccount: {
     id: `${scope}.addAccount`,
-    defaultMessage: 'افزودن حساب',
+    defaultMessage: "افزودن حساب",
   },
   defaultAccount: {
     id: `${scope}.defaultAccount`,
-    defaultMessage: 'حساب پیش فرض',
+    defaultMessage: "حساب پیش فرض",
   },
   selectAccount: {
     id: `${scope}.selectAccount`,
-    defaultMessage: 'انتخاب حساب',
+    defaultMessage: "انتخاب حساب",
   },
   bank: {
     id: `${scope}.bank`,
-    defaultMessage: 'بانک',
+    defaultMessage: "بانک",
   },
   cardNumber: {
     id: `${scope}.cardNumber`,
-    defaultMessage: 'شماره شبا',
+    defaultMessage: "شماره شبا",
   },
   deleteAccount: {
     id: `${scope}.deleteAccount`,
-    defaultMessage: 'حذف حساب',
+    defaultMessage: "حذف حساب",
   },
   question: {
     id: `${scope}.question`,
-    defaultMessage: 'پرسش ها',
+    defaultMessage: "پرسش ها",
   },
   deleteAccountConfirmation: {
     id: `${scope}.deleteAccountConfirmation`,
-    defaultMessage: 'آیا از حذف حساب خود اطمینان دارید؟',
+    defaultMessage: "آیا از حذف حساب خود اطمینان دارید؟",
+  },
+  dateAndTimeQuestion: {
+    id: `${scope}.dateAndTimeQuestion`,
+    defaultMessage: "تاریخ و ساعت سوال",
   },
 });

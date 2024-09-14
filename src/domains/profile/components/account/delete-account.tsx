@@ -1,4 +1,4 @@
-import { MelatPng } from 'assets';
+import { MelatPng } from "assets";
 import {
   Button,
   Dialog,
@@ -10,10 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
   Image,
-} from 'components';
-import { profileMessages } from 'domains/profile/profile-details.messages';
-import { globalMessages } from 'i18n/global.messages';
-import { useIntl } from 'react-intl';
+} from "components";
+import { profileMessages } from "domains/profile/profile-details.messages";
+import { globalMessages } from "i18n/global.messages";
+import { useIntl } from "react-intl";
 
 export function DeleteAccount() {
   const { formatMessage } = useIntl();
@@ -25,7 +25,7 @@ export function DeleteAccount() {
             icon="Trash"
             iconPosition="left"
             variant="text"
-            className="w-auto rounded-M  h-[56px] bg-background-lighter text-primary-main"
+            className="h-[56px] w-auto rounded-M bg-background-lighter text-primary-main"
           >
             {formatMessage(profileMessages.deleteAccount)}
           </Button>
@@ -35,7 +35,7 @@ export function DeleteAccount() {
             <DialogTitle>
               {formatMessage(profileMessages.deleteAccount)}
             </DialogTitle>
-            <DialogDescription className="py-8 text-bodylarge text-textAndIcon-darker">
+            <DialogDescription className="py-8 text-textAndIcon-darker text-bodylarge">
               {formatMessage(profileMessages.deleteAccountConfirmation)}
             </DialogDescription>
           </DialogHeader>
@@ -51,7 +51,7 @@ export function DeleteAccount() {
             </p>
           </div>
 
-          <DialogFooter className="flex gap-4 mt-6">
+          <DialogFooter className="mt-6 flex gap-4">
             <DialogClose asChild>
               <Button fullWidth variant="outline">
                 {formatMessage(globalMessages.cancel)}

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   Card,
   CardContent,
@@ -6,32 +6,32 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from 'components/ui/card/card';
+} from "components/ui/card/card";
 
-import { Button } from '../button/button';
+import { Button } from "../button/button";
 
 const meta: Meta<typeof Card> = {
-  title: 'Ui/Card',
-  tags: ['autodocs'],
+  title: "Ui/Card",
+  tags: ["autodocs"],
   component: Card,
   args: {
-    children: 'Card',
+    children: "Card",
   },
   argTypes: {},
 };
 
 const notifications = [
   {
-    title: 'Your call has been confirmed.',
-    description: '1 hour ago',
+    title: "Your call has been confirmed.",
+    description: "1 hour ago",
   },
   {
-    title: 'You have a new message!',
-    description: '1 hour ago',
+    title: "You have a new message!",
+    description: "1 hour ago",
   },
   {
-    title: 'Your subscription is expiring soon!',
-    description: '2 hours ago',
+    title: "Your subscription is expiring soon!",
+    description: "2 hours ago",
   },
 ];
 
@@ -46,12 +46,12 @@ export const Default: Story = {
           <CardDescription>You have 3 unread messages.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
-          <div className=" flex items-center space-x-4 rounded-md border p-4">
+          <div className="flex items-center space-x-4 rounded-md border p-4">
             <div className="flex-1 space-y-1">
               <p className="text-sm font-medium leading-none">
                 Push Notifications
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Send notifications to device.
               </p>
             </div>
@@ -67,7 +67,7 @@ export const Default: Story = {
                   <p className="text-sm font-medium leading-none">
                     {notification.title}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     {notification.description}
                   </p>
                 </div>

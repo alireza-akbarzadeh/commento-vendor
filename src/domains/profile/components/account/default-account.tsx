@@ -1,4 +1,4 @@
-import { MelatPng } from 'assets';
+import { MelatPng } from "assets";
 import {
   Button,
   Checkbox,
@@ -10,10 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
   Image,
-} from 'components';
-import { profileMessages } from 'domains/profile/profile-details.messages';
-import { globalMessages } from 'i18n/global.messages';
-import { useIntl } from 'react-intl';
+} from "components";
+import { profileMessages } from "domains/profile/profile-details.messages";
+import { globalMessages } from "i18n/global.messages";
+import { useIntl } from "react-intl";
 
 export function DefaultAccount() {
   const { formatMessage } = useIntl();
@@ -25,7 +25,7 @@ export function DefaultAccount() {
             icon="Edit"
             iconPosition="left"
             variant="text"
-            className="w-auto rounded-M  h-[56px] bg-background-lighter text-primary-main"
+            className="h-[56px] w-auto rounded-M bg-background-lighter text-primary-main"
           >
             {formatMessage(profileMessages.backToDefaultAccount)}
           </Button>
@@ -68,11 +68,11 @@ export function DefaultAccount() {
             icon="Plus-Square"
             iconPosition="left"
             variant="text"
-            className="w-[196px] rounded-M  h-[56px]"
+            className="h-[56px] w-[196px] rounded-M"
           >
             {formatMessage(profileMessages.openNewAccount)}
           </Button>
-          <DialogFooter className="flex gap-4 mt-6">
+          <DialogFooter className="mt-6 flex gap-4">
             <DialogClose asChild>
               <Button fullWidth variant="outline">
                 {formatMessage(globalMessages.cancel)}

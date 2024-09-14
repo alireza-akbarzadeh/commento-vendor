@@ -1,4 +1,4 @@
 export {
   type StoreInformationFormData,
   storeInfoSchema,
-} from './store-information';
+} from "./store-information";

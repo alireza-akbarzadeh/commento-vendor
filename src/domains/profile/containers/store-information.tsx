@@ -1,13 +1,13 @@
-import { Button, Form, Image, InputController } from 'components';
-import { globalMessages } from 'i18n/global.messages';
-import { useIntl } from 'react-intl';
-import { profileMessages } from '../profile-details.messages';
+import { Button, Form, Image, InputController } from "components";
+import { globalMessages } from "i18n/global.messages";
+import { useIntl } from "react-intl";
+import { profileMessages } from "../profile-details.messages";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, useWatch } from 'react-hook-form';
-import { StoreInformationFormData, storeInfoSchema } from 'schemas';
-import { MapPng } from 'assets';
-import { ReadStoreInformation } from '../components';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, useWatch } from "react-hook-form";
+import { StoreInformationFormData, storeInfoSchema } from "schemas";
+import { MapPng } from "assets";
+import { ReadStoreInformation } from "../components";
 
 export function StoreInformation() {
   const { formatMessage } = useIntl();
@@ -15,7 +15,7 @@ export function StoreInformation() {
   const form = useForm<StoreInformationFormData>({
     resolver: zodResolver(storeInfoSchema),
     defaultValues: {
-      mode: 'read',
+      mode: "read",
     },
   });
   const onSubmit = (formValuse: StoreInformationFormData) => {
@@ -28,38 +28,38 @@ export function StoreInformation() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex items-center justify-between">
-          <h3 className="text-titleLarge text-textAndIcon-dark">
+          <h3 className="text-textAndIcon-dark text-titleLarge">
             {formatMessage(profileMessages.storeInformation)}
           </h3>
           <Button
-            type={mode === 'edit' ? 'submit' : 'button'}
+            type={mode === "edit" ? "submit" : "button"}
             onClick={() => {
-              if (mode === 'read') {
-                form.setValue('mode', 'edit');
+              if (mode === "read") {
+                form.setValue("mode", "edit");
               }
             }}
             className="w-[154px]"
-            variant={mode === 'read' ? 'outline' : 'primary'}
-            {...(mode === 'read' ? { icon: 'Edit' } : null)}
-            {...(mode === 'read' ? { iconPosition: 'left' } : null)}
+            variant={mode === "read" ? "outline" : "primary"}
+            {...(mode === "read" ? { icon: "Edit" } : null)}
+            {...(mode === "read" ? { iconPosition: "left" } : null)}
           >
             {formatMessage(
-              mode === 'read'
+              mode === "read"
                 ? globalMessages.editInformation
-                : globalMessages.submitChanges
+                : globalMessages.submitChanges,
             )}
           </Button>
         </div>
-        {mode === 'read' ? (
+        {mode === "read" ? (
           <ReadStoreInformation />
         ) : (
-          <div className="grid grid-cols-4 gap-y-8  md:grid-cols-8 lg:grid-cols-12 gap-x-3 mt-8">
+          <div className="mt-8 grid grid-cols-4 gap-x-3 gap-y-8 md:grid-cols-8 lg:grid-cols-12">
             <div className="col-span-4">
               <InputController
                 label={formatMessage(profileMessages.storeName)}
                 inputControll={{
                   control: form.control,
-                  name: 'storeName',
+                  name: "storeName",
                   rules: { required: true },
                 }}
               />
@@ -69,7 +69,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.vendorFullName)}
                 inputControll={{
                   control: form.control,
-                  name: 'vendorFullName',
+                  name: "vendorFullName",
                   rules: { required: true },
                 }}
               />
@@ -79,7 +79,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.vendorNationalCode)}
                 inputControll={{
                   control: form.control,
-                  name: 'nationalCode',
+                  name: "nationalCode",
                   rules: { required: true },
                 }}
               />
@@ -89,7 +89,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.phoneNumber)}
                 inputControll={{
                   control: form.control,
-                  name: 'phoneNumber',
+                  name: "phoneNumber",
                   rules: { required: true },
                 }}
               />
@@ -99,7 +99,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.emailAddress)}
                 inputControll={{
                   control: form.control,
-                  name: 'email',
+                  name: "email",
                   rules: { required: true },
                 }}
               />
@@ -109,7 +109,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.websiteAddress)}
                 inputControll={{
                   control: form.control,
-                  name: 'website',
+                  name: "website",
                   rules: { required: true },
                 }}
               />
@@ -119,7 +119,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.birthDate)}
                 inputControll={{
                   control: form.control,
-                  name: 'birthDate',
+                  name: "birthDate",
                   rules: { required: true },
                 }}
               />
@@ -129,7 +129,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.city)}
                 inputControll={{
                   control: form.control,
-                  name: 'city',
+                  name: "city",
                   rules: { required: true },
                 }}
               />
@@ -139,7 +139,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.state)}
                 inputControll={{
                   control: form.control,
-                  name: 'state',
+                  name: "state",
                   rules: { required: true },
                 }}
               />
@@ -149,7 +149,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.address)}
                 inputControll={{
                   control: form.control,
-                  name: 'address',
+                  name: "address",
                   rules: { required: true },
                 }}
               />
@@ -158,7 +158,7 @@ export function StoreInformation() {
                   label={formatMessage(profileMessages.postalCode)}
                   inputControll={{
                     control: form.control,
-                    name: 'postalCode',
+                    name: "postalCode",
                     rules: { required: true },
                   }}
                 />
@@ -166,21 +166,21 @@ export function StoreInformation() {
                   label={formatMessage(profileMessages.telephoneNumber)}
                   inputControll={{
                     control: form.control,
-                    name: 'tellphoneNumber',
+                    name: "tellphoneNumber",
                     rules: { required: true },
                   }}
                 />
               </div>
             </div>
             <div className="col-span-4">
-              <Image className=" w-full h-auto" src={MapPng} alt="map" />
+              <Image className="h-auto w-full" src={MapPng} alt="map" />
             </div>
             <div className="col-span-4">
               <InputController
                 label={formatMessage(profileMessages.addressWhatsApp)}
                 inputControll={{
                   control: form.control,
-                  name: 'whatsAppAddress',
+                  name: "whatsAppAddress",
                   rules: { required: true },
                 }}
               />
@@ -190,7 +190,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.addressTelegram)}
                 inputControll={{
                   control: form.control,
-                  name: 'telegramAddress',
+                  name: "telegramAddress",
                   rules: { required: true },
                 }}
               />
@@ -200,7 +200,7 @@ export function StoreInformation() {
                 label={formatMessage(profileMessages.addressInstagram)}
                 inputControll={{
                   control: form.control,
-                  name: 'instaGramAddress',
+                  name: "instaGramAddress",
                   rules: { required: true },
                 }}
               />

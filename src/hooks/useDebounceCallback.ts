@@ -1,6 +1,6 @@
-import { useUnmount } from 'hooks';
-import debounce from 'lodash.debounce';
-import { useEffect, useMemo, useRef } from 'react';
+import { useUnmount } from "hooks";
+import debounce from "lodash.debounce";
+import { useEffect, useMemo, useRef } from "react";
 
 type DebounceOptions = {
   loading?: boolean;
@@ -22,7 +22,7 @@ export type DebounceState<T extends (...args: any) => ReturnType<T>> = ((
 export function useDebounceCallback<T extends (...args: any) => ReturnType<T>>(
   func: T,
   delay: number = 500,
-  options?: DebounceOptions
+  options?: DebounceOptions,
 ): DebounceState<T> {
   const debouncedFunc = useRef<ReturnType<typeof debounce>>();
 

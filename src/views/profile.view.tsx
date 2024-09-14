@@ -1,4 +1,4 @@
-import { ProfileDomains } from 'domains';
+import { ProfileDomains } from "domains";
 
 function ProfileView() {
   return <ProfileDomains />;

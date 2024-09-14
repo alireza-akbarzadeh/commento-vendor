@@ -5,10 +5,10 @@ import {
   useQuery,
   UseQueryOptions,
   UseQueryResult,
-} from '@tanstack/react-query';
-import { Loading } from 'containers';
-import { ReactNode } from 'react';
-import { Code } from './code';
+} from "@tanstack/react-query";
+import { Loading } from "containers";
+import { ReactNode } from "react";
+import { Code } from "./code";
 
 interface QueryComponentsProps<
   TData = unknown,
@@ -18,7 +18,7 @@ interface QueryComponentsProps<
 > {
   onSuccess?: (
     data: TData,
-    queryResult: UseQueryResult<TData, TError>
+    queryResult: UseQueryResult<TData, TError>,
   ) => ReactNode;
   onError?: (error: TError) => ReactNode;
   options: UseQueryOptions<TQueryFnData, TError, TData, TQueryKey>; // Adjusted the order of types

@@ -9,11 +9,11 @@ import {
   DialogTitle,
   DialogTrigger,
   Input,
-} from 'components';
-import { useIntl } from 'react-intl';
+} from "components";
+import { useIntl } from "react-intl";
 
-import { globalMessages } from 'i18n/global.messages';
-import { profileMessages } from 'domains/profile/profile-details.messages';
+import { globalMessages } from "i18n/global.messages";
+import { profileMessages } from "domains/profile/profile-details.messages";
 
 export function OpenNewAccount() {
   const { formatMessage } = useIntl();
@@ -24,7 +24,7 @@ export function OpenNewAccount() {
           <Button
             icon="Plus-Square"
             iconPosition="left"
-            className="w-[196px] rounded-M  h-[56px]"
+            className="h-[56px] w-[196px] rounded-M"
           >
             {formatMessage(profileMessages.openNewAccount)}
           </Button>
@@ -34,12 +34,12 @@ export function OpenNewAccount() {
             <DialogTitle>
               {formatMessage(profileMessages.openNewAccount)}
             </DialogTitle>
-            <DialogDescription className="text-textAndIcon-darker pt-6">
+            <DialogDescription className="pt-6 text-textAndIcon-darker">
               شماره شبا باید متعلق به کدملی که با آن ثبت نام شده باشد.
             </DialogDescription>
           </DialogHeader>
           <Input label="شماره شبا *" />
-          <DialogFooter className="flex gap-4 mt-6">
+          <DialogFooter className="mt-6 flex gap-4">
             <DialogClose asChild>
               <Button fullWidth variant="outline">
                 {formatMessage(globalMessages.cancel)}

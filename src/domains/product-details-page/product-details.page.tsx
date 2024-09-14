@@ -1,6 +1,6 @@
-import { Comment, SimilarProduct } from './components';
-import { SellerProduct } from './components/seller-product';
-import { ProductInfo } from './product-info';
+import { Comment, SimilarProduct } from "./components";
+import { SellerProduct } from "./components/seller-product";
+import { ProductInfo } from "./product-info";
 
 export function ProductDetailsPageDomain() {
   return (

@@ -1,5 +1,5 @@
-import { Image } from 'components';
-import { Banner2Png, BannerPng } from 'assets';
+import { Image } from "components";
+import { Banner2Png, BannerPng } from "assets";
 
 export function Banner() {
   return (

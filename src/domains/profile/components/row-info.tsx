@@ -1,18 +1,18 @@
-import { useIntl } from 'react-intl';
-import { profileMessages } from '../profile-details.messages';
-import { Icon, IconProps } from 'components';
+import { useIntl } from "react-intl";
+import { profileMessages } from "../profile-details.messages";
+import { Icon, IconProps } from "components";
 
 type RowInfoProps = {
   title?: keyof typeof profileMessages;
   value: string;
-  icon?: IconProps['name'];
+  icon?: IconProps["name"];
 };
 
 export function RowInfo(props: RowInfoProps) {
   const { title, value, icon } = props;
   const { formatMessage } = useIntl();
   return (
-    <div className="flex gap-3 basis-1/3">
+    <div className="flex basis-1/3 gap-3">
       {icon ? (
         <Icon name={icon} className="text-textAndIcon-light" />
       ) : (

@@ -1,10 +1,10 @@
-import { Slot } from '@radix-ui/react-slot';
-import { type VariantProps } from 'class-variance-authority';
-import { cn } from 'lib/utils';
-import * as React from 'react';
-import { buttonVariants } from './button-variant';
-import { Spin } from '../spin';
-import { Icon, IconProps, IconSize } from '../icon/icon';
+import { Slot } from "@radix-ui/react-slot";
+import { type VariantProps } from "class-variance-authority";
+import { cn } from "lib/utils";
+import * as React from "react";
+import { buttonVariants } from "./button-variant";
+import { Spin } from "../spin";
+import { Icon, IconProps, IconSize } from "../icon/icon";
 
 export interface ButtonPropsBase
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -12,13 +12,13 @@ export interface ButtonPropsBase
   asChild?: boolean;
   loading?: boolean;
   roundedFull?: boolean;
-  iconPosition?: 'left' | 'right';
+  iconPosition?: "left" | "right";
   iconSize?: IconSize | number;
 }
 
 export type ButtonProps =
-  | (ButtonPropsBase & { iconOnly?: false; icon?: IconProps['name'] })
-  | (ButtonPropsBase & { iconOnly: true; icon: IconProps['name'] });
+  | (ButtonPropsBase & { iconOnly?: false; icon?: IconProps["name"] })
+  | (ButtonPropsBase & { iconOnly: true; icon: IconProps["name"] });
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -35,17 +35,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       iconOnly,
       icon,
       iconSize,
-      iconPosition = 'right',
+      iconPosition = "right",
       ...props
     },
-    ref
+    ref,
   ) => {
-    const Comp = asChild ? Slot : 'button';
+    const Comp = asChild ? Slot : "button";
 
     const renderIcon = () =>
       icon && (
         <Icon
-          className={iconPosition === 'left' ? 'ml-2' : 'mr-2'}
+          className={iconPosition === "left" ? "ml-2" : "mr-2"}
           size={iconSize}
           name={icon}
         />
@@ -57,9 +57,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           renderIcon()
         ) : (
           <>
-            {iconPosition === 'left' && renderIcon()}
+            {iconPosition === "left" && renderIcon()}
             {loading ? <Spin size="18px" variant="light" /> : children}
-            {iconPosition === 'right' && renderIcon()}
+            {iconPosition === "right" && renderIcon()}
           </>
         )}
       </>
@@ -69,7 +69,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         disabled={loading || disabled}
         className={cn(
-          buttonVariants({ variant, size, fullWidth, roundedFull, className })
+          buttonVariants({ variant, size, fullWidth, roundedFull, className }),
         )}
         ref={ref}
         {...props}
@@ -77,7 +77,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {buttonContent}
       </Comp>
     );
-  }
+  },
 );
 
-Button.displayName = 'Button';
+Button.displayName = "Button";

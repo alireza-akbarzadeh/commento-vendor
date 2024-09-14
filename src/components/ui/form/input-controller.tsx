@@ -5,9 +5,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from 'components/ui/form/form';
-import { Input, InputProps } from 'components/ui/form/input';
-import { ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
+} from "components/ui/form/form";
+import { Input, InputProps } from "components/ui/form/input";
+import { ControllerProps, FieldPath, FieldValues } from "react-hook-form";
 
 interface InputControllerProps<
   TFieldValues extends FieldValues = FieldValues,
@@ -15,7 +15,7 @@ interface InputControllerProps<
 > {
   label: string;
   description?: string;
-  inputControll: Omit<ControllerProps<TFieldValues, TName>, 'render'>;
+  inputControll: Omit<ControllerProps<TFieldValues, TName>, "render">;
   inputProps?: InputProps;
 
   //   render?: (field: ControllerRenderProps<FieldValues, TName>) => ReactNode;
@@ -34,9 +34,9 @@ export function InputController<
           <FormControl>
             <Input
               label={
-                <FormLabel className="text-bodySmall text-textAndIcon-dark">
+                <FormLabel className="text-textAndIcon-dark text-bodySmall">
                   {label}
-                  {inputControll.rules?.required ? ' *' : ''}
+                  {inputControll.rules?.required ? " *" : ""}
                 </FormLabel>
               }
               {...field}

@@ -1,7 +1,0 @@
-node_modules
-
-vitest.config.ts
-tailwind.config.ts
-reset.d.ts
-
-commitlint.config.js

@@ -1,5 +1,5 @@
-import { ROUTE_NAME } from 'constant';
-import { Navigate, Outlet } from 'react-router-dom';
+import { ROUTE_NAME } from "constant";
+import { Navigate, Outlet } from "react-router-dom";
 
 type TProtectedRoute = {
   isPublic: boolean;

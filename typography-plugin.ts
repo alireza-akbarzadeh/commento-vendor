@@ -1,5 +1,5 @@
-import plugin from 'tailwindcss/plugin';
-import { CSSRuleObject } from 'tailwindcss/types/config';
+import plugin from "tailwindcss/plugin";
+import { CSSRuleObject } from "tailwindcss/types/config";
 
 interface TypographyStyle {
   fontSize: string;
@@ -10,9 +10,9 @@ interface TypographyStyle {
 
 const typographyPlugin = plugin(({ addUtilities, theme }) => {
   const newUtilities: Record<string, TypographyStyle> = {};
-  const typography = theme('typography') as Record<
+  const typography = theme("typography") as Record<
     string,
-    [string, Omit<TypographyStyle, 'fontSize'>]
+    [string, Omit<TypographyStyle, "fontSize">]
   >;
 
   Object.entries(typography).forEach(([key, value]) => {

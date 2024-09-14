@@ -1,10 +1,10 @@
-import IcoMoon from 'react-icomoon';
+import IcoMoon from "react-icomoon";
 
-import { iconNames, IconType } from './icon-names';
-import iconSet from './selection.json';
-import { cn } from 'lib/utils';
+import { iconNames, IconType } from "./icon-names";
+import iconSet from "./selection.json";
+import { cn } from "lib/utils";
 
-type IconSize = 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+type IconSize = "xxSmall" | "xSmall" | "small" | "medium" | "large" | "xLarge";
 
 type IconProps = {
   size?: IconSize | number;
@@ -28,7 +28,7 @@ export const sizes: Record<IconSize, number> = {
 const Icon = (props: IconProps): JSX.Element => {
   const {
     name,
-    size = 'medium',
+    size = "medium",
     onClick,
     disabled = false,
     parentClassName,
@@ -43,9 +43,9 @@ const Icon = (props: IconProps): JSX.Element => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         iconSet={iconSet as any}
         icon={name}
-        size={typeof size !== 'number' ? sizes[size] : size}
+        size={typeof size !== "number" ? sizes[size] : size}
         style={{
-          cursor: disabled ? 'not-allowed !important' : 'pointer',
+          cursor: disabled ? "not-allowed !important" : "pointer",
           ...style,
         }}
         onClick={(event) => {

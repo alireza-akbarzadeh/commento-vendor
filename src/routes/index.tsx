@@ -1,18 +1,18 @@
 /* eslint-disable react-refresh/only-export-components */
-import { DashboardLayout, ErrorBoundray, RootLayout } from 'containers';
-import { lazy } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { DashboardLayout, ErrorBoundray, RootLayout } from "containers";
+import { lazy } from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-const HomeView = lazy(() => import('views/home.view'));
-const ReportsView = lazy(() => import('views/reports.view'));
-const ProfileView = lazy(() => import('views/profile.view'));
+const HomeView = lazy(() => import("views/home.view"));
+const ReportsView = lazy(() => import("views/reports.view"));
+const ProfileView = lazy(() => import("views/profile.view"));
 const ProductDetailsPage = lazy(
-  () => import('views/product-details-page.view')
+  () => import("views/product-details-page.view"),
 );
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <RootLayout />,
     errorElement: <ErrorBoundray />,
     children: [
@@ -21,27 +21,27 @@ export const router = createBrowserRouter([
         element: <HomeView />,
       },
       {
-        path: 'reports',
+        path: "reports",
         element: <ReportsView />,
       },
       {
-        path: 'profile',
+        path: "profile",
         element: <ProfileView />,
       },
       {
-        path: 'product-details-page',
+        path: "product-details-page",
         element: <ProductDetailsPage />,
       },
     ],
   },
   {
-    path: '/dashboard',
+    path: "/dashboard",
     element: <DashboardLayout />,
     errorElement: <ErrorBoundray />,
     children: [
       {
         index: true,
-        path: 'patterns',
+        path: "patterns",
         element: <div>dashboard</div>,
       },
     ],
