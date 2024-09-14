@@ -22,6 +22,16 @@ export {
   DialogPortal,
 } from "./dialog";
 
+export {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "./pagination";
+
 export { Badge, type BadgeProps, badgeVariants } from "./badge";
 export {
   BreadcrumbItem,

@@ -151,4 +151,8 @@ export const profileMessages = defineMessages({
     id: `${scope}.dateAndTimeQuestion`,
     defaultMessage: "تاریخ و ساعت سوال",
   },
+  notifications: {
+    id: `${scope}.notifications`,
+    defaultMessage: "نوتیفکیشن ها",
+  },
 });
