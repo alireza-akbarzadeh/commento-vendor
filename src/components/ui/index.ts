@@ -22,17 +22,13 @@ export {
   DialogPortal,
 } from "./dialog";
 
-export {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "./pagination";
+export * from "./pagination";
+export * from "./dropdown-menu";
 
 export { Badge, type BadgeProps, badgeVariants } from "./badge";
+
+export * from "./data-table";
+
 export {
   BreadcrumbItem,
   Breadcrumb,
@@ -42,6 +38,8 @@ export {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "./breadcrumb";
+
+export * from "./table";
 
 export {
   Card,

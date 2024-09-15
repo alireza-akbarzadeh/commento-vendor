@@ -27,4 +27,8 @@ export const globalMessages = defineMessages({
     id: `${scope}.confirm`,
     defaultMessage: "تایید",
   },
+  status: {
+    id: `${scope}.status`,
+    defaultMessage: "وضعیت",
+  },
 });

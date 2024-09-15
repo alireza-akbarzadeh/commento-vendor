@@ -69,10 +69,25 @@ const PaginationPrevious = ({
     className={cn("gap-1 rounded-full border border-border-lighter", className)}
     {...props}
   >
-    <Icon name="double-chevron" className="rotate-180" />
+    <Icon name="left-arrow-2" className="rotate-180" />
   </PaginationLink>
 );
 PaginationPrevious.displayName = "PaginationPrevious";
+
+const PaginationEnd = ({
+  className,
+  ...props
+}: React.ComponentProps<typeof PaginationLink>) => (
+  <PaginationLink
+    aria-label="Go to previous page"
+    size="medium"
+    className={cn("gap-1 rounded-full border border-border-lighter", className)}
+    {...props}
+  >
+    <Icon name="double-chevron" />
+  </PaginationLink>
+);
+PaginationEnd.displayName = "PaginationEnd";
 
 const PaginationNext = ({
   className,
@@ -87,10 +102,28 @@ const PaginationNext = ({
     )}
     {...props}
   >
-    <Icon name="double-chevron" />
+    <Icon name="left-arrow-2" />
   </PaginationLink>
 );
 PaginationNext.displayName = "PaginationNext";
+
+const PaginationStart = ({
+  className,
+  ...props
+}: React.ComponentProps<typeof PaginationLink>) => (
+  <PaginationLink
+    aria-label="Go to next page"
+    size="medium"
+    className={cn(
+      "size-6 gap-1 rounded-full border border-border-lighter",
+      className,
+    )}
+    {...props}
+  >
+    <Icon name="double-chevron" className="rotate-180" />
+  </PaginationLink>
+);
+PaginationStart.displayName = "PaginationStart";
 
 const PaginationEllipsis = ({
   className,
@@ -115,4 +148,6 @@ export {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationStart,
+  PaginationEnd,
 };

@@ -1,10 +1,12 @@
 import {
   Pagination,
   PaginationContent,
+  PaginationEnd,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationStart,
   Select,
   SelectContent,
   SelectGroup,
@@ -48,6 +50,9 @@ export function Notification() {
       <Pagination className="mt-6 flex justify-end">
         <PaginationContent>
           <PaginationItem>
+            <PaginationStart href="#" />
+          </PaginationItem>
+          <PaginationItem>
             <PaginationPrevious href="#" />
           </PaginationItem>
           <PaginationItem>
@@ -63,6 +68,9 @@ export function Notification() {
           </PaginationItem>
           <PaginationItem>
             <PaginationNext href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationEnd />
           </PaginationItem>
         </PaginationContent>
       </Pagination>

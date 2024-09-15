@@ -151,8 +151,40 @@ export const profileMessages = defineMessages({
     id: `${scope}.dateAndTimeQuestion`,
     defaultMessage: "تاریخ و ساعت سوال",
   },
+  currentcontract: {
+    id: `${scope}.currentcontract`,
+    defaultMessage: "قرارداد جاری",
+  },
+  contractNumber: {
+    id: `${scope}.contractNumber`,
+    defaultMessage: "شماره قرارداد",
+  },
+  contractSubject: {
+    id: `${scope}.contractSubject`,
+    defaultMessage: "موضوع قرارداد",
+  },
+  startContract: {
+    id: `${scope}.startContract`,
+    defaultMessage: "شروع قرارداد",
+  },
+  endContract: {
+    id: `${scope}.endContract`,
+    defaultMessage: "پایان قرارداد",
+  },
+  acceptable: {
+    id: `${scope}.acceptable`,
+    defaultMessage: "پذیرفته شده",
+  },
+  downloadContract: {
+    id: `${scope}.downloadContract`,
+    defaultMessage: "دانلود قرارداد",
+  },
   notifications: {
     id: `${scope}.notifications`,
-    defaultMessage: "نوتیفکیشن ها",
+    defaultMessage: "اطلاعیه ها",
+  },
+  contractHistory: {
+    id: `${scope}.contractHistory`,
+    defaultMessage: "تاریخچه قرارداد‌ها",
   },
 });
