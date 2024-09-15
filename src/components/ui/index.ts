@@ -5,7 +5,7 @@ export {
   AccordionContent,
   AccordionTrigger,
 } from "./accordion";
-export { Popover, PopoverContent, PopoverTrigger } from "./popover";
+
 export { Alert, AlertDescription, AlertTitle } from "./alert";
 export { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 export * from "./form";

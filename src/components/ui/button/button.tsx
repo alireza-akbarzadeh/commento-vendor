@@ -45,7 +45,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const renderIcon = () =>
       icon && (
         <Icon
-          className={iconPosition === "left" ? "ml-2" : "mr-2"}
+          className={iconPosition === "left" ? "mr-2" : "ml-2"}
           size={iconSize}
           name={icon}
         />
@@ -57,9 +57,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           renderIcon()
         ) : (
           <>
-            {iconPosition === "left" && renderIcon()}
-            {loading ? <Spin size="18px" variant="light" /> : children}
             {iconPosition === "right" && renderIcon()}
+            {loading ? <Spin size="18px" variant="light" /> : children}
+            {iconPosition === "left" && renderIcon()}
           </>
         )}
       </>

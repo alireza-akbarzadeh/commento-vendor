@@ -2,7 +2,6 @@ import { ColumnDef } from "@tanstack/react-table";
 import {
   Button,
   Checkbox,
-  DataTable,
   DataTableColumnHeader,
   DropdownMenu,
   DropdownMenuContent,
@@ -10,9 +9,9 @@ import {
   DropdownMenuTrigger,
   Icon,
 } from "components";
+import { DataTable } from "components/ui/data-table/data-table";
 import { useIntl } from "react-intl";
 import { profileMessages } from "../profile-details.messages";
-import { format } from "path";
 
 export function ContractTable() {
   const { formatMessage } = useIntl();
@@ -20,21 +19,22 @@ export function ContractTable() {
   type Contract = {
     id: string;
     contractNumber: number;
-    status: "pending" | "processing" | "success" | "failed";
+    status: "pending" | "processing" | "success" | "failed" | "completed";
     contractSubject: string;
     StartDate: string;
     endDate: string;
     downloadContract: string;
   };
+
   const contract: Contract[] = [
     {
       id: "16872673817263",
       contractNumber: 123456789,
       status: "pending",
-      contractSubject: "Contract Subject",
+      contractSubject: "Web Development Agreement",
       StartDate: "2023-06-15",
-      endDate: "2023-06-1",
-      downloadContract: "https://example.com/contract.pdf",
+      endDate: "2024-06-15",
+      downloadContract: "https://example.com/contract_123456789.pdf",
     },
     {
       id: "16872673817264",
@@ -45,43 +45,133 @@ export function ContractTable() {
       endDate: "2024-06-30",
       downloadContract: "https://example.com/contract_123456790.pdf",
     },
-    // ... (continue with 58 more entries)
     {
-      id: "16872673817323",
-      contractNumber: 123456849,
+      id: "16872673817265",
+      contractNumber: 123456791,
       status: "success",
-      contractSubject: "Maintenance Service Agreement",
-      StartDate: "2023-12-01",
-      endDate: "2024-11-30",
-      downloadContract: "https://example.com/contract_123456849.pdf",
+      contractSubject: "Consulting Services Agreement",
+      StartDate: "2023-07-20",
+      endDate: "2023-12-31",
+      downloadContract: "https://example.com/contract_123456791.pdf",
     },
     {
-      id: "168723123673817323",
-      contractNumber: 123456849,
-      status: "success",
-      contractSubject: "Maintenance Service Agreement",
-      StartDate: "2023-12-01",
-      endDate: "2024-11-30",
-      downloadContract: "https://example.com/contract_123456849.pdf",
+      id: "16872673817266",
+      contractNumber: 123456792,
+      status: "pending",
+      contractSubject: "Non-Disclosure Agreement",
+      StartDate: "2023-08-01",
+      endDate: "2024-07-31",
+      downloadContract: "https://example.com/contract_123456792.pdf",
     },
     {
-      id: "16872671233817323",
-      contractNumber: 123456849,
-      status: "success",
-      contractSubject: "Maintenance Service Agreement",
-      StartDate: "2023-12-01",
-      endDate: "2024-11-30",
-      downloadContract: "https://example.com/contract_123456849.pdf",
+      id: "16872673817267",
+      contractNumber: 123456793,
+      status: "failed",
+      contractSubject: "Partnership Agreement",
+      StartDate: "2023-09-15",
+      endDate: "2024-09-15",
+      downloadContract: "https://example.com/contract_123456793.pdf",
     },
     {
-      id: "16872671233817323",
-      contractNumber: 123456849,
+      id: "16872673817268",
+      contractNumber: 123456794,
+      status: "completed",
+      contractSubject: "Employment Contract",
+      StartDate: "2023-10-01",
+      endDate: "2024-09-30",
+      downloadContract: "https://example.com/contract_123456794.pdf",
+    },
+    {
+      id: "16872673817269",
+      contractNumber: 123456795,
+      status: "pending",
+      contractSubject: "Freelance Agreement",
+      StartDate: "2023-11-01",
+      endDate: "2024-10-31",
+      downloadContract: "https://example.com/contract_123456795.pdf",
+    },
+    {
+      id: "16872673817270",
+      contractNumber: 123456796,
       status: "success",
-      contractSubject: "Maintenance Service Agreement",
+      contractSubject: "Lease Agreement",
+      StartDate: "2023-12-01",
+      endDate: "2025-11-30",
+      downloadContract: "https://example.com/contract_123456796.pdf",
+    },
+    {
+      id: "16872673817271",
+      contractNumber: 123456797,
+      status: "processing",
+      contractSubject: "Supply Contract",
+      StartDate: "2024-01-01",
+      endDate: "2024-12-31",
+      downloadContract: "https://example.com/contract_123456797.pdf",
+    },
+    {
+      id: "16872673817272",
+      contractNumber: 123456798,
+      status: "completed",
+      contractSubject: "Maintenance Agreement",
+      StartDate: "2023-06-01",
+      endDate: "2024-05-31",
+      downloadContract: "https://example.com/contract_123456798.pdf",
+    },
+    {
+      id: "16872673817273",
+      contractNumber: 123456799,
+      status: "failed",
+      contractSubject: "Joint Venture Agreement",
+      StartDate: "2023-07-01",
+      endDate: "2024-06-30",
+      downloadContract: "https://example.com/contract_123456799.pdf",
+    },
+    {
+      id: "16872673817274",
+      contractNumber: 123456800,
+      status: "success",
+      contractSubject: "Service Level Agreement",
+      StartDate: "2023-08-15",
+      endDate: "2024-08-14",
+      downloadContract: "https://example.com/contract_123456800.pdf",
+    },
+    {
+      id: "16872673817275",
+      contractNumber: 123456801,
+      status: "pending",
+      contractSubject: "Subcontractor Agreement",
+      StartDate: "2023-09-01",
+      endDate: "2024-08-31",
+      downloadContract: "https://example.com/contract_123456801.pdf",
+    },
+    {
+      id: "16872673817276",
+      contractNumber: 123456802,
+      status: "processing",
+      contractSubject: "Partnership Agreement",
+      StartDate: "2023-10-01",
+      endDate: "2024-09-30",
+      downloadContract: "https://example.com/contract_123456802.pdf",
+    },
+    {
+      id: "16872673817277",
+      contractNumber: 123456803,
+      status: "success",
+      contractSubject: "Consultancy Agreement",
+      StartDate: "2023-11-01",
+      endDate: "2024-10-31",
+      downloadContract: "https://example.com/contract_123456803.pdf",
+    },
+    {
+      id: "16872673817278",
+      contractNumber: 123456804,
+      status: "processing",
+      contractSubject: "Vendor Agreement",
       StartDate: "2023-12-01",
       endDate: "2024-11-30",
-      downloadContract: "https://example.com/contract_123456849.pdf",
+      downloadContract: "https://example.com/contract_123456804.pdf",
     },
+    // Continue similarly for more entries...
   ];
 
   const columns: ColumnDef<Contract>[] = [
@@ -193,6 +283,7 @@ export function ContractTable() {
       },
     },
   ];
+
   return (
     <>
       <h3 className="mt-6 pb-5 text-textAndIcon-darker text-titleLarge">

@@ -1,9 +1,4 @@
 import {
-  Button,
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
   Input,
   Table,
   TableBody,
@@ -33,12 +28,13 @@ import { DataTableViewOptions } from "./table-view-options";
 export interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  columnControl?: boolean;
+  hasSearch?: boolean;
+  hasPaginate?: boolean;
 }
 
-export function DataTable<TData, TValue>({
-  columns,
-  data,
-}: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>(props: DataTableProps<TData, TValue>) {
+  const { columns, data, columnControl, hasPaginate, hasSearch } = props;
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     [],
@@ -69,20 +65,26 @@ export function DataTable<TData, TValue>({
   return (
     <>
       <div className="flex items-center justify-between py-4">
-        <div className="w-[280px]">
-          <Input
-            fullWidth
-            placeholder="جستوجو کنید"
-            value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
-            onChange={(event) =>
-              table.getColumn("email")?.setFilterValue(event.target.value)
-            }
-            className="max-w-sm"
-          />
-        </div>
-        <div className="flex items-center space-x-2">
-          <DataTableViewOptions table={table} />
-        </div>
+        {hasSearch && (
+          <div className="w-[280px]">
+            <Input
+              fullWidth
+              placeholder="جستوجو کنید"
+              value={
+                (table.getColumn("email")?.getFilterValue() as string) ?? ""
+              }
+              onChange={(event) =>
+                table.getColumn("email")?.setFilterValue(event.target.value)
+              }
+              className="max-w-sm"
+            />
+          </div>
+        )}
+        {columnControl && (
+          <div className="flex items-center space-x-2">
+            <DataTableViewOptions table={table} />
+          </div>
+        )}
       </div>
       <div className="rounded-md border">
         <Table>
@@ -134,7 +136,13 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
       </div>
-      <DataTablePagination table={table} />
+      {hasPaginate && <DataTablePagination table={table} />}
     </>
   );
 }
+
+// Wrap the DataTable function in forwardRef
+export const ForwardedDataTable = React.forwardRef(DataTable);
+
+// Set display name for easier debugging
+ForwardedDataTable.displayName = "DataTable";

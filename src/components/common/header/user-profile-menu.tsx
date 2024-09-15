@@ -1,8 +1,10 @@
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
   Icon,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
   ProfileImg,
 } from "components";
 import { ROUTE_NAME } from "constant";
@@ -14,29 +16,28 @@ export function UserProfileMenu() {
   return (
     <div className="flex gap-2">
       <ProfileImg src="https://github.com/shadcn.png" />
-      <Popover>
-        <PopoverTrigger>
+      <DropdownMenu>
+        <DropdownMenuTrigger>
           <div className="flex items-center gap-2">
             <p className="text-labelMedium">دیجی لند</p>
             <Icon name="down-arrow-1" />
           </div>
-        </PopoverTrigger>
-        <PopoverContent>
-          <ul className="space-y-2 divide-y">
-            <li
-              onClick={() => navigate(ROUTE_NAME.UserProfile)}
-              className="flex cursor-pointer items-center gap-2"
-            >
-              <Icon name="account" />
-              <p>علیرضا</p>
-            </li>
-            <li className="flex items-center gap-2 pt-1.5">
-              <Icon name="Logout" />
-              <p>خروج</p>
-            </li>
-          </ul>
-        </PopoverContent>
-      </Popover>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-[150px]">
+          <DropdownMenuItem
+            onClick={() => navigate(ROUTE_NAME.UserProfile)}
+            className="flex cursor-pointer items-center gap-2"
+          >
+            <Icon name="account" />
+            <p>علیرضا</p>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="flex items-center gap-2 pt-1.5">
+            <Icon name="Logout" />
+            <p>خروج</p>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

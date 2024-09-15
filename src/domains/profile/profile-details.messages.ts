@@ -187,4 +187,12 @@ export const profileMessages = defineMessages({
     id: `${scope}.contractHistory`,
     defaultMessage: "تاریخچه قرارداد‌ها",
   },
+  addDocument: {
+    id: `${scope}.addDocument`,
+    defaultMessage: "افزودن مدرک جدید",
+  },
+  deleteDocument: {
+    id: `${scope}.deleteDocument`,
+    defaultMessage: "حذف مدرک",
+  },
 });

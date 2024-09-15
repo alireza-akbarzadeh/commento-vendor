@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap py-4 px-4 rounded-xl text-labelLarge  transition-colors disabled:cursor-not-allowed",
+  "inline-flex items-center justify-center whitespace-nowrap py-4 px-4 w-auto rounded-xl text-labelLarge  transition-colors disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
@@ -21,9 +21,9 @@ export const buttonVariants = cva(
         info: "bg-sky-500/100 text-primary-foreground hover:bg-sky-600",
       },
       size: {
-        big: "h-14 w-[125px]",
-        medium: "h-12 w-[125px]",
-        small: "h-10 w-[125px]",
+        big: "h-14",
+        medium: "h-12",
+        small: "h-10",
       },
 
       fullWidth: {

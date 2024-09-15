@@ -14,6 +14,7 @@ export function StoreInformation() {
 
   const form = useForm<StoreInformationFormData>({
     resolver: zodResolver(storeInfoSchema),
+    mode: "all",
     defaultValues: {
       mode: "read",
     },
@@ -41,7 +42,6 @@ export function StoreInformation() {
             className="w-[154px]"
             variant={mode === "read" ? "outline" : "primary"}
             {...(mode === "read" ? { icon: "Edit" } : null)}
-            {...(mode === "read" ? { iconPosition: "left" } : null)}
           >
             {formatMessage(
               mode === "read"
@@ -153,7 +153,7 @@ export function StoreInformation() {
                   rules: { required: true },
                 }}
               />
-              <div className="grid grid-cols-2 gap-3">
+              <div className="mt-5 grid grid-cols-2 gap-3">
                 <InputController
                   label={formatMessage(profileMessages.postalCode)}
                   inputControll={{

@@ -23,7 +23,6 @@ export function DefaultAccount() {
         <DialogTrigger asChild>
           <Button
             icon="Edit"
-            iconPosition="left"
             variant="text"
             className="h-[56px] w-auto rounded-M bg-background-lighter text-primary-main"
           >
@@ -66,7 +65,6 @@ export function DefaultAccount() {
           </div>
           <Button
             icon="Plus-Square"
-            iconPosition="left"
             variant="text"
             className="h-[56px] w-[196px] rounded-M"
           >

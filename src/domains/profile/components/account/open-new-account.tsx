@@ -21,11 +21,7 @@ export function OpenNewAccount() {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            icon="Plus-Square"
-            iconPosition="left"
-            className="h-[56px] w-[196px] rounded-M"
-          >
+          <Button icon="Plus-Square" className="h-[56px] w-[196px] rounded-M">
             {formatMessage(profileMessages.openNewAccount)}
           </Button>
         </DialogTrigger>

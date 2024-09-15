@@ -43,12 +43,7 @@ export function CardContract() {
         <p className="text-textAndIcon-darker text-labelLarge">۱۴۰۲/۱۲/۲۹</p>
       </div>
       <div className="text-left">
-        <Button
-          icon="download-1"
-          iconPosition="left"
-          variant="outline"
-          className="w-[152px]"
-        >
+        <Button icon="download-1" variant="outline" className="w-[152px]">
           {formatMessage(profileMessages.downloadContract)}
         </Button>
       </div>

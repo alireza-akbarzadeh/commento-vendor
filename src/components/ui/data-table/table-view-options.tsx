@@ -12,11 +12,15 @@ import { Icon } from "../icon/icon";
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;
+  columnControl?: boolean;
+  hasSearch?: boolean;
+  hasPaginate?: boolean;
 }
 
-export function DataTableViewOptions<TData>({
-  table,
-}: DataTableViewOptionsProps<TData>) {
+export function DataTableViewOptions<TData>(
+  props: DataTableViewOptionsProps<TData>,
+) {
+  const { table } = props;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,7 +33,7 @@ export function DataTableViewOptions<TData>({
           <p className="">نمایش</p>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-full">
+      <DropdownMenuContent align="end" className="w-[250px]">
         <DropdownMenuLabel className="text-right">
           نمایش ستون ها
         </DropdownMenuLabel>

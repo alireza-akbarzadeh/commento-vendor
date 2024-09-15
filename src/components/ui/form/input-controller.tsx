@@ -34,7 +34,7 @@ export function InputController<
           <FormControl>
             <Input
               label={
-                <FormLabel className="text-textAndIcon-dark text-bodySmall">
+                <FormLabel className="text-textAndIcon-dark text-bodyMedium">
                   {label}
                   {inputControll.rules?.required ? " *" : ""}
                 </FormLabel>

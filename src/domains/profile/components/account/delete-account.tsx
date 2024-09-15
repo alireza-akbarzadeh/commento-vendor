@@ -23,7 +23,6 @@ export function DeleteAccount() {
         <DialogTrigger asChild>
           <Button
             icon="Trash"
-            iconPosition="left"
             variant="text"
             className="h-[56px] w-auto rounded-M bg-background-lighter text-primary-main"
           >

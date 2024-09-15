@@ -31,4 +31,16 @@ export const globalMessages = defineMessages({
     id: `${scope}.status`,
     defaultMessage: "وضعیت",
   },
+  approved: {
+    id: `${scope}.approved`,
+    defaultMessage: "تایید شده",
+  },
+  rejected: {
+    id: `${scope}.rejected`,
+    defaultMessage: "رد شده",
+  },
+  inProgress: {
+    id: `${scope}.inProgress`,
+    defaultMessage: "در انتظار تایید",
+  },
 });

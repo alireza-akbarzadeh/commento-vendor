@@ -4,7 +4,6 @@ import { profileMessages } from "../profile-details.messages";
 
 export function Contract() {
   const { formatMessage } = useIntl();
-
   return (
     <div>
       <h3 className="text-textAndIcon-darker text-titleLarge">

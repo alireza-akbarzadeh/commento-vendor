@@ -60,48 +60,42 @@ export function DataTableColumnHeader<TData, TValue>({
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
-          <DropdownMenuItem
-            className="justify-end"
-            onClick={() => column.toggleSorting(false)}
-          >
-            <span className="text-textAndIcon-light text-labelMedium">
-              {formatMessage(tableMessages.asc)}
-            </span>
+          <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
             <Icon
               size="small"
               name="up-arrow"
               className="text-muted-foreground/70 mr-2 h-3.5 w-3.5"
             />
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            className="justify-end"
-            onClick={() => column.toggleSorting(true)}
-          >
             <span className="text-textAndIcon-light text-labelMedium">
-              {formatMessage(tableMessages.Desc)}
+              {formatMessage(tableMessages.asc)}
             </span>
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
             <Icon
               size="small"
               name="down-arrow"
               className="text-muted-foreground/70 mr-2 h-3.5 w-3.5"
             />
+            <span className="text-textAndIcon-light text-labelMedium">
+              {formatMessage(tableMessages.Desc)}
+            </span>
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="justify-end space-x-2"
+            className="space-x-2"
             onClick={() => column.toggleVisibility(false)}
           >
-            <span className="text-textAndIcon-light text-labelMedium">
-              {formatMessage(tableMessages.hide)}
-            </span>
             <Icon
               size="xSmall"
               name="eye"
               className="text-muted-foreground/70 mr-2 h-3.5 w-3.5"
             />
+            <span className="text-textAndIcon-light text-labelMedium">
+              {formatMessage(tableMessages.hide)}
+            </span>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
-            className="justify-end space-x-2"
+            className="space-x-2"
             onClick={() => column.clearSorting()}
           >
             <span className="text-textAndIcon-light text-labelMedium">
