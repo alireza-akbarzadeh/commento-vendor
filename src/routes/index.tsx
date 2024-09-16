@@ -15,7 +15,6 @@ export const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorBoundary />,
-    loader: () => [{ id: "213", name: "title" }],
     children: [
       {
         index: true,
