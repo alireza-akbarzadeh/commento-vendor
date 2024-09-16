@@ -1,5 +1,4 @@
 import {
-  Input,
   Table,
   TableBody,
   TableCell,
@@ -9,7 +8,6 @@ import {
 } from "components";
 
 import {
-  ColumnDef,
   ColumnFiltersState,
   flexRender,
   getCoreRowModel,
@@ -21,19 +19,15 @@ import {
   VisibilityState,
 } from "@tanstack/react-table";
 
-import React from "react";
+import React, { ForwardedRef } from "react";
 import { DataTablePagination } from "./table-pagination";
-import { DataTableViewOptions } from "./table-view-options";
+import { TableToolbar } from "./table-toolbar";
+import { DataTableProps, TableRef } from "./table.types";
 
-export interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[];
-  data: TData[];
-  columnControl?: boolean;
-  hasSearch?: boolean;
-  hasPaginate?: boolean;
-}
-
-export function DataTable<TData, TValue>(props: DataTableProps<TData, TValue>) {
+function ForwardedDataTable<TData, TValue>(
+  props: DataTableProps<TData, TValue>,
+  ref: ForwardedRef<TableRef<TData>>,
+) {
   const { columns, data, columnControl, hasPaginate, hasSearch } = props;
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -62,30 +56,16 @@ export function DataTable<TData, TValue>(props: DataTableProps<TData, TValue>) {
     },
   });
 
+  React.useImperativeHandle(ref, () => ({
+    table,
+  }));
   return (
     <>
-      <div className="flex items-center justify-between py-4">
-        {hasSearch && (
-          <div className="w-[280px]">
-            <Input
-              fullWidth
-              placeholder="جستوجو کنید"
-              value={
-                (table.getColumn("email")?.getFilterValue() as string) ?? ""
-              }
-              onChange={(event) =>
-                table.getColumn("email")?.setFilterValue(event.target.value)
-              }
-              className="max-w-sm"
-            />
-          </div>
-        )}
-        {columnControl && (
-          <div className="flex items-center space-x-2">
-            <DataTableViewOptions table={table} />
-          </div>
-        )}
-      </div>
+      <TableToolbar
+        table={table}
+        hasSearch={hasSearch}
+        columnControl={columnControl}
+      />
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -141,8 +121,11 @@ export function DataTable<TData, TValue>(props: DataTableProps<TData, TValue>) {
   );
 }
 
-// Wrap the DataTable function in forwardRef
-export const ForwardedDataTable = React.forwardRef(DataTable);
-
-// Set display name for easier debugging
-ForwardedDataTable.displayName = "DataTable";
+export const DataTable = React.forwardRef(ForwardedDataTable) as <
+  TData,
+  TValue = undefined,
+>(
+  props: DataTableProps<TData, TValue> & {
+    ref?: ForwardedRef<TableRef<TData>>;
+  },
+) => ReturnType<typeof ForwardedDataTable>;

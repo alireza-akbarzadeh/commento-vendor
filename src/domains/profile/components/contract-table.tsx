@@ -9,9 +9,11 @@ import {
   DropdownMenuTrigger,
   Icon,
 } from "components";
-import { DataTable } from "components/ui/data-table/data-table";
+import { DataTable } from "components/ui/data-table";
+import { useRef } from "react";
 import { useIntl } from "react-intl";
 import { profileMessages } from "../profile-details.messages";
+import { TableRef } from "components/ui/data-table/table.types";
 
 export function ContractTable() {
   const { formatMessage } = useIntl();
@@ -171,7 +173,6 @@ export function ContractTable() {
       endDate: "2024-11-30",
       downloadContract: "https://example.com/contract_123456804.pdf",
     },
-    // Continue similarly for more entries...
   ];
 
   const columns: ColumnDef<Contract>[] = [
@@ -283,13 +284,15 @@ export function ContractTable() {
       },
     },
   ];
+  const tableRef = useRef<TableRef<Contract>>(null);
+  console.log(tableRef.current?.table.nextPage);
 
   return (
     <>
       <h3 className="mt-6 pb-5 text-textAndIcon-darker text-titleLarge">
         {formatMessage(profileMessages.contractHistory)}
       </h3>
-      <DataTable columns={columns} data={contract} />
+      <DataTable ref={tableRef} columns={columns} data={contract} />
     </>
   );
 }
