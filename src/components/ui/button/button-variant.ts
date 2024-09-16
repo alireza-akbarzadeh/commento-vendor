@@ -17,7 +17,8 @@ export const buttonVariants = cva(
         text: "bg-transparent text-primary-main focus:ring-2 focus:ring-primary-light focus:ring-offset-1 disabled:opacity-60 disabled:text-textAndIcon-light",
         error:
           "bg-error-light text-destructive-f oreground hover:bg-destructive/90",
-        outline: "border border-primary-main bg-background hover:bg-accent ",
+        outline:
+          "border-primary-main border-[2.5px] bg-background hover:bg-accent ",
         info: "bg-sky-500/100 text-primary-foreground hover:bg-sky-600",
       },
       size: {

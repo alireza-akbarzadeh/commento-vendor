@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { DashboardLayout, ErrorBoundray, RootLayout } from "containers";
+import { DashboardLayout, ErrorBoundary, RootLayout } from "containers";
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -14,7 +14,8 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <ErrorBoundray />,
+    errorElement: <ErrorBoundary />,
+    loader: () => [{ id: "213", name: "title" }],
     children: [
       {
         index: true,
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <DashboardLayout />,
-    errorElement: <ErrorBoundray />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,
