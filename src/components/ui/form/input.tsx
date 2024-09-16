@@ -74,7 +74,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
         <Label
           htmlFor={props.id}
-          className={`pointer-events-none absolute right-2 top-3 bg-white px-2 text-textAndIcon-dark transition duration-200 ease-in-out text-bodyMedium ${labelClassName}`}
+          className={`pointer-events-none absolute right-2 top-3 bg-white px-2 font-thin text-textAndIcon-dark transition duration-200 ease-in-out text-bodySmall ${labelClassName}`}
           style={labelStyles}
         >
           {label}

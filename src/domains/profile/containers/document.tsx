@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { profileMessages } from "../profile-details.messages";
 import { globalMessages } from "i18n/global.messages";
 import { MacBook } from "assets";
+import { AddDocument } from "../components/add-document";
 
 export function Document() {
   const { formatMessage } = useIntl();
@@ -22,9 +23,7 @@ export function Document() {
               {formatMessage(globalMessages.approved)}
             </Badge>
           </div>
-          <Button icon="Trash" fullWidth variant="outline" size="medium">
-            {formatMessage(profileMessages.deleteDocument)}
-          </Button>
+          <AddDocument />
         </div>
         <div className="flex flex-col gap-y-3 rounded-XL border border-border-lighter p-6">
           <Image src={MacBook} alt="macbook" className="h-[124px] w-full" />
@@ -34,9 +33,7 @@ export function Document() {
               {formatMessage(globalMessages.rejected)}
             </Badge>
           </div>
-          <Button icon="Trash" fullWidth variant="outline" size="medium">
-            {formatMessage(profileMessages.deleteDocument)}
-          </Button>
+          <AddDocument />
         </div>
         <div className="flex flex-col gap-y-3 rounded-XL border border-border-lighter p-6">
           <Image src={MacBook} alt="macbook" className="h-[124px] w-full" />
@@ -46,9 +43,7 @@ export function Document() {
               {formatMessage(globalMessages.inProgress)}
             </Badge>
           </div>
-          <Button icon="Trash" fullWidth variant="outline" size="medium">
-            {formatMessage(profileMessages.deleteDocument)}
-          </Button>
+          <AddDocument />
         </div>
       </div>
     </div>

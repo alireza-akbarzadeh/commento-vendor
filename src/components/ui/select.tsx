@@ -2,6 +2,7 @@ import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Icon } from "components";
 import { cn } from "lib/utils";
+import { Label } from "./form/label";
 
 const Select = SelectPrimitive.Root;
 
@@ -9,21 +10,30 @@ const SelectGroup = SelectPrimitive.Group;
 
 const SelectValue = SelectPrimitive.Value;
 
+type SelectTriggerProps = React.ComponentPropsWithoutRef<
+  typeof SelectPrimitive.Trigger
+> & {
+  label: string;
+};
+
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
+  SelectTriggerProps
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "border-input focus:ring-ring flex h-10 w-full flex-row-reverse items-center justify-between rounded-md border bg-background-lightest px-3 py-2 ring-offset-background-lightest text-labelLarge placeholder:text-primary-main focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "focus:ring-ring relative flex h-10 w-full flex-row-reverse items-center justify-between rounded-S border border-border-light bg-background-lightest px-3 py-2 ring-offset-background-lightest text-labelLarge placeholder:text-primary-main focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className,
     )}
     {...props}
   >
+    <div className="absolute right-2 top-0 -translate-y-3 bg-background-lightest px-2">
+      <Label>{props.label}</Label>
+    </div>
     {children}
     <SelectPrimitive.Icon asChild>
-      <Icon name="down-arrow-1" className="h-4 w-4" />
+      <Icon name="down-arrow-1" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -115,18 +125,17 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "focus:text-accent-foreground data-[disabled] :opacity-50 relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-info-lighter data-[disabled]:pointer-events-none",
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 outline-none text-bodyMedium focus:bg-info-lighter focus:text-textAndIcon-darker data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className,
     )}
     {...props}
   >
-    <span className="absolute right-2 flex h-3.5 w-3.5 items-center justify-center">
+    <div className="flex items-center gap-2">
       <SelectPrimitive.ItemIndicator>
-        <Icon name="Checked" className="h-4 w-4" />
+        <Icon name="ApproveTick" />
       </SelectPrimitive.ItemIndicator>
-    </span>
-
-    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+      <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+    </div>
   </SelectPrimitive.Item>
 ));
 SelectItem.displayName = SelectPrimitive.Item.displayName;

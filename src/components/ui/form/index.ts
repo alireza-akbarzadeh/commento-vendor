@@ -11,3 +11,5 @@ export {
   FormMessage,
   useFormField,
 } from "./form";
+
+export { DatePickerController } from "./date-picker-controller";

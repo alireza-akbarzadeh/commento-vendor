@@ -20,7 +20,7 @@ export function TopProducts() {
             {formatMessage(homeMessages.topProduct)}
           </h3>
           <Select>
-            <SelectTrigger className="h-[48px] rounded-2xl">
+            <SelectTrigger className="h-[48px] rounded-2xl" label="نوع نمایش">
               <SelectValue placeholder="نوع نمایش" />
             </SelectTrigger>
             <SelectContent dir="rtl">
@@ -32,7 +32,7 @@ export function TopProducts() {
             </SelectContent>
           </Select>
           <Select>
-            <SelectTrigger className="h-[48px] rounded-2xl">
+            <SelectTrigger className="h-[48px] rounded-2xl" label="زمان">
               <SelectValue placeholder="زمان" />
             </SelectTrigger>
             <SelectContent dir="rtl">
@@ -42,7 +42,7 @@ export function TopProducts() {
             </SelectContent>
           </Select>
           <Select>
-            <SelectTrigger className="h-[48px] rounded-2xl">
+            <SelectTrigger className="h-[48px] rounded-2xl" label="دسته بندی">
               <SelectValue placeholder="دسته بندی" />
             </SelectTrigger>
             <SelectContent dir="rtl">
