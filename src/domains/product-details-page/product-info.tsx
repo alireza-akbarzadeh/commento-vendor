@@ -1,13 +1,22 @@
-import { Button, Icon } from "components";
-import { PageDirection } from "./components";
-import { CURRENCY } from "constant";
-import { FormattedNumber } from "react-intl";
+import { Button, Icon, PageDirection } from "components";
+
+import { CURRENCY, ROUTE_NAME } from "constant";
+import { FormattedNumber, useIntl } from "react-intl";
 import { ProductSummary } from "./components/product-summary";
+import { pdpMessages } from "./pdp.messages";
 
 export function ProductInfo() {
+  const { formatMessage } = useIntl();
   return (
     <div className="mt-6 rounded-S bg-background-lightest p-6">
-      <PageDirection />
+      <PageDirection
+        directions={[
+          {
+            title: formatMessage(pdpMessages.productList),
+            link: ROUTE_NAME.Products,
+          },
+        ]}
+      />
       <div className="mt-6 flex items-center justify-between">
         <div className="flex items-center gap-1">
           <Icon name="right-arrow" size="xLarge" />

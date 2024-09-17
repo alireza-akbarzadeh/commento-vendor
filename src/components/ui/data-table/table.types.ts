@@ -9,6 +9,7 @@ interface DataTableProps<TData, TValue> {
   columnControl?: boolean;
   hasSearch?: boolean;
   hasPaginate?: boolean;
+  navigate?: { url: string; accessorKey: string };
 }
 
 export type { DataTableProps, TableRef };

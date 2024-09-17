@@ -6,7 +6,7 @@ import { StoreChart } from "./store-chart";
 export function StorPerformance() {
   const { formatMessage } = useIntl();
   return (
-    <div className="col-span-10 rounded-XL bg-background-lightest p-6 md:col-span-3">
+    <div className="col-span-12 rounded-XL bg-background-lightest p-6 md:col-span-3">
       <div className="flex justify-between">
         <h4 className="text-textAndIcon-darker text-titleMedium">
           {formatMessage(homeMessages.storePerformance)}

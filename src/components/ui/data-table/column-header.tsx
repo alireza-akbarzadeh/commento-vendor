@@ -53,7 +53,7 @@ export function DataTableColumnHeader<TData, TValue>({
               <Icon
                 name="Filters"
                 className="ml-1 text-textAndIcon-light"
-                size="xSmall"
+                size="xxSmall"
               />
             )}
             <span>{title}</span>
@@ -95,17 +95,17 @@ export function DataTableColumnHeader<TData, TValue>({
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
-            className="space-x-2"
+            className="flex items-center"
             onClick={() => column.clearSorting()}
           >
-            <span className="text-textAndIcon-light text-labelMedium">
-              {formatMessage(tableMessages.removeFilter)}
-            </span>
             <Icon
               size="xSmall"
               name="No-Filter"
               className="text-muted-foreground/70 mr-2 h-3.5 w-3.5"
             />
+            <span className="pt-1 text-textAndIcon-light text-labelMedium">
+              {formatMessage(tableMessages.removeFilter)}
+            </span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

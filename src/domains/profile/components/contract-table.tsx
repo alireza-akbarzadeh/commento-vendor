@@ -1,5 +1,6 @@
 import { ColumnDef } from "@tanstack/react-table";
 import {
+  Badge,
   Button,
   Checkbox,
   DataTableColumnHeader,
@@ -242,6 +243,7 @@ export function ContractTable() {
           title={formatMessage(profileMessages.state)}
         />
       ),
+      cell: (props) => <Badge>{props.row.getValue("status")}</Badge>,
     },
     {
       accessorKey: "contractSubject",
@@ -285,7 +287,6 @@ export function ContractTable() {
     },
   ];
   const tableRef = useRef<TableRef<Contract>>(null);
-  console.log(tableRef.current?.table.nextPage);
 
   return (
     <>

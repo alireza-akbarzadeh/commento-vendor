@@ -3,6 +3,14 @@ import { defineMessages } from "react-intl";
 const scope = "Domains.globalMessages";
 
 export const globalMessages = defineMessages({
+  dashboard: {
+    id: `${scope}.dashboard`,
+    defaultMessage: "داشبورد",
+  },
+  vendorDashboard: {
+    id: `${scope}.vendorDashboard`,
+    defaultMessage: "داشبورد فروشنده",
+  },
   viewAll: {
     id: `${scope}.viewAll`,
     defaultMessage: "نمایش همه",
@@ -42,5 +50,13 @@ export const globalMessages = defineMessages({
   inProgress: {
     id: `${scope}.inProgress`,
     defaultMessage: "در انتظار تایید",
+  },
+  hasnt: {
+    id: `${scope}.hasnt`,
+    defaultMessage: "ندارد",
+  },
+  has: {
+    id: `${scope}.has`,
+    defaultMessage: "دارد",
   },
 });

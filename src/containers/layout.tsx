@@ -11,7 +11,7 @@ export function RootLayout() {
         <Loading />
       }
     >
-      <div className="bg-background-lighter px-[72px] py-10 font-vazirmatn-semibold antialiased">
+      <div className="bg-background-lighter px-2 py-10 font-vazirmatn-semibold antialiased lg:px-[72px]">
         <div className="rounded-S border border-border-lightest bg-background-lightest">
           <Header />
           <Navbar />

@@ -3,4 +3,5 @@ export const ROUTE_NAME = {
   Home: "/",
   PDP: "/product-details-page",
   Login: "/login",
+  Products: "/products",
 };

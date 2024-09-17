@@ -5,6 +5,8 @@ import { DayPicker } from "react-day-picker";
 import { buttonVariants } from "./button";
 import { Icon } from "components";
 import { faIR } from "date-fns-jalali/locale";
+import { format } from "date-fns-jalali";
+import { FORMAT } from "constant";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -18,6 +20,7 @@ function Calendar({
     <DayPicker
       showOutsideDays={showOutsideDays}
       locale={faIR}
+      dir="rlt"
       className={cn("p-3", className)}
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
@@ -25,6 +28,7 @@ function Calendar({
         caption: "flex justify-center pt-1 relative items-center",
         caption_label: "text-sm font-medium",
         nav: "space-x-1 flex items-center",
+        caption_dropdowns: "flex",
         nav_button: cn(
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
@@ -57,6 +61,19 @@ function Calendar({
       components={{
         IconLeft: ({ ...props }) => <Icon name="left-arrow-2" {...props} />,
         IconRight: ({ ...props }) => <Icon name="right-arrow-3" {...props} />,
+
+        CaptionLabel: (props) => (
+          <div className="flex items-center gap-2">
+            <p className="pt-1 text-textAndIcon-darker text-labelMedium">
+              {new Intl.NumberFormat("fa-IR", { useGrouping: false }).format(
+                Number(format(new Date(), FORMAT.YEAR)),
+              )}
+            </p>
+            <p className="text-textAndIcon-darker text-labelMedium">
+              {format(props.displayMonth, FORMAT.MONTH)}
+            </p>
+          </div>
+        ),
       }}
       {...props}
     />

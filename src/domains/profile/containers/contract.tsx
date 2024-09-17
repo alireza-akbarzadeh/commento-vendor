@@ -6,7 +6,7 @@ export function Contract() {
   const { formatMessage } = useIntl();
   return (
     <div>
-      <h3 className="text-textAndIcon-darker text-titleLarge">
+      <h3 className="mt-4 text-textAndIcon-darker text-titleLarge md:mt-0">
         {formatMessage(profileMessages.currentcontract)}
       </h3>
       <div className="mt-8 grid grid-cols-1 items-center gap-5 md:grid-cols-2">

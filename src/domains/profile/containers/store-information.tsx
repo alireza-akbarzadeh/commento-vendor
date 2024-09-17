@@ -28,7 +28,7 @@ export function StoreInformation() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="flex items-center justify-between">
+        <div className="mt-6 flex items-center justify-between md:mt-0">
           <h3 className="text-textAndIcon-dark text-titleLarge">
             {formatMessage(profileMessages.storeInformation)}
           </h3>
@@ -53,8 +53,8 @@ export function StoreInformation() {
         {mode === "read" ? (
           <ReadStoreInformation />
         ) : (
-          <div className="mt-8 grid grid-cols-4 gap-x-3 gap-y-8 md:grid-cols-8 lg:grid-cols-12">
-            <div className="col-span-4">
+          <div className="mt-8 grid grid-cols-4 gap-x-3 gap-y-4 md:grid-cols-8 md:gap-y-8 lg:grid-cols-12">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.storeName)}
                 inputControll={{
@@ -64,7 +64,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.vendorFullName)}
                 inputControll={{
@@ -74,7 +74,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.vendorNationalCode)}
                 inputControll={{
@@ -84,7 +84,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.phoneNumber)}
                 inputControll={{
@@ -94,7 +94,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.emailAddress)}
                 inputControll={{
@@ -104,7 +104,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.websiteAddress)}
                 inputControll={{
@@ -114,7 +114,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.birthDate)}
                 inputControll={{
@@ -124,7 +124,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.city)}
                 inputControll={{
@@ -134,7 +134,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.state)}
                 inputControll={{
@@ -144,7 +144,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-8">
+            <div className="col-span-12 md:col-span-8">
               <InputController
                 label={formatMessage(profileMessages.address)}
                 inputControll={{
@@ -153,7 +153,7 @@ export function StoreInformation() {
                   rules: { required: true },
                 }}
               />
-              <div className="mt-5 grid grid-cols-2 gap-3">
+              <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2">
                 <InputController
                   label={formatMessage(profileMessages.postalCode)}
                   inputControll={{
@@ -172,10 +172,10 @@ export function StoreInformation() {
                 />
               </div>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <Image className="h-auto w-full" src={MapPng} alt="map" />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.addressWhatsApp)}
                 inputControll={{
@@ -185,7 +185,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.addressTelegram)}
                 inputControll={{
@@ -195,7 +195,7 @@ export function StoreInformation() {
                 }}
               />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 md:col-span-4">
               <InputController
                 label={formatMessage(profileMessages.addressInstagram)}
                 inputControll={{

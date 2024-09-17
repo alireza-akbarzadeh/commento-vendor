@@ -3,7 +3,7 @@ import { Checkbox } from "components/ui/form";
 
 export function StorSurvey() {
   return (
-    <div className="col-span-10 rounded-XL bg-background-lightest p-6 md:col-span-6">
+    <div className="col-span-12 rounded-XL bg-background-lightest p-6 md:col-span-6">
       <div className="flex items-center justify-between">
         <h4 className="text-border-darker text-titleMedium">نظر سنجی</h4>
         <div className="flex items-center justify-between gap-4">

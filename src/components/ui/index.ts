@@ -23,6 +23,7 @@ export {
 } from "./dialog";
 
 export * from "./pagination";
+export * from "./carousel";
 export * from "./dropdown-menu";
 
 export { Badge, type BadgeProps, badgeVariants } from "./badge";

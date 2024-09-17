@@ -1,5 +1,4 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MacBook, uploadSvg } from "assets";
 import {
   Button,
   DatePickerController,
@@ -12,8 +11,6 @@ import {
   DialogTitle,
   DialogTrigger,
   Form,
-  Icon,
-  Image,
   Select,
   SelectContent,
   SelectGroup,
@@ -21,11 +18,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "components";
+
 import { globalMessages } from "i18n/global.messages";
 import { useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 import { z } from "zod";
 import { profileMessages } from "../profile-details.messages";
+import { UploadImage } from "./upload-image";
 
 const FormSchema = z.object({
   dob: z.date({
@@ -83,44 +82,7 @@ export const AddDocument = () => {
                   initialFocus: true,
                 }}
               />
-              <div className="flex gap-3">
-                <div className="flex flex-col gap-2">
-                  <Image src={uploadSvg} alt="upload-svg" />
-                  <p className="text-textAndIcon-darker text-labelXLarge">
-                    آپلود تصویر مدارک
-                  </p>
-                </div>
-                <div className="flex-1 rounded-M border border-dashed border-border-lighter p-6">
-                  <p className="text-textAndIcon-dark text-labelMedium">
-                    نوشته ها خوانا و عکس واضح باشد
-                  </p>
-                  <p className="text-textAndIcon-dark text-labelMedium before:size-2 before:rounded-full before:bg-gray-400">
-                    حجم عکس از ۵ مگابایت بیشتر نباشد
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="relative">
-                <div className="absolute right-2 top-2 z-10 rounded-XS bg-background-lightest p-1">
-                  <Icon name="Trash" />
-                </div>
-                <Image
-                  src={MacBook}
-                  alt="macbook"
-                  className="h-[120px] w-[180px]"
-                />
-              </div>
-              <div className="relative">
-                <div className="absolute right-2 top-2 z-10 rounded-XS bg-background-lightest p-1">
-                  <Icon name="Trash" />
-                </div>
-                <Image
-                  src={MacBook}
-                  alt="macbook"
-                  className="h-[120px] w-[180px]"
-                />
-              </div>
+              <UploadImage />
             </div>
             <DialogFooter className="mt-6 flex gap-4">
               <DialogClose asChild>
@@ -129,7 +91,7 @@ export const AddDocument = () => {
                 </Button>
               </DialogClose>
               <Button fullWidth>
-                {formatMessage(profileMessages.addDocument)}
+                {formatMessage(profileMessages.addDocument).replace("جدید", "")}
               </Button>
             </DialogFooter>
           </form>

@@ -7,4 +7,8 @@ export const pdpMessages = defineMessages({
     id: `${scope}.vendorSimilarProduct`,
     defaultMessage: "محصولات مشابه سایر فروشندگان",
   },
+  productList: {
+    id: `${scope}.productList`,
+    defaultMessage: "لیست محصولات ",
+  },
 });

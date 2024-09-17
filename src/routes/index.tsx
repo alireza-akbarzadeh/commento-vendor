@@ -5,6 +5,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 const HomeView = lazy(() => import("views/home.view"));
 const ReportsView = lazy(() => import("views/reports.view"));
+const ProductsView = lazy(() => import("views/products"));
 const ProfileView = lazy(() => import("views/profile.view"));
 const ProductDetailsPage = lazy(
   () => import("views/product-details-page.view"),
@@ -29,7 +30,11 @@ export const router = createBrowserRouter([
         element: <ProfileView />,
       },
       {
-        path: "product-details-page",
+        path: "products",
+        element: <ProductsView />,
+      },
+      {
+        path: "product/:slug",
         element: <ProductDetailsPage />,
       },
     ],

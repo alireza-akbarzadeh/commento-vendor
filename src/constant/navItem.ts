@@ -14,7 +14,7 @@ export const navList: NavItem[] = [
   },
   {
     title: "مدیریت محصولات",
-    path: "/product-details-page",
+    path: "/products",
   },
   {
     title: "گزارشات",
