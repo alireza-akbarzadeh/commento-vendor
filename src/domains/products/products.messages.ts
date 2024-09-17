@@ -75,4 +75,8 @@ export const productsMessages = defineMessages({
     id: `${scope}.insurance`,
     defaultMessage: "گارانتی",
   },
+  addNewProduct: {
+    id: `${scope}.addNewProduct`,
+    defaultMessage: "افزودن محصول جدید",
+  },
 });
