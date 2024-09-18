@@ -16,6 +16,7 @@ import { globalMessages } from "i18n/global.messages";
 import { NavLink, useNavigate } from "react-router-dom";
 import { products, Products } from "../data";
 import { productsMessages } from "../products.messages";
+import { TableRef } from "components/ui/data-table/table.types";
 
 export function ProductTable() {
   const { formatMessage } = useIntl();
@@ -257,9 +258,11 @@ export function ProductTable() {
     },
   ];
 
-  const tableRef = React.useRef<Table<Products>>();
+  const tableRef = React.useRef<TableRef<Products>>(null);
   const navigate = useNavigate();
-  const tableApi = tableRef?.current;
+  const tableApi = tableRef?.current?.table;
+  console.log(tableApi?.getColumn("title")?.getFilterValue());
+
   return (
     <>
       <div className="mt-[30px] flex flex-wrap items-center justify-between">
@@ -292,6 +295,7 @@ export function ProductTable() {
       <DataTable
         navigate={{ url: "product", accessorKey: "title" }}
         hasPaginate
+        ref={tableRef}
         columns={columns}
         data={products}
       />
