@@ -1,4 +1,4 @@
-import { ColumnDef, Table } from "@tanstack/react-table";
+import { ColumnDef } from "@tanstack/react-table";
 import {
   Badge,
   Button,
@@ -11,15 +11,17 @@ import { DataTable } from "components/ui/data-table";
 import React from "react";
 import { FormattedNumber, useIntl } from "react-intl";
 
+import { TableRef } from "components/ui/data-table/table.types";
 import { CURRENCY } from "constant";
 import { globalMessages } from "i18n/global.messages";
 import { NavLink, useNavigate } from "react-router-dom";
 import { products, Products } from "../data";
 import { productsMessages } from "../products.messages";
-import { TableRef } from "components/ui/data-table/table.types";
 
 export function ProductTable() {
   const { formatMessage } = useIntl();
+  const navigate = useNavigate();
+  const tableRef = React.useRef<TableRef<Products>>(null);
 
   const columns: ColumnDef<Products>[] = [
     {
@@ -258,11 +260,14 @@ export function ProductTable() {
     },
   ];
 
-  const tableRef = React.useRef<TableRef<Products>>(null);
-  const navigate = useNavigate();
-  const tableApi = tableRef?.current?.table;
-  console.log(tableApi?.getColumn("title")?.getFilterValue());
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const api = tableRef.current?.table;
+    console.log({ api });
 
+    if (api) {
+      api.getColumn("title")?.setFilterValue(event.target.value);
+    }
+  };
   return (
     <>
       <div className="mt-[30px] flex flex-wrap items-center justify-between">
@@ -273,12 +278,7 @@ export function ProductTable() {
               <Icon name="Research" className="" />
             </div>
             <Input
-              value={
-                (tableApi?.getColumn("title")?.getFilterValue() as string) ?? ""
-              }
-              onChange={(event) =>
-                tableApi?.getColumn("title")?.setFilterValue(event.target.value)
-              }
+              onChange={handleSearchChange}
               className="w-[323px] border-none bg-transparent focus:ring-0"
               placeholder={formatMessage(productsMessages.searchWithTitle)}
             />

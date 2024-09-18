@@ -1,20 +1,17 @@
-import { ColumnDef, flexRender, Table } from "@tanstack/react-table";
+import { flexRender, Table } from "@tanstack/react-table";
 import { useNavigate } from "react-router-dom";
 import { TableBody, TableCell, TableRow } from "../table";
 
-type DataTableBodyProps<TData, TValue> = {
+type DataTableBodyProps<TData> = {
   table: Table<TData>;
   navigate?: {
     url: string;
     accessorKey: string;
   };
-  columns: ColumnDef<TData, TValue>[];
 };
 
-export function DataTableBody<TData, TValue>(
-  props: DataTableBodyProps<TData, TValue>,
-) {
-  const { table, navigate, columns } = props;
+export function DataTableBody<TData>(props: DataTableBodyProps<TData>) {
+  const { table, navigate } = props;
   const push = useNavigate();
 
   return (
@@ -57,11 +54,9 @@ export function DataTableBody<TData, TValue>(
           </TableRow>
         ))
       ) : (
-        <TableRow>
-          <div className="flex items-center justify-center">
-            هیچ رکوردی یافت نشد
-          </div>
-        </TableRow>
+        <div className="mx-auto flex h-[300px] w-full items-center justify-center">
+          هیچ رکوردی یافت نشد
+        </div>
       )}
     </TableBody>
   );

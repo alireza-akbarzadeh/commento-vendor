@@ -13,7 +13,7 @@ const SelectValue = SelectPrimitive.Value;
 type SelectTriggerProps = React.ComponentPropsWithoutRef<
   typeof SelectPrimitive.Trigger
 > & {
-  label: string;
+  label?: string;
 };
 
 const SelectTrigger = React.forwardRef<

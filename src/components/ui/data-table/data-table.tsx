@@ -1,9 +1,8 @@
-import { Table, TableHead, TableHeader, TableRow } from "components";
+import { Table } from "components";
 
 import {
   ColumnFiltersState,
   ColumnPinningState,
-  flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
@@ -15,10 +14,10 @@ import {
 
 import React, { ForwardedRef, RefObject } from "react";
 import { DataTableBody } from "./table-body";
+import { DataTableHeader } from "./table-header";
 import { DataTablePagination } from "./table-pagination";
 import { TableToolbar } from "./table-toolbar";
 import { DataTableProps, TableRef } from "./table.types";
-import { DataTableHeader } from "./table-header";
 
 function ForwardedDataTable<TData, TValue>(
   props: DataTableProps<TData, TValue>,
@@ -84,7 +83,7 @@ function ForwardedDataTable<TData, TValue>(
       <div className="rounded-md border">
         <Table>
           <DataTableHeader table={table} />
-          <DataTableBody navigate={navigate} columns={columns} table={table} />
+          <DataTableBody navigate={navigate} table={table} />
         </Table>
       </div>
       {hasPaginate && <DataTablePagination table={table} />}
