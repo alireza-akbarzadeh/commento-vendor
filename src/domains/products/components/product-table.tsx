@@ -262,8 +262,6 @@ export function ProductTable() {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const api = tableRef.current?.table;
-    console.log({ api });
-
     if (api) {
       api.getColumn("title")?.setFilterValue(event.target.value);
     }

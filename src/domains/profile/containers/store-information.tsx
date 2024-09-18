@@ -20,7 +20,7 @@ export function StoreInformation() {
     },
   });
   const onSubmit = (formValuse: StoreInformationFormData) => {
-    console.log(formValuse);
+    //  do something
   };
 
   const { mode } = useWatch({ control: form.control });
