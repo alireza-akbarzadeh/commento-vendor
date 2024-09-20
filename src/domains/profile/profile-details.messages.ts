@@ -223,8 +223,28 @@ export const profileMessages = defineMessages({
     id: `${scope}.additionalInformation`,
     defaultMessage: "توضیحات تکمیلی",
   },
-  conditionLink: {
-    id: `${scope}.conditionLink`,
-    defaultMessage: "لینک شرایط خرید و ارسال در سایت شما",
+  userReportIssue: {
+    id: `${scope}.userReportIssue`,
+    defaultMessage: "گزارش خطای کاربر",
+  },
+  reportDescription: {
+    id: `${scope}.reportDescription`,
+    defaultMessage: "متن گزارش",
+  },
+  adminDescription: {
+    id: `${scope}.adminDescription`,
+    defaultMessage: "توضیح ادمین",
+  },
+  closeReportTime: {
+    id: `${scope}.closeReportTime`,
+    defaultMessage: "زمان بسته شدن گزارش",
+  },
+  openReportTime: {
+    id: `${scope}.openReportTime`,
+    defaultMessage: "ساعت و تاریخ ثبت گزارش",
+  },
+  reportType: {
+    id: `${scope}.reportType`,
+    defaultMessage: "نوع گزارش",
   },
 });

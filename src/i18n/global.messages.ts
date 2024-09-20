@@ -59,4 +59,8 @@ export const globalMessages = defineMessages({
     id: `${scope}.has`,
     defaultMessage: "دارد",
   },
+  title: {
+    id: `${scope}.title`,
+    defaultMessage: "عنوان",
+  },
 });
