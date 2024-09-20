@@ -5,9 +5,11 @@ import * as React from "react";
 import { Icon } from "../icon/icon";
 import { cn } from "lib/utils";
 
+export type CheckboxPrimitiveRootType = typeof CheckboxPrimitive.Root;
+
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+  React.ComponentPropsWithoutRef<CheckboxPrimitiveRootType>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}

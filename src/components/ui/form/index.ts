@@ -11,5 +11,6 @@ export {
   FormMessage,
   useFormField,
 } from "./form";
-
+export { CheckboxGroupController } from "./checkbox-group-controller";
+export { SwitchController } from "./switch-controller";
 export { DatePickerController } from "./date-picker-controller";

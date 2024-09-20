@@ -195,4 +195,36 @@ export const profileMessages = defineMessages({
     id: `${scope}.deleteDocument`,
     defaultMessage: "حذف مدرک",
   },
+  immediateDelivery: {
+    id: `${scope}.immediateDelivery`,
+    defaultMessage: "امکان تحویل فوری",
+  },
+  installmentPayment: {
+    id: `${scope}.installmentPayment`,
+    defaultMessage: "امکان پرداخت قسطی",
+  },
+  paymentSpot: {
+    id: `${scope}.paymentSpot`,
+    defaultMessage: "امکان پرداخت در محل",
+  },
+  shippingMerhod: {
+    id: `${scope}.shippingMerhod`,
+    defaultMessage: "روش ارسال",
+  },
+  bulkPurchase: {
+    id: `${scope}.bulkPurchase`,
+    defaultMessage: "امکان خرید عمده",
+  },
+  yourResponseTime: {
+    id: `${scope}.yourResponseTime`,
+    defaultMessage: "زمان پاسخگویی شما",
+  },
+  additionalInformation: {
+    id: `${scope}.additionalInformation`,
+    defaultMessage: "توضیحات تکمیلی",
+  },
+  conditionLink: {
+    id: `${scope}.conditionLink`,
+    defaultMessage: "لینک شرایط خرید و ارسال در سایت شما",
+  },
 });
