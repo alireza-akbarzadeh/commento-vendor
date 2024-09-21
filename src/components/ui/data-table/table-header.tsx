@@ -20,7 +20,10 @@ export function DataTableHeader<TData>(props: DataTableHeaderProps<TData>) {
                   className="relative"
                   key={header.id}
                 >
-                  <div style={{ width: `${header.getSize()}px` }}>
+                  <div
+                    className="pr-5 text-textAndIcon-light text-labelLarge"
+                    style={{ width: `${header.getSize()}px` }}
+                  >
                     {header.isPlaceholder
                       ? null
                       : flexRender(

@@ -247,4 +247,44 @@ export const profileMessages = defineMessages({
     id: `${scope}.reportType`,
     defaultMessage: "نوع گزارش",
   },
+  authorityLevel: {
+    id: `${scope}.authorityLevel`,
+    defaultMessage: "سطح دسترسی",
+  },
+  email: {
+    id: `${scope}.email`,
+    defaultMessage: "ایمیل",
+  },
+  lastLogged: {
+    id: `${scope}.lastLogged`,
+    defaultMessage: "آخرین ورود",
+  },
+  changeUserAuthority: {
+    id: `${scope}.changeUserAuthority`,
+    defaultMessage: "تغییر دسترسی کاربر",
+  },
+  fullName: {
+    id: `${scope}.fullName`,
+    defaultMessage: "نام ونام خانوادگی کاربر",
+  },
+  conditionLink: {
+    id: `${scope}.conditionLink`,
+    defaultMessage: "لینک شرایط خرید و ارسال در سایت شما",
+  },
+  addNewUser: {
+    id: `${scope}.addNewUser`,
+    defaultMessage: "افزودن کاربر جدید",
+  },
+  activityType: {
+    id: `${scope}.activityType`,
+    defaultMessage: "نوغ فالیت",
+  },
+  dateTimeActivity: {
+    id: `${scope}.dateTimeActivity`,
+    defaultMessage: "تاریخ و ساعت فعالیت",
+  },
+  userHistoryRecord: {
+    id: `${scope}.userHistoryRecord`,
+    defaultMessage: "سوابق فعالیت های اخیر کاربران",
+  },
 });

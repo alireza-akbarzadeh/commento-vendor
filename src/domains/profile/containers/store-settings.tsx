@@ -10,6 +10,11 @@ import {
   FormLabel,
   FormMessage,
   InputController,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   SwitchController,
 } from "components";
 import { globalMessages } from "i18n/global.messages";
@@ -19,6 +24,7 @@ import { SettingsFormData, storeInfoSchema } from "schemas";
 import { ViewSettings } from "../components/setting/view-setting";
 import { profileMessages } from "../profile-details.messages";
 import { Textarea } from "components/ui/textarea";
+import { Link } from "react-router-dom";
 
 export function StoreSttings() {
   const { formatMessage } = useIntl();
@@ -132,13 +138,30 @@ export function StoreSttings() {
             </div>
             <div className="my-8 grid grid-cols-1 items-center gap-8 md:grid-cols-12">
               <div className="col-span-12 md:col-span-4">
-                <InputController
-                  label={formatMessage(profileMessages.yourResponseTime)}
-                  inputControll={{
-                    control: form.control,
-                    name: "yourResponseTime",
-                    rules: { required: true },
-                  }}
+                <FormField
+                  control={form.control}
+                  name="yourResponseTime"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a verified email to display" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="m@example.com">
+                            m@example.com
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
               </div>
               <div className="col-span-12 md:col-span-4">

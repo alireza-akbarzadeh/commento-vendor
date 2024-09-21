@@ -63,4 +63,28 @@ export const globalMessages = defineMessages({
     id: `${scope}.title`,
     defaultMessage: "عنوان",
   },
+  saveChanges: {
+    id: `${scope}.saveChanges`,
+    defaultMessage: "ثبت تغییرات",
+  },
+  delete: {
+    id: `${scope}.delete`,
+    defaultMessage: "حذف",
+  },
+  approve: {
+    id: `${scope}.approve`,
+    defaultMessage: "تایید",
+  },
+  create: {
+    id: `${scope}.create`,
+    defaultMessage: "افزودن",
+  },
+  back: {
+    id: `${scope}.back`,
+    defaultMessage: "بازگشت",
+  },
+  approvedDelete: {
+    id: `${scope}.approvedDelete`,
+    defaultMessage: "آیا از حذف {msg} اطمینان دارید؟",
+  },
 });

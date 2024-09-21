@@ -23,7 +23,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "relative flex h-10 w-full flex-row-reverse items-center justify-between rounded-S border border-border-light bg-background-lightest px-3 py-2 text-labelLarge placeholder:text-primary-main focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "relative flex h-[48px] w-full flex-row-reverse items-center justify-between rounded-S border border-border-light bg-background-lightest px-3 py-2 text-labelLarge placeholder:text-textAndIcon-darker focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className,
     )}
     {...props}
@@ -81,6 +81,7 @@ const SelectContent = React.forwardRef<
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
+      dir="rtl"
       className={cn(
         "relative z-50 max-h-96 min-w-[8rem] rounded-md border bg-background-lightest text-primary-main shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
         position === "popper" &&

@@ -7,3 +7,5 @@ export { UploadImage } from "./upload-image";
 export * from "./account";
 export { ReadStoreInformation } from "./read-store-information";
 export { ReportTable } from "./reports/report-table";
+export { UsersTable } from "./users/users-table";
+export { UsersRecordTable } from "./users/users-record-table";

@@ -56,7 +56,9 @@ export function DataTableColumnHeader<TData, TValue>({
                 size="xxSmall"
               />
             )}
-            <span>{title}</span>
+            <span className="text-textAndIcon-light text-labelLarge">
+              {title}
+            </span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
