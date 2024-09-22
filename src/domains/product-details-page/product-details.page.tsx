@@ -1,4 +1,4 @@
-import { Comment, SimilarProduct } from "./components";
+import { Comment, ProductAnalyticsChart, SimilarProduct } from "./components";
 import { SellerProduct } from "./components/seller-product";
 import { ProductInfo } from "./product-info";
 
@@ -7,6 +7,7 @@ export function ProductDetailsPageDomain() {
     <div className="flex flex-col gap-6">
       <ProductInfo />
       <SellerProduct />
+      <ProductAnalyticsChart />
       <Comment />
       <SimilarProduct />
     </div>
