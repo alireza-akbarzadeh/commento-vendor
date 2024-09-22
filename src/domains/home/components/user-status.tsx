@@ -8,7 +8,7 @@ export function UserStatus() {
           <ProfileImg size="medium" src="https://github.com/shadcn.png" />
           <p className="text-titleMedium">دیجی لند</p>
         </div>
-        <Button>پروفایل</Button>
+        <Button className="px-[22px]">پروفایل</Button>
       </div>
       <div className="col-span-2 flex h-[90px] items-center justify-between rounded-XL bg-background-lightest p-6">
         <p className="text-titleMedium">آخرین زمان ورود</p>
@@ -22,7 +22,7 @@ export function UserStatus() {
       </div>
       <div className="col-span-2 flex h-[90px] items-center justify-between rounded-XL bg-background-lightest p-6">
         <p className="text-titleLarge">ویترین فروشگاه</p>
-        <Button>نمایش</Button>
+        <Button className="px-[22px]">نمایش</Button>
       </div>
     </div>
   );

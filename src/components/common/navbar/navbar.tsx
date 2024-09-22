@@ -16,7 +16,7 @@ export function Navbar() {
                 to={nav.path}
                 className={({ isActive }) =>
                   `flex items-center gap-2.5 px-2 py-2 md:px-4 ${
-                    isActive ? "rounded-XSS bg-background-lighter" : ""
+                    isActive ? "rounded-XS bg-background-lighter" : ""
                   }`
                 }
               >
@@ -26,7 +26,7 @@ export function Navbar() {
                 <label className="text-labelXLarge">{nav.title}</label>
               </NavLink>
               {nav !== navList[navList.length - 1] && (
-                <div className="ml-2 h-4 w-[3px] bg-border-light md:mx-4" />
+                <div className="ml-2 h-4 w-[2px] bg-border-lightest md:mx-4" />
               )}
             </li>
           );

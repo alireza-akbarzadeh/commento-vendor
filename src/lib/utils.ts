@@ -40,3 +40,9 @@ const deepPick = <T, K extends keyof T>(fields: string, object: T): T[K] => {
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 export { capitalize, countDown, deepPick };
+
+export function kFormatter(num: number) {
+  return Math.abs(num) > 999
+    ? Math.sign(num) * parseFloat((Math.abs(num) / 1000).toFixed(1)) + "k"
+    : Math.sign(num) * Math.abs(num);
+}

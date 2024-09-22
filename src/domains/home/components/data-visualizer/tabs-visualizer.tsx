@@ -39,20 +39,25 @@ export function TabsVisualizer() {
           variant="text"
           className="text-textAndIcon-light text-labelLarge"
         >
-          تعداد کلیک
           <span className="m-1.5 mr-1.5 block size-1.5 rounded-full bg-primary-main" />
+          تعداد کلیک
         </Button>
         <Button
           variant="text"
           className="text-textAndIcon-light text-labelLarge"
         >
-          تعداد کلیک
           <span className="m-1.5 mr-1.5 block size-1.5 rounded-full bg-info-light" />
+          تعداد کلیک
         </Button>
       </div>
-      <p className="pr-4 text-textAndIcon-darker text-labelMedium lg:pr-0">
-        تعداد کل کلیک ۱۲۳۴۶۷۳۲۵۱۶۷{" "}
-      </p>
+      <div className="flex gap-2">
+        <p className="pr-4 text-textAndIcon-darker text-labelXLarge lg:pr-0">
+          تعداد کل کلیک ۱۲۳۴۶۷۳۲۵۱۶۷{" "}
+        </p>
+        <p className="pr-4 text-textAndIcon-darker text-labelXLarge lg:pr-0">
+          تعداد کل بازدید ۱۲۳۴۶۷۳۲۵۱۶۷{" "}
+        </p>
+      </div>
     </div>
   );
 }

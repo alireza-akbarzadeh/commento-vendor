@@ -15,7 +15,7 @@ export function UserProfileMenu() {
 
   return (
     <div className="flex gap-2">
-      <ProfileImg src="https://github.com/shadcn.png" />
+      <ProfileImg size="small" src="https://github.com/shadcn.png" />
       <DropdownMenu>
         <DropdownMenuTrigger>
           <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export function UserProfileMenu() {
             <Icon name="down-arrow-1" />
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-[150px]">
+        <DropdownMenuContent className="w-[200px]">
           <DropdownMenuItem
             onClick={() => navigate(ROUTE_NAME.UserProfile)}
             className="flex cursor-pointer items-center gap-2"
